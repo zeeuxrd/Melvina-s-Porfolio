@@ -1,0 +1,101 @@
+/* Work / Selected Case Studies Section */
+
+.work-section {
+  width: 100%;
+  padding: 4rem 2rem 8rem 2rem;
+}
+
+.work-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2.5rem;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.work-card-media {
+  height: 320px;
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: border-color var(--transition-speed) ease;
+}
+
+.work-card:hover .work-card-media {
+  border-color: var(--accent-color);
+}
+
+.work-card-placeholder {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+.work-card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.work-card-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 0.5rem;
+}
+
+.work-card-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.work-card-value {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .work-section {
+    padding: 3rem 1.5rem 5rem 1.5rem;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .work-card-media {
+    height: 260px;
+  }
+}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Header from './components/Header'
 import Hero from './components/Hero'
+import Work from './components/Work'
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -21,6 +22,7 @@ function App() {
       <Header theme={theme} onToggleTheme={toggleTheme} />
       <main>
         <Hero />
+        <Work />
       </main>
     </div>
   )
