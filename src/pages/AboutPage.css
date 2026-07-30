@@ -1,0 +1,934 @@
+/* Standalone About Page Component Styling */
+
+.about-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 8rem 2rem 10rem 2rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.about-page-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+/* Back Button */
+.about-page-back-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 3.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color var(--transition-speed) ease, transform 0.2s ease;
+}
+
+.about-page-back-btn:hover {
+  color: var(--accent-color);
+  transform: translateX(-4px);
+}
+
+/* 1. Hero Headline Statement */
+.about-page-hero-block {
+  width: 100%;
+  margin-bottom: 3.5rem;
+}
+
+.about-page-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.25rem);
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  line-height: 1.15;
+  color: var(--text-primary);
+  max-width: 1200px;
+}
+
+.about-page-hero-title em,
+.about-page-philosophy-text em {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* 2. Expanded Interactive Tactile Sticker Canvas - 960px Height (+50% increase) */
+.about-sticker-canvas {
+  width: 100%;
+  min-height: 960px;
+  position: relative;
+  margin-bottom: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.015);
+  border-radius: 28px;
+  padding: 4.5rem 2rem;
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  overflow: visible;
+}
+
+/* Interactive Animated Drag Cue Floating Badge (One-Time Onboarding Hint) */
+.canvas-drag-cue {
+  position: absolute;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.42rem 1.05rem;
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 100px;
+  z-index: 60;
+  pointer-events: none;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  animation: fadeInCue 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeInCue {
+  from { opacity: 0; transform: translate(-50%, -12px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+.cue-hand-icon {
+  font-size: 1rem;
+  display: inline-block;
+  animation: dragHandGesture 2.2s infinite ease-in-out;
+}
+
+@keyframes dragHandGesture {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  25% { transform: translate(12px, -5px) rotate(10deg); }
+  50% { transform: translate(-8px, 4px) rotate(-8deg); }
+  75% { transform: translate(6px, -2px) rotate(5deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+.cue-text {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 450;
+  letter-spacing: 0.6px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.sticker-card {
+  position: absolute;
+  transform: rotate(var(--rot, 0deg)) translate(var(--tx, 0px), var(--ty, 0px));
+  transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, z-index 0.1s ease;
+  cursor: grab;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.38);
+  user-select: none;
+  touch-action: none;
+}
+
+.sticker-card:active {
+  cursor: grabbing !important;
+}
+
+.sticker-card:hover {
+  transform: rotate(var(--rot, 0deg)) translate(var(--tx, 0px), calc(var(--ty, 0px) - 10px)) scale(1.03) !important;
+  z-index: 40 !important;
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.6);
+}
+
+/* Sticker 1: Terracotta Main Note (Center) */
+.sticker-terracotta {
+  --rot: -5deg;
+  --tx: -140px;
+  --ty: 20px;
+  width: min(450px, 85vw);
+  background-color: #E04524;
+  color: #FFFFFF;
+  padding: 2.5rem 2.25rem 2.25rem 2.25rem;
+  border-radius: 6px;
+  z-index: 3;
+}
+
+.sticker-holes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.hole {
+  width: 9px;
+  height: 9px;
+  background-color: var(--bg-primary);
+  border-radius: 2px;
+}
+
+.sticker-terracotta-text {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+/* Sticker 2: Peach Folded Note (Bottom Right) */
+.sticker-peach {
+  --rot: 4deg;
+  --tx: 180px;
+  --ty: 240px;
+  width: min(380px, 80vw);
+  background-color: #FCD8C5;
+  color: #2B1D19;
+  padding: 1.85rem 1.85rem 2.35rem 1.85rem;
+  border-radius: 4px;
+  z-index: 4;
+}
+
+.sticker-peach-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.sticker-fold {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, transparent 50%, rgba(0, 0, 0, 0.15) 50%);
+  border-top-left-radius: 4px;
+}
+
+/* 4 Scattered Polaroid Photo Stickers Spaced Out across 960px Height */
+.sticker-polaroid {
+  width: 220px;
+  background-color: #FFFFFF;
+  color: #111111;
+  padding: 12px 12px 18px 12px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.sticker-polaroid.polaroid-1 {
+  --rot: 7deg;
+  --tx: 100px;
+  --ty: -240px;
+  z-index: 8;
+}
+
+.sticker-polaroid.polaroid-2 {
+  --rot: -9deg;
+  --tx: -440px;
+  --ty: 180px;
+  z-index: 9;
+}
+
+.sticker-polaroid.polaroid-3 {
+  --rot: 11deg;
+  --tx: 420px;
+  --ty: -20px;
+  z-index: 10;
+}
+
+.sticker-polaroid.polaroid-4 {
+  --rot: -6deg;
+  --tx: -20px;
+  --ty: -320px;
+  z-index: 11;
+}
+
+.tape-accent {
+  width: 65px;
+  height: 22px;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(4px);
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.polaroid-img-frame {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #111;
+  margin-bottom: 10px;
+}
+
+.polaroid-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.polaroid-caption {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #333333;
+}
+
+/* Sticker 4: Yellow Method Checklist Note (Top Left) */
+.sticker-yellow {
+  --rot: -7deg;
+  --tx: -420px;
+  --ty: -140px;
+  width: 250px;
+  background-color: #FFF275;
+  color: #2C2802;
+  padding: 1.6rem 1.35rem;
+  border-radius: 4px;
+  z-index: 6;
+  position: absolute;
+}
+
+.pin-accent {
+  width: 12px;
+  height: 12px;
+  background-color: #E63946;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sticker-yellow-title {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  color: #554D00;
+}
+
+.sticker-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.82rem;
+  line-height: 1.65;
+  font-weight: 600;
+}
+
+/* Sticker 5: Lilac AI & Future Research Note (Top Right) */
+.sticker-lilac {
+  --rot: 6deg;
+  --tx: 380px;
+  --ty: -220px;
+  width: 280px;
+  background-color: #E2C6FF;
+  color: #2B1640;
+  padding: 1.6rem;
+  border-radius: 6px;
+  z-index: 7;
+}
+
+.sticker-lilac-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #6B34A3;
+  margin-bottom: 0.5rem;
+}
+
+.sticker-lilac-text {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+/* Sticker 6: Mint Green Ticket Stamp (Bottom Right) */
+.sticker-mint {
+  --rot: -2deg;
+  --tx: 360px;
+  --ty: 310px;
+  background-color: #A8E6CF;
+  color: #103B2B;
+  padding: 0.85rem 1.35rem;
+  border-radius: 6px;
+  border: 2px dashed #103B2B;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.mint-code {
+  font-family: monospace;
+  font-size: 0.7rem;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+.mint-title {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* Sticker 7: Lime Tag (Far Top Right) */
+.sticker-lime {
+  --rot: -3deg;
+  --tx: 380px;
+  --ty: -350px;
+  background-color: #C6DD57;
+  color: #1C240A;
+  padding: 0.65rem 1.25rem;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  z-index: 2;
+}
+
+/* Sticker 8: Sky Blue Emoticon Badge (Bottom Left) */
+.sticker-blue {
+  --rot: -8deg;
+  --tx: -260px;
+  --ty: 280px;
+  width: 140px;
+  height: 120px;
+  background-color: #B3DEF7;
+  color: #1A3445;
+  padding: 1rem;
+  border-radius: 6px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sticker-emoji {
+  font-family: monospace;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+/* Sticker 9: Washi Tape Quote Strip (Bottom Center) */
+.sticker-quote-strip {
+  --rot: 5deg;
+  --tx: -100px;
+  --ty: 165px;
+  background-color: #FFD166;
+  color: #3A2B00;
+  padding: 0.75rem 2rem;
+  border-radius: 2px;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1rem;
+  z-index: 9;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Sticker 10: Spotify-Style Now Playing Music Card (Light Purple Palette) */
+.sticker-music {
+  --rot: -4deg;
+  --tx: -350px;
+  --ty: -350px;
+  width: 275px;
+  background-color: #E5D4FA;
+  color: #20083B;
+  padding: 1.25rem;
+  border-radius: 14px;
+  border: 1px solid rgba(58, 23, 92, 0.15);
+  z-index: 12;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.music-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.music-tag {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #3A175C;
+}
+
+.music-equalizer {
+  display: flex;
+  align-items: flex-end;
+  gap: 2.5px;
+  height: 14px;
+}
+
+.music-equalizer .bar {
+  width: 3px;
+  background-color: #3A175C;
+  border-radius: 2px;
+  height: 100%;
+}
+
+.sticker-music.is-playing .bar-1 { animation: bounceWave 0.8s ease-in-out infinite; }
+.sticker-music.is-playing .bar-2 { animation: bounceWave 1.1s ease-in-out 0.2s infinite; }
+.sticker-music.is-playing .bar-3 { animation: bounceWave 0.7s ease-in-out 0.4s infinite; }
+.sticker-music.is-playing .bar-4 { animation: bounceWave 0.9s ease-in-out 0.1s infinite; }
+
+.sticker-music.is-paused .bar {
+  height: 3px !important;
+  animation: none !important;
+  opacity: 0.5;
+}
+
+@keyframes bounceWave {
+  0%, 100% { height: 3px; }
+  50% { height: 14px; }
+}
+
+.music-body {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background-color: rgba(58, 23, 92, 0.08);
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid rgba(58, 23, 92, 0.1);
+}
+
+.music-cover {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #3A175C 0%, #1E0A32 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(30, 10, 50, 0.25);
+  flex-shrink: 0;
+}
+
+.music-vinyl-disc {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 3px solid #3A175C;
+  background: radial-gradient(circle, #E5D4FA 22%, #1E0A32 22%);
+}
+
+.sticker-music.is-playing .music-vinyl-disc {
+  animation: spinVinyl 4s linear infinite;
+}
+
+@keyframes spinVinyl {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.music-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.music-title {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #20083B;
+}
+
+.music-artist {
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: #5A387E;
+}
+
+.music-progress-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.music-progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: rgba(58, 23, 92, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.music-progress-fill {
+  width: 55%;
+  height: 100%;
+  background-color: #3A175C;
+  border-radius: 2px;
+}
+
+.music-time {
+  display: flex;
+  justify-content: space-between;
+  font-family: monospace;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #5A387E;
+}
+
+/* Sticker 11: Baby Pink Pastel Note (Right of Orange Card) */
+.sticker-coral {
+  --rot: 6deg;
+  --tx: 210px;
+  --ty: -10px;
+  width: 160px;
+  background-color: #FF85A1;
+  color: #3D0012;
+  padding: 1.1rem 1rem;
+  border-radius: 6px;
+  z-index: 13;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.coral-emoji {
+  font-size: 1.1rem;
+}
+
+.coral-text {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+/* Responsive Sticker Layout */
+@media (max-width: 900px) {
+  .about-sticker-canvas {
+    min-height: 700px;
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .sticker-card {
+    position: relative;
+    transform: none !important;
+    margin: 0.75rem 0;
+    width: 100% !important;
+    max-width: 480px;
+  }
+
+  .sticker-lime,
+  .sticker-blue {
+    display: none;
+  }
+}
+
+/* 3. Core Philosophy & Big Metric Counters */
+.about-page-philosophy-block {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.about-page-philosophy-text {
+  font-family: var(--font-body);
+  font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--text-primary);
+  max-width: 1100px;
+  margin-bottom: 4.5rem;
+}
+
+.about-page-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  width: 100%;
+}
+
+.about-page-stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1.75rem;
+}
+
+.about-page-stat-number {
+  font-family: var(--font-serif);
+  font-size: clamp(3.2rem, 5.5vw, 4.75rem);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--text-primary);
+}
+
+.about-page-stat-label {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+}
+
+/* Section Dividers */
+.about-page-section-divider {
+  width: 100%;
+  border-top: 1px solid var(--border-color);
+  margin: 4.5rem 0;
+}
+
+/* Subhead Tags */
+.about-page-sub-tag {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.about-page-section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.2vw, 2.5rem);
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 2.5rem;
+}
+
+/* 4. Capabilities / Research Rigor List */
+.about-page-capabilities-block {
+  width: 100%;
+}
+
+.about-page-capabilities-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.about-page-capability-row {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 2.5rem;
+  padding: 2.25rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  align-items: baseline;
+}
+
+.about-page-capability-row:first-child {
+  border-top: none;
+}
+
+.about-page-capability-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.about-page-capability-desc {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+/* 5. Recognition & Speaking Table */
+.about-page-recognition-block {
+  width: 100%;
+}
+
+.about-page-table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-page-table-header {
+  display: grid;
+  grid-template-columns: 280px 1fr 100px;
+  gap: 2rem;
+  padding-bottom: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.about-page-table-row {
+  display: grid;
+  grid-template-columns: 280px 1fr 100px;
+  gap: 2rem;
+  padding: 1.35rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+}
+
+.about-page-table-col1 {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.about-page-table-col2 {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.about-page-table-col3 {
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* 6. Closing Inbound CTA */
+.about-page-cta-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2.5rem;
+  padding-top: 2rem;
+}
+
+.about-page-cta-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 4.2vw, 3.4rem);
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--text-primary);
+  max-width: 900px;
+}
+
+.about-page-cta-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.about-page-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.about-page-cta-btn.primary {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.about-page-cta-btn.primary:hover {
+  background-color: var(--accent-color);
+  color: #000000;
+  transform: translateY(-2px);
+}
+
+.about-page-cta-btn.secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+}
+
+.about-page-cta-btn.secondary:hover {
+  border-color: var(--text-primary);
+  transform: translateY(-2px);
+}
+
+/* Responsive Layout */
+@media (max-width: 1024px) {
+  .about-page-capability-row {
+    grid-template-columns: 260px 1fr;
+    gap: 1.5rem;
+  }
+
+  .about-page-table-header,
+  .about-page-table-row {
+    grid-template-columns: 220px 1fr 80px;
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding: 6rem 1.5rem 6rem 1.5rem;
+  }
+
+  .about-page-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-page-capability-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.75rem 0;
+  }
+
+  .about-page-table-header {
+    display: none;
+  }
+
+  .about-page-table-row {
+    grid-template-columns: 1fr;
+    gap: 0.4rem;
+    padding: 1.25rem 0;
+  }
+
+  .about-page-table-col3 {
+    text-align: left;
+    font-size: 0.85rem;
+  }
+
+  .about-page-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .about-page-cta-btn {
+    justify-content: center;
+  }
+}

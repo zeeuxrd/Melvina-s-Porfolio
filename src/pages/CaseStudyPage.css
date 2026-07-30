@@ -1,0 +1,589 @@
+/* Adeola Adekoya Layout Styling for UXR Case Studies */
+
+.adekoya-case-page {
+  width: 100%;
+  min-height: 100vh;
+  padding: 7rem 2.5rem 6rem 2.5rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.adekoya-container {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+/* Back Link Button */
+.adekoya-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 2.5rem;
+  transition: color var(--transition-speed) ease;
+}
+
+.adekoya-back-btn:hover {
+  color: var(--text-primary);
+}
+
+/* Top Centered Header with Huge Title */
+.adekoya-header {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.adekoya-main-title {
+  font-family: 'General Sans', sans-serif;
+  font-weight: 700;
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  letter-spacing: -1.5px;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+/* Hero Image Mockup Canvas */
+.adekoya-hero-canvas {
+  width: 100%;
+  height: 480px;
+  background: #18181b;
+  border: none;
+  border-radius: 16px;
+  margin-bottom: 4rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-mock-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-mock-icon {
+  font-size: 3rem;
+}
+
+.hero-mock-text {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Overview Bar: 3-Column Layout */
+.adekoya-overview-bar {
+  display: grid;
+  grid-template-columns: 1.3fr 1.5fr 1fr;
+  gap: 3.5rem;
+  padding-bottom: 4rem;
+  margin-bottom: 4rem;
+  border-bottom: 1px solid var(--border-color);
+  align-items: start;
+}
+
+.overview-headline {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.4px;
+  color: var(--text-primary);
+}
+
+.overview-desc-text {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.overview-meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.meta-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.meta-key {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: var(--text-secondary);
+}
+
+.meta-val {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+/* 8 Structured Sections Following Adeola Adekoya's Layout */
+.adekoya-section {
+  margin-bottom: 5.5rem;
+}
+
+/* Asymmetric 2-Column Text Row */
+.adekoya-section-text-row {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 4rem;
+  margin-bottom: 2.5rem;
+  align-items: start;
+}
+
+.section-title-lbl {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(1.3rem, 2vw, 1.75rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+}
+
+.section-content-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.section-body-text {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+/* Quote Callout */
+.section-quote {
+  margin-top: 1rem;
+  padding: 1.5rem 2rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid var(--text-primary);
+  border-radius: 0 10px 10px 0;
+}
+
+.quote-body {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.quote-cite {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  display: block;
+}
+
+/* Section Metrics Grid */
+.section-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.metric-tile {
+  background: rgba(255, 255, 255, 0.03);
+  border: none;
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.metric-tile-val {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.metric-tile-lbl {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+}
+
+/* Massive Full-Width Light Grey / Dark Container for Visual Artifacts */
+.adekoya-section-canvas {
+  width: 100%;
+  min-height: 520px;
+  background: #18181b;
+  border: none;
+  border-radius: 16px;
+  padding: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.margin-bottom-lg {
+  margin-bottom: 5.5rem;
+}
+
+.mock-canvas-inner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.large-screen-mock {
+  width: 100%;
+  max-width: 960px;
+  height: 420px;
+  background: #27272a;
+  border: none;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  box-shadow: none;
+}
+
+.mock-badge {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--text-secondary);
+}
+
+.mock-title {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+/* Triple Card Grid inside Canvas */
+.mock-triple-grid {
+  width: 100%;
+  max-width: 1040px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.triple-card-mock {
+  height: 420px;
+  background: #27272a;
+  border: none;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  box-shadow: none;
+}
+
+.triple-card-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.triple-card-lbl {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+/* Footer Next Project Navigation */
+.adekoya-footer {
+  border-top: 1px solid var(--border-color);
+  padding-top: 4rem;
+  margin-top: 6rem;
+}
+
+.footer-next-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.next-lbl {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--text-secondary);
+}
+
+.next-title-btn {
+  background: none;
+  border: none;
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.next-title-btn:hover {
+  opacity: 0.8;
+  transform: translateX(6px);
+}
+
+/* Tactile Ruled Paper Sticky Note Board for Research & Discovery */
+.research-sticky-board {
+  width: 100%;
+  max-width: 1100px;
+  min-height: 480px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2.25rem;
+  padding: 2rem 1rem;
+  position: relative;
+}
+
+.research-sticky {
+  position: relative;
+  border-radius: 6px;
+  padding: 1.75rem 1.6rem;
+  box-shadow: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  /* Ruled Notebook Paper Background Lines */
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 27px,
+    rgba(0, 0, 0, 0.08) 28px
+  );
+}
+
+.research-sticky:hover {
+  transform: translateY(-8px) scale(1.04) !important;
+  z-index: 20 !important;
+  box-shadow: none !important;
+}
+
+/* Sticky 1: Terracotta Ruled Note */
+.sticky-terracotta {
+  width: min(340px, 85vw);
+  background-color: #E04524;
+  color: #FFFFFF;
+  transform: rotate(-3deg);
+}
+
+.sticky-holes {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.sticky-holes .hole {
+  width: 8px;
+  height: 8px;
+  background-color: #18181b;
+  border-radius: 2px;
+}
+
+.sticky-tag {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  margin-bottom: 0.65rem;
+  opacity: 0.9;
+}
+
+.sticky-text {
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+/* Sticky 2: Yellow Pinned Checklist Note */
+.sticky-yellow {
+  width: min(290px, 85vw);
+  background-color: #FFF275;
+  color: #2C2802;
+  transform: rotate(4deg);
+  padding-top: 2.2rem;
+}
+
+.sticky-yellow .pin-accent {
+  width: 12px;
+  height: 12px;
+  background-color: #E63946;
+  border-radius: 50%;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.yellow-tag {
+  color: #615700;
+  text-align: center;
+}
+
+.sticky-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  font-weight: 700;
+}
+
+/* Sticky 3: Vibrant Pink Washi Tape Note */
+.sticky-pink {
+  width: min(320px, 85vw);
+  background-color: #FF85A1;
+  color: #380415;
+  transform: rotate(-4deg);
+  padding-top: 2.2rem;
+}
+
+.sticky-pink .tape-accent {
+  width: 70px;
+  height: 22px;
+  background-color: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(4px);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.pink-tag {
+  color: #630522;
+}
+
+.sticky-text-bold {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  font-weight: 600;
+}
+
+.sticky-fold {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, transparent 50%, rgba(0, 0, 0, 0.2) 50%);
+  border-top-left-radius: 4px;
+}
+
+/* Sticky 4: Lilac Research Synthesis Note */
+.sticky-lilac {
+  width: min(340px, 85vw);
+  background-color: #E2C6FF;
+  color: #2B1640;
+  transform: rotate(5deg);
+  padding: 1.75rem 1.6rem;
+}
+
+.lilac-tag {
+  color: #6B34A3;
+}
+
+.sticky-lilac-text {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Sticky 5: Mint Perforated Ticket Note */
+.sticky-mint {
+  width: min(340px, 85vw);
+  background-color: #A8E6CF;
+  color: #0C3626;
+  transform: rotate(-2deg);
+  border: 2px dashed #0C3626;
+}
+
+.mint-tag {
+  color: #07422C;
+}
+
+.sticky-mint-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  font-weight: 700;
+}
+
+/* Responsive Breakdown */
+@media (max-width: 960px) {
+  .adekoya-overview-bar {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .adekoya-section-text-row {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .mock-triple-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .triple-card-mock {
+    height: 280px;
+  }
+
+  .adekoya-hero-canvas,
+  .adekoya-section-canvas {
+    padding: 1.5rem;
+    min-height: 340px;
+  }
+
+  .large-screen-mock {
+    height: 260px;
+  }
+}

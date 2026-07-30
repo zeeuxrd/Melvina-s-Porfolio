@@ -40,14 +40,15 @@
   --border-color: #22262d;      /* Thin premium borders */
 
   /* Typography */
-  --font-display: 'Syne', sans-serif;
+  --font-display: 'General Sans', sans-serif;
   --font-body: 'Montserrat', sans-serif;
+  --font-serif: 'Instrument Serif', serif;
   --fs-display: clamp(1.8rem, 8vw, 4.5rem); /* Capped at 72px, scales down to 28.8px on mobile */
   --fs-body: clamp(0.95rem, 1.5vw, 1.15rem);
   --fs-subtitle: clamp(1.05rem, 2.5vw, 1.4rem);
   
   /* Layout Options */
-  --max-width: 1200px;
+  --max-width: 1400px;
   --transition-speed: 0.3s;
   --focus-outline: 2px solid var(--accent-color);
 }
@@ -105,7 +106,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  justify-content: center;
 }
 
 main {

@@ -1,15 +1,22 @@
 import React, { useState } from 'react'
 import './Header.css'
 
-export default function Header({ theme, onToggleTheme }) {
+export default function Header({ theme, onToggleTheme, onNavigate, currentPage }) {
   const [imgError, setImgError] = useState(false);
   const avatarPath = '/src/assets/avatar.png';
+
+  const handleNav = (page, targetId) => (e) => {
+    if (onNavigate) {
+      e.preventDefault();
+      onNavigate(page, targetId);
+    }
+  };
 
   return (
     <header className="header-nav" aria-label="Main Navigation">
       <div className="nav-pill">
-        {/* Left Side: Avatar */}
-        <div className="nav-avatar-container">
+        {/* Left Side: Avatar & Brand Name */}
+        <div className="nav-brand" onClick={handleNav('home')} title="Go to Homepage">
           {!imgError ? (
             <img 
               src={avatarPath} 
@@ -25,13 +32,32 @@ export default function Header({ theme, onToggleTheme }) {
               </svg>
             </div>
           )}
+          <span className="nav-brand-name">Somtochukwu</span>
         </div>
 
-        {/* Right Side: Links + Toggle */}
+        {/* Directional Nav Links */}
         <nav className="nav-links">
-          <a href="#work" className="nav-item">work</a>
-          <a href="#about" className="nav-item">about</a>
-          <a href="#writing" className="nav-item">writing</a>
+          <a 
+            href="#work" 
+            className={`nav-item ${currentPage === 'home' ? 'is-active' : ''}`}
+            onClick={handleNav('home', 'work')}
+          >
+            work <span className="nav-arrow">↓</span>
+          </a>
+          <a 
+            href="#about" 
+            className={`nav-item ${currentPage === 'about' ? 'is-active' : ''}`}
+            onClick={handleNav('about')}
+          >
+            about <span className="nav-arrow">→</span>
+          </a>
+          <a 
+            href="#testimonials" 
+            className="nav-item"
+            onClick={handleNav('home', 'testimonials')}
+          >
+            testimonials <span className="nav-arrow">↓</span>
+          </a>
           
           <button 
             onClick={onToggleTheme} 
