@@ -4,6 +4,7 @@ import firstCaseCover from 'C:/Users/Lenovo/.gemini/antigravity-ide/brain/d189ee
 import secondCaseCover from 'C:/Users/Lenovo/.gemini/antigravity-ide/brain/d189ee92-2ad7-43f3-b2c8-4c42f3c69bd6/media__1785160961905.png'
 import thirdCaseCover from 'C:/Users/Lenovo/.gemini/antigravity-ide/brain/d189ee92-2ad7-43f3-b2c8-4c42f3c69bd6/media__1785165571132.jpg'
 import fourthCaseCover from 'C:/Users/Lenovo/.gemini/antigravity-ide/brain/d189ee92-2ad7-43f3-b2c8-4c42f3c69bd6/media__1785166951949.jpg'
+import porscheCoverNew from 'C:/Users/Lenovo/.gemini/antigravity-ide/brain/bc996f2b-f821-4882-a4b8-3fb1816f1c5f/media__1785442322253.jpg'
 
 const caseStudies = [
   {
@@ -19,7 +20,7 @@ const caseStudies = [
     name: 'Verse Automotive Financing',
     year: '2024',
     sector: 'Fintech, Automotive',
-    coverImage: secondCaseCover,
+    coverImage: fourthCaseCover,
     gridClass: 'work-card--wide',
   },
   {
@@ -32,10 +33,10 @@ const caseStudies = [
   },
   {
     id: 'case-04',
-    name: 'Porsche Telematics & HMI Strategy',
+    name: 'Digital Inclusion & Accessibility Strategy',
     year: '2024',
-    sector: 'Automotive, Systems Strategy',
-    coverImage: fourthCaseCover,
+    sector: 'Inclusive Design, WCAG Strategy',
+    coverImage: porscheCoverNew,
     gridClass: 'work-card--wide',
   },
 ]

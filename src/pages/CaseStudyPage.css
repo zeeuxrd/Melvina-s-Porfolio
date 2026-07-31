@@ -3,13 +3,14 @@
 .adekoya-case-page {
   width: 100%;
   min-height: 100vh;
-  padding: 7rem 2.5rem 6rem 2.5rem;
+  padding: 6rem 3vw 6rem 3vw;
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }
 
 .adekoya-container {
-  max-width: 1240px;
+  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -52,8 +53,10 @@
 /* Hero Image Mockup Canvas */
 .adekoya-hero-canvas {
   width: 100%;
-  height: 480px;
-  background: #18181b;
+  height: auto;
+  min-height: 380px;
+  max-height: 640px;
+  background: rgba(26, 26, 26, 0.35);
   border: none;
   border-radius: 16px;
   margin-bottom: 4rem;
@@ -61,6 +64,50 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.adekoya-hero-image-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 440px;
+  max-height: 640px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.adekoya-hero-img {
+  width: 100%;
+  height: 100%;
+  min-height: 440px;
+  max-height: 640px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.adekoya-hero-overlay-brand {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.35) 100%);
+  pointer-events: none;
+}
+
+.hero-brand-overlay-title {
+  font-family: 'General Sans', 'Outfit', sans-serif;
+  font-size: clamp(4.5rem, 11vw, 8rem);
+  font-weight: 700;
+  color: #F7F5EE;
+  letter-spacing: -3px;
+  line-height: 0.95;
+  text-transform: lowercase;
+  text-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+  user-select: none;
 }
 
 .hero-mock-placeholder {
@@ -170,6 +217,7 @@
   font-size: 1.05rem;
   line-height: 1.75;
   color: var(--text-secondary);
+  max-width: 75ch;
 }
 
 /* Quote Callout */
@@ -179,6 +227,7 @@
   background-color: rgba(255, 255, 255, 0.03);
   border-left: 3px solid var(--text-primary);
   border-radius: 0 10px 10px 0;
+  max-width: 75ch;
 }
 
 .quote-body {
@@ -201,23 +250,29 @@
 /* Section Metrics Grid */
 .section-metrics-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1.25rem;
-  margin-top: 1rem;
+  margin-top: 1.25rem;
+  max-width: 75ch;
 }
 
 .metric-tile {
   background: rgba(255, 255, 255, 0.03);
   border: none;
-  padding: 1.5rem 1rem;
-  border-radius: 12px;
+  padding: 1.6rem 1.2rem;
+  border-radius: 14px;
   text-align: center;
+  transition: transform var(--transition-speed) ease;
+}
+
+.metric-tile:hover {
+  transform: translateY(-3px);
 }
 
 .metric-tile-val {
   display: block;
   font-family: var(--font-display);
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.25rem;
@@ -229,13 +284,14 @@
   font-weight: 600;
   color: var(--text-secondary);
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 /* Massive Full-Width Light Grey / Dark Container for Visual Artifacts */
 .adekoya-section-canvas {
   width: 100%;
-  min-height: 520px;
-  background: #18181b;
+  min-height: 480px;
+  background: rgba(26, 26, 26, 0.35);
   border: none;
   border-radius: 16px;
   padding: 3.5rem;
@@ -557,6 +613,2528 @@
   font-weight: 700;
 }
 
+/* Custom 4-Mobile Story Flow Walkthrough Component */
+.overview-story-flow-container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.overview-story-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Phone Frame Shell */
+.story-phone {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: none;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: none;
+}
+
+.story-phone:hover {
+  transform: translateY(-8px);
+  box-shadow: none;
+}
+
+/* Top Status Bar & Avatar Header */
+.phone-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem 0.25rem 1.25rem;
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 10;
+}
+
+.phone-status-bar--overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  color: #FFFFFF;
+}
+
+.phone-avatar-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 1.25rem 0.75rem 1.25rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  z-index: 10;
+}
+
+.phone-avatar-header--overlay {
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  color: #FFFFFF;
+}
+
+.phone-avatar-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: currentColor;
+  opacity: 0.7;
+}
+
+.phone-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+
+.phone-body--padded {
+  padding: 1.5rem 1.25rem;
+}
+
+.phone-body--centered {
+  padding: 2rem 1.25rem;
+  justify-content: center;
+}
+
+.phone-body--dark-content {
+  padding: 1.5rem 1.25rem;
+}
+
+/* Phone 1: White Card */
+.story-phone--white {
+  background-color: #F7F5EE;
+  color: #121418;
+}
+
+.phone-hero-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.6px;
+  color: #121418;
+  margin-bottom: 0.5rem;
+}
+
+.phone-hero-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #666D79;
+}
+
+.phone-tag {
+  display: inline-block;
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #121418;
+  margin-bottom: 0.2rem;
+}
+
+.phone-tag-sub {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #666D79;
+}
+
+/* Phone 2: Pink Card */
+.story-phone--pink {
+  background-color: #FF85A1;
+  color: #380415;
+}
+
+.phone-statement-text {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
+  font-weight: 700;
+  line-height: 1.35;
+  letter-spacing: -0.3px;
+  color: #380415;
+}
+
+/* Phone 3: Full Bleed Graphic Card */
+.story-phone--graphic {
+  background-color: #121418;
+  position: relative;
+}
+
+.phone-graphic-wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+.phone-graphic-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.phone-graphic-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #1C2330 0%, #0F141E 100%);
+  color: #FFFFFF;
+}
+
+.phone-graphic-icon {
+  font-size: 2.5rem;
+}
+
+.phone-graphic-txt {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Phone 4: Dark UI Card */
+.story-phone--dark {
+  background-color: #000000;
+  color: #F7F5EE;
+  border: none;
+}
+
+.phone-dark-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.6px;
+  color: #F7F5EE;
+  margin-bottom: 0.6rem;
+}
+
+.phone-time-pill {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  color: #F7F5EE;
+}
+
+.phone-impact-val {
+  display: block;
+  font-family: 'General Sans', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #F7F5EE;
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.phone-dark-desc {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Custom 4-Card Problem Context Artifact Component */
+.problem-context-container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 1rem 0;
+}
+
+/* Top Skim Metrics Row: 3 Columns */
+.problem-top-metrics-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.problem-metric-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.problem-metric-val {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.problem-metric-lbl {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* 3 Vertical Color-Coded Scalloped Problem Cards Grid */
+.problem-cards-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+  padding-top: 1rem;
+}
+
+/* Scalloped / Cloud Card Container */
+/* Black Theme for Scalloped Challenge Cards while preserving Sticker Badge Colors */
+.scallop-card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  padding: 3.25rem 2rem 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+  border-radius: 44px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  box-shadow: none;
+  background-color: #121418 !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.scallop-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Floating Asterisk / Starburst Sticker Badge */
+.scallop-badge {
+  position: absolute;
+  top: -18px;
+  left: -18px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background-color: #FFD4E5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: none !important;
+  z-index: 10;
+  transform: rotate(-10deg);
+  transition: transform 0.3s ease;
+}
+
+.scallop-card:hover .scallop-badge {
+  transform: rotate(20deg) scale(1.1);
+}
+
+.scallop-badge-icon {
+  width: 26px;
+  height: 26px;
+  stroke: #4A081A;
+}
+
+/* Card Centered Content */
+.scallop-card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 1.2rem;
+  width: 100%;
+}
+
+.scallop-card--centered-content {
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.scallop-card-body--centered {
+  align-items: center !important;
+  text-align: center !important;
+}
+
+.scallop-card-num {
+  font-family: 'General Sans', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.5px;
+  color: inherit;
+}
+
+.scallop-card-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.6px;
+  color: inherit;
+  margin-top: -0.4rem;
+}
+
+.scallop-card-text {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.65;
+  font-weight: 500;
+  color: inherit;
+  opacity: 0.92;
+}
+
+/* Default Pastel Themes for Fitflex Scalloped Cards */
+/* 01. Soft Periwinkle Blue */
+.scallop-card--blue {
+  background-color: #C6D8FF;
+  color: #0D1C40;
+}
+.scallop-card--blue .scallop-badge {
+  background-color: #1A3A7A;
+}
+.scallop-card--blue .scallop-badge-icon {
+  stroke: #C6D8FF;
+}
+
+/* 02. Soft Lime Green */
+.scallop-card--lime {
+  background-color: #D9F5C2;
+  color: #123305;
+}
+.scallop-card--lime .scallop-badge {
+  background-color: #184209;
+}
+.scallop-card--lime .scallop-badge-icon {
+  stroke: #D9F5C2;
+}
+
+/* 03. Soft Golden Butter / Yellow */
+.scallop-card--amber {
+  background-color: #FDE3B8 !important;
+  color: #382200 !important;
+}
+.scallop-card--amber .scallop-card-num,
+.scallop-card--amber .scallop-card-title {
+  color: #382200 !important;
+}
+.scallop-card--amber .scallop-card-text {
+  color: #4A3005 !important;
+}
+.scallop-card--amber .scallop-badge {
+  background-color: #5C3800 !important;
+}
+.scallop-card--amber .scallop-badge-icon {
+  stroke: #FDE3B8 !important;
+}
+
+/* 04. Soft Blush Pink */
+.scallop-card--pink {
+  background-color: #FBBFCA;
+  color: #3B0512;
+}
+.scallop-card--pink .scallop-badge {
+  background-color: #4A0817;
+}
+.scallop-card--pink .scallop-badge-icon {
+  stroke: #FBBFCA;
+}
+
+/* 05. Soft Periwinkle Purple */
+.scallop-card--purple {
+  background-color: #E2D9FF !important;
+  color: #1F0D40 !important;
+}
+.scallop-card--purple .scallop-card-num,
+.scallop-card--purple .scallop-card-title {
+  color: #1F0D40 !important;
+}
+.scallop-card--purple .scallop-card-text {
+  color: #2D1A54 !important;
+}
+.scallop-card--purple .scallop-badge {
+  background-color: #351A7A !important;
+}
+.scallop-card--purple .scallop-badge-icon {
+  stroke: #E2D9FF !important;
+}
+
+/* Dark Theme Variant Applied Strictly to Verse (case-02) Scalloped Cards */
+.scallop-card--dark {
+  background-color: #121418 !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.scallop-card--dark .scallop-card-num,
+.scallop-card--dark .scallop-card-title {
+  color: #FFFFFF !important;
+}
+
+.scallop-card--dark .scallop-card-text {
+  color: #CBD5E1 !important;
+}
+
+/* Platform Capability Modules Grid (Verse Overview) */
+.modules-grid-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.modules-grid-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.modules-grid-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.modules-grid-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  color: var(--text-primary);
+}
+
+.modules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.module-card {
+  position: relative;
+  border-radius: 28px;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.module-card:hover {
+  transform: translateY(-6px);
+}
+
+.module-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.module-card-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.module-card-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  color: inherit;
+}
+
+.module-card-text {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  font-weight: 500;
+  color: inherit;
+  opacity: 0.92;
+}
+
+/* Module Card Color Variants (reusing the case-study pastel palette) */
+.module-card--blue {
+  background-color: #C6D8FF;
+  color: #0D1C40;
+}
+.module-card--blue .module-card-icon {
+  background-color: #1A3A7A;
+  color: #C6D8FF;
+}
+
+.module-card--lime {
+  background-color: #D9F5C2;
+  color: #123305;
+}
+.module-card--lime .module-card-icon {
+  background-color: #184209;
+  color: #D9F5C2;
+}
+
+.module-card--amber {
+  background-color: #FDE3B8;
+  color: #382200;
+}
+.module-card--amber .module-card-icon {
+  background-color: #5C3800;
+  color: #FDE3B8;
+}
+
+.module-card--pink {
+  background-color: #FBBFCA;
+  color: #3B0512;
+}
+.module-card--pink .module-card-icon {
+  background-color: #4A0817;
+  color: #FBBFCA;
+}
+
+.module-card--lilac {
+  background-color: #E2C6FF;
+  color: #2B1640;
+}
+.module-card--lilac .module-card-icon {
+  background-color: #6B34A3;
+  color: #E2C6FF;
+}
+
+.module-card--mint {
+  background-color: #A8E6CF;
+  color: #0C3626;
+}
+.module-card--mint .module-card-icon {
+  background-color: #0C3626;
+  color: #A8E6CF;
+}
+
+@media (max-width: 900px) {
+  .modules-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .modules-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Enterprise Flow / Impact Reflections Layout (Verse) */
+.flow-impact-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.reflection-dark-card {
+  background-color: #22261E;
+  color: #EEF0E7;
+}
+
+.flow-diagram-card {
+  border-radius: 28px;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.flow-diagram-tag {
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.flow-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.flow-row-label {
+  flex-shrink: 0;
+  width: 100px;
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+}
+
+.flow-steps {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  row-gap: 0.75rem;
+}
+
+.flow-step {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.flow-step--muted {
+  background-color: rgba(238, 240, 231, 0.08);
+  color: #EEF0E7;
+  opacity: 0.6;
+}
+
+.flow-step--accent {
+  background-color: #EEF0E7;
+  color: #22261E;
+}
+
+.flow-arrow {
+  font-size: 0.9rem;
+  opacity: 0.4;
+}
+
+.flow-arrow--accent {
+  opacity: 0.9;
+  font-weight: 700;
+}
+
+.flow-divider {
+  height: 1px;
+  width: 100%;
+  background-color: rgba(238, 240, 231, 0.15);
+}
+
+.principles-impact-row {
+  display: flex;
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+.principles-card {
+  flex: 1.4;
+  border-radius: 28px;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.principles-card-tag {
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.principles-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.principle-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.principle-num {
+  font-family: 'General Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+
+.principle-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  margin-bottom: 0.35rem;
+}
+
+.principle-text {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.impact-recap-card {
+  flex: 1;
+  border-radius: 28px;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.impact-recap-tag {
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.impact-recap-tiles {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.impact-recap-val {
+  display: block;
+  font-family: 'General Sans', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.impact-recap-lbl {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  opacity: 0.8;
+  margin-top: 0.35rem;
+}
+
+.reflection-quote-card {
+  border-radius: 28px;
+  padding: 2.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.reflection-quote-text {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: -0.3px;
+}
+
+.reflection-quote-cite {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+  .principles-impact-row {
+    flex-direction: column;
+  }
+
+  .flow-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .flow-row-label {
+    width: auto;
+  }
+}
+
+/* 3-Column Dual-Gradient Metric Progress Slider Matrix Component */
+.ideation-slider-container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 1rem 0;
+}
+
+/* Header with Title & Lime Badge */
+.ideation-slider-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.ideation-slider-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  color: var(--text-primary);
+}
+
+.ideation-slider-badge {
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  background-color: #B2F042; /* Vibrant Lime Badge */
+  color: #123305;
+}
+
+/* 3-Column Grid */
+.ideation-slider-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.slider-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* Dual Pill Slider Track */
+.slider-track-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  width: 100%;
+}
+
+.slider-axis-labels {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.slider-arrow {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: 0.68rem;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.slider-pill-bar {
+  width: 100%;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+}
+
+.slider-pill-fill {
+  height: 100%;
+  border-radius: 14px;
+}
+
+.slider-pill-rest {
+  height: 100%;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Plain Solid Color Fills */
+.gradient-coral-yellow .slider-pill-fill {
+  background-color: #FF7E67;
+}
+
+.gradient-yellow-green .slider-pill-fill {
+  background-color: #C8F086;
+}
+
+.gradient-blue-green .slider-pill-fill {
+  background-color: #8A7DFF;
+}
+
+/* Stat & Narrative Group */
+.slider-stat-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.slider-stat-num {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(3.2rem, 5.5vw, 4.8rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -1.5px;
+  color: var(--text-primary);
+}
+
+.slider-stat-unit {
+  font-size: 0.65em;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-left: 2px;
+}
+
+.slider-stat-desc {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+/* Editorial Geometric Bento Grid Component (Ideation & Design Process) */
+.ideation-bento-container {
+  width: 100%;
+  max-width: 1140px;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.ideation-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  align-items: stretch;
+}
+
+/* Bento Card Shell */
+.bento-card {
+  position: relative;
+  min-height: 380px;
+  border-radius: 20px;
+  padding: 2.25rem 1.75rem 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.bento-card:hover {
+  transform: translateY(-8px);
+}
+
+.bento-card-art {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.bento-line-svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+}
+
+.bento-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.bento-card-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(1.3rem, 1.8vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  color: inherit;
+}
+
+.bento-card-sub {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  font-weight: 500;
+  color: inherit;
+  opacity: 0.9;
+}
+
+/* Card Themes (Triadic Editorial Palette) */
+/* 01. Vibrant Burnt Orange */
+.bento-card--orange {
+  background-color: #EE4E1D;
+  color: #FFFFFF;
+}
+
+/* 02. Deep Dark Charcoal */
+.bento-card--charcoal {
+  background-color: #22261E;
+  color: #EEF0E7;
+}
+
+/* 03. Golden Mustard Yellow */
+.bento-card--mustard {
+  background-color: #EAB83A;
+  color: #1A1F16;
+}
+
+/* 04. Linen Cream */
+.bento-card--cream {
+  background-color: #EEF0E7;
+  color: #1F241A;
+}
+
+/* OpenPay-Inspired 3-Bar Metric Growth Chart Component */
+.findings-barchart-container {
+  width: 100%;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 4.5rem;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+/* Left Info Column */
+.findings-barchart-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
+}
+
+.barchart-header-tags {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  opacity: 0.8;
+  margin-bottom: 1.5rem;
+}
+
+.barchart-main-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.barchart-desc-text {
+  font-family: var(--font-body);
+  font-size: 0.96rem;
+  line-height: 1.65;
+  font-weight: 500;
+  color: var(--text-secondary);
+  max-width: 48ch;
+}
+
+.barchart-stat-anchor {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: 2rem;
+}
+
+.barchart-stat-num {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(4.5rem, 8vw, 6.8rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -2px;
+  color: var(--text-primary);
+}
+
+.barchart-stat-label {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* Right 3-Bar Visual Column */
+.findings-barchart-visual {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  height: 400px;
+  align-items: flex-end;
+}
+
+.bar-track-col {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.bar-track-shell {
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 24px 24px 16px 16px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.bar-fill {
+  width: 100%;
+  position: relative;
+  border-radius: 20px 20px 14px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 1.25rem 0.85rem;
+  transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Bar Label Inner */
+.bar-label-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.2rem;
+  font-family: 'General Sans', sans-serif;
+  color: #FFFFFF;
+}
+
+.bar-year {
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.bar-val {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+/* Bar Color Fill Themes (Established Portfolio Palette) */
+/* 01. Day 01 Onboarding - Soft Periwinkle Blue */
+.bar-fill--blue {
+  background-color: #C6D8FF;
+  color: #0D1C40;
+}
+.bar-fill--blue .bar-label-inner {
+  color: #0D1C40;
+}
+
+/* 02. Day 07 Streak Pressure - Soft Lime Green */
+.bar-fill--lime {
+  background-color: #D9F5C2;
+  color: #123305;
+}
+.bar-fill--lime .bar-label-inner {
+  color: #123305;
+}
+
+/* 03. Day 14 Drop-Off Peak - Soft Blush Pink */
+.bar-fill--pink {
+  background-color: #FBBFCA;
+  color: #3B0512;
+}
+.bar-fill--pink .bar-label-inner {
+  color: #3B0512;
+}
+
+/* Feedback & Testing Loops Component (.mock-triple-grid) */
+.mock-triple-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.triple-card-mock {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.triple-card-mock:hover {
+  transform: translateY(-8px);
+}
+
+/* Card 1: Video Session Recording Card */
+.testing-video-card {
+  padding: 0;
+  background-color: #000000;
+}
+
+.testing-video-card--full {
+  padding: 0;
+  background-color: #000000;
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.testing-full-video-media,
+.testing-full-video-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 28px;
+  background-color: #000000;
+}
+
+.testing-video-wrap {
+  position: relative;
+  width: 100%;
+  height: 270px;
+  overflow: hidden;
+}
+
+.testing-video-media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  opacity: 0.85;
+  transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+.testing-video-card:hover .testing-video-media {
+  opacity: 1;
+  transform: scale(1.04);
+}
+
+.video-play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: rgba(0, 0, 0, 0.35);
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.video-play-overlay:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.play-icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  color: #121418;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 3px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.video-play-overlay:hover .play-icon-circle {
+  transform: scale(1.12);
+  background: #FFFFFF;
+}
+
+.play-svg {
+  width: 22px;
+  height: 22px;
+}
+
+.video-overlay-lbl {
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.testing-card-footer {
+  padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.triple-card-num {
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: var(--text-primary);
+}
+
+.testing-card-desc {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+/* Cards 2 & 3: Scorecards */
+.testing-score-card {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0;
+}
+
+.score-card-body {
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.score-val {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(3.2rem, 5vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  color: var(--text-primary);
+}
+
+.score-lbl {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* Bloomberg-Inspired 10x10 Waffle Dot Grid Matrix Component */
+.findings-matrix-container {
+  width: 100%;
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4rem;
+  align-items: center;
+  padding: 1.5rem 0;
+}
+
+/* Left Stat Callout Column */
+.findings-stat-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.findings-stat-val {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(4.5rem, 9vw, 7.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -2px;
+  color: #8A7DFF; /* Vibrant Bloomberg Periwinkle */
+}
+
+.findings-stat-desc {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.4px;
+  color: var(--text-primary);
+}
+
+.findings-provenance-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  width: fit-content;
+  margin-top: 0.5rem;
+}
+
+.provenance-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #8A7DFF;
+}
+
+.provenance-txt {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Right Matrix Column */
+.findings-matrix-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.matrix-labels-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.matrix-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+.matrix-label::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.matrix-label--purple {
+  color: #8A7DFF;
+}
+.matrix-label--purple::before {
+  background-color: #8A7DFF;
+}
+
+.matrix-label--lime {
+  color: #C8F086;
+}
+.matrix-label--lime::before {
+  background-color: #C8F086;
+}
+
+/* 10x10 Waffle Grid */
+.waffle-grid-matrix {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  width: 100%;
+  max-width: 440px;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 24px;
+}
+
+.waffle-dot {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease;
+  cursor: pointer;
+}
+
+.waffle-dot:hover {
+  transform: scale(1.35);
+  z-index: 10;
+}
+
+.waffle-dot--purple {
+  background-color: #8A7DFF;
+  box-shadow: 0 0 10px rgba(138, 125, 255, 0.3);
+}
+
+.waffle-dot--purple:hover {
+  box-shadow: 0 0 18px rgba(138, 125, 255, 0.8);
+}
+
+.waffle-dot--lime {
+  background-color: #C8F086;
+  box-shadow: 0 0 10px rgba(200, 240, 134, 0.3);
+}
+
+.waffle-dot--lime:hover {
+  box-shadow: 0 0 18px rgba(200, 240, 134, 0.8);
+}
+
+/* Outcome & Impact 3-Card Analytics Dashboard Component */
+.impact-dashboard-container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.impact-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.impact-card:hover {
+  transform: translateY(-6px);
+}
+
+.impact-card--wide {
+  width: 100%;
+}
+
+.impact-bottom-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.impact-card--square {
+  min-height: 320px;
+  justify-content: space-between;
+}
+
+.impact-card--center {
+  align-items: center;
+  justify-content: center;
+}
+
+/* Top Card: Slider Track & Axis */
+.impact-slider-track-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.impact-slider-axis {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.impact-slider-handle {
+  position: absolute;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  z-index: 5;
+}
+
+.handle-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.handle-crosshair {
+  width: 2px;
+  height: 36px;
+  background-color: #24B54B;
+}
+
+.impact-slider-bar-track {
+  width: 100%;
+  height: 24px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.impact-slider-bar-fill {
+  height: 100%;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #FCE23A 0%, #24B54B 100%);
+}
+
+.impact-segments-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding-top: 0.5rem;
+}
+
+.impact-segment-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.segment-badge-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.segment-pill {
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+}
+
+.segment-pill--green {
+  background-color: #24B54B;
+}
+
+.segment-pill--grey {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.segment-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.segment-avatars {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-left: 1.35rem;
+}
+
+.avatar-circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.78rem;
+}
+
+.avatar-circle-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  margin-left: -6px;
+  transition: transform 0.2s ease;
+}
+
+.avatar-circle-img:first-child {
+  margin-left: 0;
+}
+
+.avatar-circle-img:hover {
+  transform: scale(1.15) translateY(-2px);
+  z-index: 5;
+}
+
+.avatar-img-fit {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+.avatar-count-pill {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* Bottom-Left Card: Histogram */
+.histogram-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.histogram-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.histogram-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.3px;
+}
+
+.histogram-sublbl {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.histogram-chart-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-top: 1rem;
+}
+
+.histogram-bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.75rem;
+  height: 180px;
+  padding: 0.5rem 0;
+}
+
+.hist-bar {
+  width: 22px;
+  border-radius: 10px 10px 4px 4px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hist-bar--muted {
+  background-color: rgba(255, 255, 255, 0.18);
+  border: none;
+}
+
+.hist-bar--active {
+  background-color: #FCE23A;
+  border: none;
+  box-shadow: none;
+}
+
+.hist-bar:hover {
+  transform: translateY(-4px);
+}
+
+.histogram-range-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+.range-handle-pill {
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.range-track-line {
+  flex: 1;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* 3-Bubble Overlapping Venn Cluster Analytics Card */
+.impact-card--venn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.venn-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.venn-header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.venn-eyebrow {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.venn-hero-val-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.venn-hero-val {
+  font-family: 'General Sans', sans-serif;
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.8px;
+  color: var(--text-primary);
+}
+
+.venn-hero-badge {
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  border-radius: 20px;
+  background-color: #C3F5DB;
+  color: #0D5C35;
+}
+
+.venn-details-btn {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.venn-details-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+/* 3-Bubble Cluster Layout */
+.venn-bubbles-container {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0;
+}
+
+.venn-bubble {
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'General Sans', sans-serif;
+  font-weight: 800;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.venn-bubble:hover {
+  transform: scale(1.06);
+  z-index: 10;
+}
+
+/* Circle 1: Top-Left Soft Pink 20% */
+.venn-bubble--pink {
+  width: 82px;
+  height: 82px;
+  top: -14px;
+  left: calc(50% - 62px);
+  background-color: #FBBFCA;
+  color: #3B0512;
+  font-size: 1.1rem;
+  opacity: 1;
+}
+
+/* Circle 2: Bottom-Left Soft Lime 32% */
+.venn-bubble--lime {
+  width: 105px;
+  height: 105px;
+  bottom: 8px;
+  left: calc(50% - 85px);
+  background-color: #D9F5C2;
+  color: #123305;
+  font-size: 1.35rem;
+  opacity: 1;
+}
+
+/* Circle 3: Large Right Soft Blue 48% */
+.venn-bubble--blue {
+  width: 132px;
+  height: 132px;
+  top: 18px;
+  right: calc(50% - 95px);
+  background-color: #C6D8FF;
+  color: #0D1C40;
+  font-size: 1.85rem;
+  opacity: 1;
+}
+
+/* Legend Rows Breakdown */
+.venn-legend-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  width: 100%;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.venn-legend-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--text-primary);
+}
+
+.venn-legend-label {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.venn-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+}
+
+.venn-dot--blue {
+  background-color: #C6D8FF;
+}
+
+.venn-dot--lime {
+  background-color: #D9F5C2;
+}
+
+.venn-dot--pink {
+  background-color: #FBBFCA;
+}
+
+.venn-legend-val {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: 'General Sans', sans-serif;
+  font-weight: 700;
+}
+
+.venn-trend--up {
+  font-size: 0.75rem;
+  color: #24B54B;
+}
+
+/* Strategy Bento Board Artifact (Reflections Section) */
+.strat-bento-container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 0;
+}
+
+.strat-bento-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 800px;
+}
+
+.strat-bento-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  color: var(--text-primary);
+}
+
+.strat-bento-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.strat-bento-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.strat-card {
+  border-radius: 28px;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.strat-card:hover {
+  transform: translateY(-6px);
+}
+
+.strat-card-tag {
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: inherit;
+  opacity: 0.85;
+}
+
+.dark-tag {
+  color: #121418 !important;
+}
+
+/* Card 1: Top Hero Soft Periwinkle Blue Roadmap Card */
+.strat-card--blue {
+  background-color: #C6D8FF;
+  color: #0D1C40;
+}
+
+.roadmap-stepped-axis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  width: 100%;
+}
+
+.roadmap-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  z-index: 2;
+}
+
+.step-node {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #0D1C40;
+  color: #FFFFFF;
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-label {
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #0D1C40;
+}
+
+.roadmap-line {
+  flex: 1;
+  height: 2px;
+  background: rgba(13, 28, 64, 0.2);
+  margin: 0 -1rem 1.4rem -1rem;
+}
+
+.roadmap-text-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  opacity: 0.92;
+}
+
+/* Middle Row Layout */
+.strat-middle-row {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.strat-card--white {
+  background-color: #FFFFFF;
+  color: #121418;
+}
+
+.bento-title-48 {
+  font-family: 'General Sans', sans-serif;
+  font-size: 68px;
+  font-weight: 800;
+  line-height: 0.98;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+  color: #121418;
+  margin: 0;
+}
+
+.golden-circle-wrap {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.golden-circle-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.golden-circle-callouts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #121418;
+}
+
+.callout-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+}
+
+.callout-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #121418;
+  margin-top: 0.4rem;
+  flex-shrink: 0;
+}
+
+.strat-right-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Card 3: Soft Lime Green Card */
+.strat-card--green {
+  background-color: #D9F5C2;
+  color: #123305;
+}
+
+/* Card 4: Soft Blush Pink Card */
+.strat-card--pink {
+  background-color: #FBBFCA;
+  color: #3B0512;
+}
+
+.pill-tags-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.bento-pill-tag {
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Green Card Dark Pill Shades */
+.strat-card--green .bento-pill-tag {
+  background: rgba(18, 51, 5, 0.12);
+  color: #123305;
+}
+
+.strat-card--green .bento-pill-tag.active {
+  background: #184209;
+  color: #D9F5C2;
+  box-shadow: 0 4px 12px rgba(24, 66, 9, 0.25);
+}
+
+/* Pink Card Dark Pill Shades */
+.strat-card--pink .bento-pill-tag {
+  background: rgba(59, 5, 18, 0.12);
+  color: #3B0512;
+}
+
+.strat-card--pink .bento-pill-tag.active {
+  background: #4A0817;
+  color: #FBBFCA;
+  box-shadow: 0 4px 12px rgba(74, 8, 23, 0.25);
+}
+
+/* Bottom Row Layout */
+.strat-bottom-row {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Card 5: Soft Lavender/Lilac Card */
+.strat-card--purple {
+  background-color: #E6D9FF;
+  color: #1C0D40;
+}
+
+.bento-sliders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.slider-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: inherit;
+}
+
+.slider-bar-track {
+  position: relative;
+  width: 100%;
+  height: 14px;
+  border-radius: 8px;
+  background: rgba(28, 13, 64, 0.12);
+  overflow: hidden;
+}
+
+.slider-fill-bar {
+  height: 100%;
+  border-radius: 8px;
+  background: #6B38C3;
+  box-shadow: 0 2px 8px rgba(107, 56, 195, 0.3);
+  transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Card 6: Soft Golden Amber Positioning Matrix Card */
+.strat-card--yellow {
+  background-color: #FDE3B8;
+  color: #382200;
+}
+
+.matrix-chart-wrap {
+  width: 100%;
+  height: 200px;
+}
+
+.matrix-quad-grid {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.matrix-line-h {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  background: rgba(56, 34, 0, 0.25);
+}
+
+.matrix-line-v {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1.5px;
+  background: rgba(56, 34, 0, 0.25);
+}
+
+.matrix-axis-label {
+  position: absolute;
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: rgba(56, 34, 0, 0.65);
+}
+
+.axis-y-top {
+  top: 4px;
+  left: 52%;
+}
+
+.axis-y-bottom {
+  bottom: 4px;
+  left: 52%;
+}
+
+.axis-x-left {
+  left: 4px;
+  top: 52%;
+}
+
+.axis-x-right {
+  right: 4px;
+  top: 52%;
+}
+
+.matrix-node {
+  position: absolute;
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(56, 34, 0, 0.15);
+  color: #382200;
+}
+
+.matrix-hero-fitflex {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.fitflex-brand-pill {
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.4rem 0.95rem;
+  border-radius: 20px;
+  background: #121418;
+  color: #FFFFFF;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive Breakdown */
+@media (max-width: 1024px) {
+  .problem-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .problem-top-metrics-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .problem-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .problem-top-metrics-row {
+    grid-template-columns: 1fr;
+  }
+
+  .problem-card {
+    min-height: 280px;
+    padding: 1.5rem;
+  }
+}
+
 /* Responsive Breakdown */
 @media (max-width: 960px) {
   .adekoya-overview-bar {
@@ -585,5 +3163,1132 @@
 
   .large-screen-mock {
     height: 260px;
+  }
+}
+
+/* Press Pause Lagos Inspired FAQ Path Container for Verse Overview */
+.verse-faq-path-container {
+  width: 100%;
+  background-color: #1a1a1a;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 27px,
+    rgba(255, 255, 255, 0.08) 27px,
+    rgba(255, 255, 255, 0.08) 28px
+  );
+  border-radius: 32px;
+  padding: 2.5rem 2.25rem 3rem 2.25rem;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: none !important;
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  position: relative;
+}
+
+.faq-path-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+
+.faq-brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.faq-brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.faq-brand-logo .logo-symbol {
+  font-family: 'General Sans', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+  color: #FFFFFF;
+}
+
+.faq-brand-logo .logo-txt {
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+  color: #E2E8F0;
+}
+
+.faq-brand-logo .logo-txt small {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #94A3B8;
+  letter-spacing: 1px;
+}
+
+.faq-eyebrow-tag {
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: #F1F5F9;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.4rem 0.85rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Cards Layout Container */
+.faq-cards-path-wrap {
+  position: relative;
+  width: 100%;
+  min-height: 640px;
+}
+
+.faq-dashed-path-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Tilted Overview Path Cards */
+.verse-faq-card {
+  position: absolute;
+  width: clamp(280px, 42vw, 390px);
+  border-radius: 24px;
+  padding: 1.85rem 1.65rem;
+  z-index: 2;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  box-shadow: none !important;
+}
+
+.verse-faq-card:hover {
+  transform: scale(1.04) rotate(0deg) !important;
+  z-index: 10;
+  box-shadow: none !important;
+}
+
+/* Card Positioning & Tilts */
+.card-pos-1 {
+  top: 20px;
+  left: 20px;
+  transform: rotate(-3deg);
+}
+
+.card-pos-2 {
+  top: 130px;
+  right: 20px;
+  transform: rotate(2deg);
+}
+
+.card-pos-3 {
+  top: 310px;
+  left: 30px;
+  transform: rotate(-2deg);
+}
+
+.card-pos-4 {
+  top: 420px;
+  right: 30px;
+  transform: rotate(3deg);
+}
+
+/* Circular Number Badge */
+.faq-card-num-badge {
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  font-family: 'General Sans', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #FFFFFF;
+  box-shadow: none !important;
+}
+
+/* Palette Variants for Cards */
+/* 01. Soft Periwinkle Blue */
+.verse-card--blue {
+  background-color: #C6D8FF !important;
+  color: #0D1C40 !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+.verse-card--blue .faq-card-q {
+  color: #1A3A7A !important;
+}
+.verse-card--blue .faq-card-a {
+  color: #0D1C40 !important;
+}
+.verse-card--blue .faq-card-num-badge {
+  background-color: #1A3A7A !important;
+  color: #C6D8FF !important;
+}
+
+/* 02. Soft Lime Green */
+.verse-card--lime {
+  background-color: #D9F5C2 !important;
+  color: #123305 !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+.verse-card--lime .faq-card-q {
+  color: #184209 !important;
+}
+.verse-card--lime .faq-card-a {
+  color: #123305 !important;
+}
+.verse-card--lime .faq-card-num-badge {
+  background-color: #184209 !important;
+  color: #D9F5C2 !important;
+}
+
+/* 03. Soft Golden Butter */
+.verse-card--amber {
+  background-color: #FDE3B8 !important;
+  color: #382200 !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+.verse-card--amber .faq-card-q {
+  color: #5C3800 !important;
+}
+.verse-card--amber .faq-card-a {
+  color: #382200 !important;
+}
+.verse-card--amber .faq-card-num-badge {
+  background-color: #5C3800 !important;
+  color: #FDE3B8 !important;
+}
+
+/* 04. Soft Blush Pink */
+.verse-card--pink {
+  background-color: #FBBFCA !important;
+  color: #3B0512 !important;
+  box-shadow: none !important;
+  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+}
+.verse-card--pink .faq-card-q {
+  color: #4A0817 !important;
+}
+.verse-card--pink .faq-card-a {
+  color: #3B0512 !important;
+}
+.verse-card--pink .faq-card-num-badge {
+  background-color: #4A0817 !important;
+  color: #FBBFCA !important;
+}
+
+/* Global Override: Remove all shadows across Case Study page cards and elements */
+.adekoya-case-page *,
+.adekoya-case-page *::before,
+.adekoya-case-page *::after {
+  box-shadow: none !important;
+}
+
+/* Question Header */
+.faq-card-q {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(1.2rem, 1.8vw, 1.5rem);
+  font-weight: 800;
+  line-height: 1.22;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.3px;
+}
+
+/* Answer Paragraph */
+.faq-card-a {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  font-weight: 500;
+  opacity: 0.96;
+}
+
+/* Color Highlight Tags */
+.faq-hl-tag {
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-weight: 800;
+  display: inline-block;
+}
+
+.hl-darkblue {
+  background-color: #1A3A7A;
+  color: #FFFFFF;
+}
+
+.hl-darkgreen {
+  background-color: #184209;
+  color: #FFFFFF;
+}
+
+.hl-darkamber {
+  background-color: #5C3800;
+  color: #FFFFFF;
+}
+
+.hl-darkpink {
+  background-color: #4A0817;
+  color: #FFFFFF;
+}
+
+/* Sparkle Accents */
+.sparkle-accent {
+  position: absolute;
+  font-size: 1.4rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.sparkle-dark {
+  color: rgba(18, 20, 24, 0.35);
+  bottom: 12px;
+  right: 16px;
+}
+
+@media (max-width: 850px) {
+  .faq-cards-path-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    min-height: auto;
+  }
+
+  .faq-dashed-path-svg {
+    display: none;
+  }
+
+  .verse-faq-card {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+    width: 100%;
+  }
+}
+
+/* Artsy Gallery Insights Inspired Stepped Ribbon Chart for Verse Key Insights */
+.verse-stepped-insights-container {
+  width: 100%;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 1rem 0;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  box-shadow: none !important;
+  margin-bottom: 2.5rem;
+  overflow: visible;
+  border: none;
+  position: relative;
+}
+
+.stepped-report-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  opacity: 0.85;
+}
+
+.stepped-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.stepped-page-num {
+  font-family: 'General Sans', sans-serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+}
+
+.stepped-headline-wrap {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.stepped-main-headline {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(1.8rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.8px;
+  color: var(--text-primary);
+  max-width: 22ch;
+}
+
+/* Vertical Stack of 5 Stepped Horizontal Color Bars */
+.stepped-bars-stack {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.35rem;
+  margin-top: 1rem;
+}
+
+.stepped-bar {
+  display: flex;
+  align-items: center;
+  padding: 1.1rem 2.25rem;
+  gap: 1.25rem;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.stepped-bar:hover {
+  transform: translateX(6px);
+}
+
+/* Staggered Indentation Offsets matching Artsy stepped grid */
+.pos-step-1 {
+  margin-left: 28%;
+}
+
+.pos-step-2 {
+  margin-left: 18%;
+}
+
+.pos-step-3 {
+  margin-left: 14%;
+}
+
+.pos-step-4 {
+  margin-left: 32%;
+}
+
+.pos-step-5 {
+  margin-left: 40%;
+}
+
+/* Color Themes */
+.bar-color-pink {
+  background-color: #E886C9;
+  color: #121418;
+}
+
+.bar-color-amber {
+  background-color: #FAA938;
+  color: #121418;
+}
+
+.bar-color-blue {
+  background-color: #3B62F6;
+  color: #FFFFFF;
+}
+
+.bar-color-coral {
+  background-color: #FF5A60;
+  color: #121418;
+}
+
+.bar-color-lime {
+  background-color: #B6F059;
+  color: #121418;
+}
+
+.bar-stat-val {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1px;
+  flex-shrink: 0;
+}
+
+.bar-stat-desc {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.35;
+  opacity: 0.95;
+  max-width: 48ch;
+}
+
+/* Footer Index */
+.stepped-report-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.footer-index-txt {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+  .pos-step-1,
+  .pos-step-2,
+  .pos-step-3,
+  .pos-step-4,
+  .pos-step-5 {
+    margin-left: 0;
+  }
+  .stepped-bars-stack {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    gap: 0.5rem;
+  }
+  .stepped-bar {
+    border-radius: 14px;
+    padding: 1rem 1.25rem;
+  }
+}
+
+/* 4-Step Solution Architecture & System Ideation Flow Infographic for Verse */
+/* 4-Step Solution Architecture & System Ideation Flow Infographic for Verse */
+.verse-ideation-flow-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  border-radius: 0;
+  padding: 1rem 0;
+  color: var(--text-primary, #FFFFFF);
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+  border: none;
+  position: relative;
+  box-shadow: none !important;
+}
+
+.flow-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.flow-main-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.6px;
+  color: var(--text-primary, #FFFFFF);
+}
+
+.flow-sub-title {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--text-secondary, #94A3B8);
+  max-width: 60ch;
+  line-height: 1.5;
+}
+
+/* 4-Step Pipeline Grid */
+.flow-pipeline-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  position: relative;
+  margin-top: 1rem;
+}
+
+/* Dotted Horizontal Connecting Arrow Line Behind Nodes */
+.flow-pipeline-grid::before {
+  content: '';
+  position: absolute;
+  top: 72px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.3) 0,
+    rgba(255, 255, 255, 0.3) 6px,
+    transparent 6px,
+    transparent 12px
+  );
+  z-index: 1;
+}
+
+.flow-step-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+  position: relative;
+  z-index: 2;
+}
+
+.flow-node-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+/* Floating Icon Badge (Using Portfolio Palette Accent Colors) */
+.flow-top-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  box-shadow: none !important;
+  z-index: 3;
+}
+
+.flow-top-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* 01. Periwinkle Blue */
+.icon-bg--blue {
+  background-color: #1A3A7A;
+  color: #C6D8FF;
+}
+
+/* 02. Soft Lime Green */
+.icon-bg--green {
+  background-color: #184209;
+  color: #D9F5C2;
+}
+
+/* 03. Soft Golden Butter / Amber */
+.icon-bg--amber {
+  background-color: #5C3800;
+  color: #FDE3B8;
+}
+
+/* 04. Soft Blush Pink */
+.icon-bg--pink {
+  background-color: #4A0817;
+  color: #FBBFCA;
+}
+
+/* Radial Blur Aura Rings (Matching Portfolio Palette Tones) */
+.flow-aura-ring {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.flow-step-col:hover .flow-aura-ring {
+  transform: scale(1.08);
+}
+
+.aura--blue {
+  background: radial-gradient(circle, rgba(198, 216, 255, 0.45) 0%, rgba(198, 216, 255, 0.15) 50%, transparent 75%);
+  box-shadow: 0 0 35px rgba(198, 216, 255, 0.25);
+}
+
+.aura--green {
+  background: radial-gradient(circle, rgba(217, 245, 194, 0.45) 0%, rgba(217, 245, 194, 0.15) 50%, transparent 75%);
+  box-shadow: 0 0 35px rgba(217, 245, 194, 0.25);
+}
+
+.aura--amber {
+  background: radial-gradient(circle, rgba(253, 227, 184, 0.45) 0%, rgba(253, 227, 184, 0.15) 50%, transparent 75%);
+  box-shadow: 0 0 35px rgba(253, 227, 184, 0.25);
+}
+
+.aura--pink {
+  background: radial-gradient(circle, rgba(251, 191, 202, 0.45) 0%, rgba(251, 191, 202, 0.15) 50%, transparent 75%);
+  box-shadow: 0 0 35px rgba(251, 191, 202, 0.25);
+}
+
+.flow-center-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  border: 3px solid #121418;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+}
+
+/* Step Content Card */
+.flow-step-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.flow-step-num {
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #94A3B8;
+  letter-spacing: 0.5px;
+}
+
+.flow-pillar-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #FFFFFF;
+}
+
+.flow-pillar-desc {
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: #CBD5E1;
+  opacity: 0.9;
+}
+
+@media (max-width: 900px) {
+  .flow-pipeline-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .flow-pipeline-grid::before {
+    display: none;
+  }
+}
+
+/* Steerwise Roadmap & Vision Inspired 3-Column Progressive Card Grid for Verse Ideation (Using Portfolio Palette) */
+.verse-roadmap-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: none !important;
+  margin-bottom: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.roadmap-header-card {
+  width: 100%;
+  background-color: #FFFFFF;
+  color: #121418;
+  padding: 2.25rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+}
+
+.roadmap-header-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #64748B;
+  letter-spacing: 0.5px;
+}
+
+.roadmap-eyebrow {
+  color: #475569;
+  letter-spacing: 1px;
+}
+
+.roadmap-main-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.8px;
+  color: #121418;
+  margin-top: 0.25rem;
+}
+
+/* 3 Equal Columns Using Portfolio Palette Colors */
+.roadmap-columns-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+
+.roadmap-col {
+  padding: 2.5rem 2rem 2.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 0.85rem;
+  transition: transform 0.3s ease;
+}
+
+.roadmap-col:hover {
+  transform: translateY(-4px);
+}
+
+/* Column 1: Periwinkle Blue */
+.roadmap-col--blue {
+  background-color: #C6D8FF;
+  color: #0D1C40;
+}
+
+.badge--navy {
+  background-color: #1A3A7A;
+}
+
+/* Column 2: Soft Lime Green */
+.roadmap-col--lime {
+  background-color: #D9F5C2;
+  color: #123305;
+}
+
+.badge--darkgreen {
+  background-color: #184209;
+}
+
+/* Column 3: Soft Golden Butter / Amber */
+.roadmap-col--amber {
+  background-color: #FDE3B8;
+  color: #382200;
+}
+
+.badge--darkamber {
+  background-color: #5C3800;
+}
+
+/* Icon Badge */
+.roadmap-icon-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+  box-shadow: none !important;
+}
+
+.roadmap-icon-badge svg {
+  width: 24px;
+  height: 24px;
+}
+
+.roadmap-stage-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(1.4rem, 2vw, 1.85rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  color: inherit;
+}
+
+.roadmap-pillar-name {
+  font-family: 'General Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.roadmap-stage-desc {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  font-weight: 500;
+  color: inherit;
+  opacity: 0.92;
+  margin-top: 0.2rem;
+}
+
+@media (max-width: 900px) {
+  .roadmap-columns-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Result Showcase Container (Modeled on Reference Image Layout for Verse) */
+.verse-result-showcase-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  padding: 1rem 0;
+  color: var(--text-primary, #FFFFFF);
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.result-eyebrow {
+  font-family: 'General Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-secondary, #94A3B8);
+  letter-spacing: 0.5px;
+}
+
+.result-main-headline {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  color: var(--text-primary, #FFFFFF);
+  max-width: 32ch;
+}
+
+.result-author-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.result-avatar-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  background-color: #1E222A;
+}
+
+.author-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.result-author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.author-name {
+  font-family: 'General Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary, #FFFFFF);
+}
+
+.author-role {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-secondary, #94A3B8);
+}
+
+/* Bottom Grid Layout */
+.result-bottom-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2.5rem;
+  align-items: end;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+/* Visual Cards Column (2 Rounded Cards Side-by-Side) */
+.result-cards-column {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.res-visual-card {
+  background-color: var(--bg-card, #121418);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 230px;
+}
+
+.res-card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.res-card-label {
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  color: #94A3B8;
+  font-weight: 500;
+}
+
+.res-card-num {
+  font-family: 'General Sans', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+/* Bar Chart inside Card 1 */
+.res-bar-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.35rem;
+  height: 90px;
+  margin-top: 1.25rem;
+}
+
+.res-bar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 1;
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.res-bar-track {
+  width: 100%;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.res-bar-fill {
+  width: 100%;
+  background-color: #8C75FF;
+  border-radius: 12px;
+  transition: height 0.4s ease;
+}
+
+.res-bar-month {
+  font-size: 0.65rem;
+  color: #64748B;
+  font-weight: 600;
+}
+
+/* Donut Chart inside Card 2 */
+.res-donut-chart {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin: 1rem auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.donut-svg {
+  width: 100%;
+  height: 100%;
+}
+
+.donut-center-text {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.donut-val {
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: #FFFFFF;
+}
+
+.donut-lbl {
+  font-size: 0.62rem;
+  color: #94A3B8;
+}
+
+/* Right Details Column */
+.result-details-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.result-summary-text {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #CBD5E1;
+}
+
+.result-counters-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+}
+
+.result-counter-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.res-counter-num {
+  font-family: 'General Sans', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1;
+}
+
+.res-counter-lbl {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: #94A3B8;
+  max-width: 12ch;
+}
+
+@media (max-width: 900px) {
+  .result-bottom-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .result-cards-column {
+    grid-template-columns: 1fr;
   }
 }

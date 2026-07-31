@@ -1,8 +1,24 @@
 /* Font Imports */
 @font-face {
   font-family: 'General Sans';
+  src: url('/fonts/GeneralSans-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
   src: url('/fonts/GeneralSans-Medium.otf') format('opentype');
   font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/GeneralSans-Semibold.otf') format('opentype');
+  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -41,6 +57,8 @@
 
   /* Typography */
   --font-display: 'General Sans', sans-serif;
+  --font-heading: 'General Sans', sans-serif;
+  --font-title: 'General Sans', sans-serif;
   --font-body: 'Montserrat', sans-serif;
   --font-serif: 'Instrument Serif', serif;
   --fs-display: clamp(1.8rem, 8vw, 4.5rem); /* Capped at 72px, scales down to 28.8px on mobile */
@@ -95,9 +113,8 @@ textarea:focus-visible {
 }
 
 /* Typography Helpers */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-display);
-  font-weight: 700;
+h1, h2, h3, h4, h5, h6, .display-font, .title-font {
+  font-family: 'General Sans', sans-serif;
   color: var(--text-primary);
 }
 
