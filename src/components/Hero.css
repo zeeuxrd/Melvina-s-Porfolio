@@ -6,7 +6,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  padding: 12rem 2rem 8rem 2rem;
+  padding: 12rem 2rem 5rem 2rem;
   overflow: hidden;
 }
 
@@ -49,50 +49,51 @@
 .hero-title {
   font-family: 'General Sans', sans-serif;
   font-weight: 500;
-  font-size: clamp(2.4rem, 5.4vw, 4.25rem);
-  line-height: 1.18;
+  font-size: clamp(1.8rem, 4.0vw, 3.2rem);
+  line-height: 1.42;
   letter-spacing: -0.5px;
   color: var(--text-primary);
 }
 
-/* Sticker pile layered over the headline */
-.hero-stickers {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.hero-sticker {
-  position: absolute;
+/* Option 2: Inline Capsule Badges (Flows Inline with Text - Never Covers Text) */
+.hero-inline-pill {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.5rem 0.9rem;
-  border-radius: 10px;
+  padding: 0.25rem 0.85rem;
+  border-radius: 999px;
   font-family: var(--font-body);
-  font-size: 1.15rem;
-  font-weight: 500;
-  white-space: nowrap;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
-  pointer-events: auto;
-  transition: transform var(--transition-speed) ease;
+  font-size: clamp(0.98rem, 1.85vw, 1.38rem);
+  font-weight: 600;
+  vertical-align: middle;
+  margin: 0 0.18rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease;
+  cursor: default;
 }
 
-.hero-sticker:hover {
-  transform: rotate(0deg) scale(1.05) !important;
-  z-index: 10 !important;
+.hero-inline-pill:hover {
+  transform: rotate(0deg) scale(1.08) !important;
 }
 
-.hero-sticker-icon {
+.hero-pill-icon {
   display: inline-flex;
-  width: 18px;
-  height: 18px;
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
 }
 
-.hero-sticker-icon svg {
+.hero-pill-icon svg {
   width: 100%;
   height: 100%;
 }
+
+/* Decorative Rotations */
+.rotate-neg-5 { transform: rotate(-5deg); }
+.rotate-pos-4 { transform: rotate(4deg); }
+.rotate-neg-3 { transform: rotate(-3deg); }
+.rotate-neg-4 { transform: rotate(-4deg); }
+.rotate-pos-6 { transform: rotate(6deg); }
 
 /* Soft pastel fills with a deeper tone-matched label */
 .hero-sticker--green {
@@ -134,7 +135,7 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 9rem 1.5rem 4rem 1.5rem;
+    padding: 9rem 18px 2.5rem 18px;
     min-height: auto;
   }
 
@@ -157,7 +158,7 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    padding: 8rem 1rem 3rem 1rem;
+    padding: 8rem 18px 2.5rem 18px;
   }
 
   .hero-sticker {

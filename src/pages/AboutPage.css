@@ -131,7 +131,7 @@
   transform: rotate(var(--rot, 0deg)) translate(var(--tx, 0px), var(--ty, 0px));
   transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, z-index 0.1s ease;
   cursor: grab;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.38);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.19);
   user-select: none;
   touch-action: none;
 }
@@ -143,7 +143,7 @@
 .sticker-card:hover {
   transform: rotate(var(--rot, 0deg)) translate(var(--tx, 0px), calc(var(--ty, 0px) - 10px)) scale(1.03) !important;
   z-index: 40 !important;
-  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
 }
 
 /* Sticker 1: Terracotta Main Note (Center) */
@@ -442,7 +442,7 @@
   font-weight: 600;
   font-size: 1rem;
   z-index: 9;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* Sticker 10: Spotify-Style Now Playing Music Card (Light Purple Palette) */
@@ -460,7 +460,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.175);
 }
 
 .music-header {
@@ -612,7 +612,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.125);
 }
 
 .coral-emoji {
@@ -693,13 +693,6 @@
   font-weight: 500;
   letter-spacing: 0.5px;
   color: var(--text-secondary);
-}
-
-/* Section Dividers */
-.about-page-section-divider {
-  width: 100%;
-  border-top: 1px solid var(--border-color);
-  margin: 4.5rem 0;
 }
 
 /* Subhead Tags */
@@ -860,9 +853,10 @@
   color: var(--bg-primary);
 }
 
-.about-page-cta-btn.primary:hover {
-  background-color: var(--accent-color);
-  color: #000000;
+.about-page-cta-btn.primary:hover,
+.about-page-cta-btn.primary:focus {
+  background-color: #FF1493;
+  color: #ffffff;
   transform: translateY(-2px);
 }
 
@@ -893,7 +887,7 @@
 
 @media (max-width: 768px) {
   .about-page {
-    padding: 6rem 1.5rem 6rem 1.5rem;
+    padding: 6rem 18px 6rem 18px;
   }
 
   .about-page-stats-grid {

@@ -5,13 +5,13 @@ export default function About({ onReadMore }) {
   return (
     <section className="about-section" id="about" aria-label="About">
       <div className="about-container">
-        <h2 className="about-display-title">
+        <h2 className="about-display-title" data-reveal>
           UX researcher focused on complex products, systems, and human-centered strategy.
         </h2>
 
         <div className="about-divider" />
 
-        <div className="about-story-wrap">
+        <div className="about-story-wrap" data-reveal>
           <span className="about-tag">EXPERIENCE</span>
 
           <div className="about-paragraphs">

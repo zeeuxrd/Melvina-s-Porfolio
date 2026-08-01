@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './Header.css'
+import avatarImg from '../../images/assets/avatar.jpg'
 
 const mobileMenuLinks = [
   { label: 'Home', page: 'home', targetId: undefined },
@@ -11,7 +12,7 @@ const mobileMenuLinks = [
 export default function Header({ theme, onToggleTheme, onNavigate, currentPage }) {
   const [imgError, setImgError] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const avatarPath = '/src/assets/avatar.png';
+  const avatarPath = avatarImg;
 
   const handleNav = (page, targetId) => (e) => {
     if (onNavigate) {
@@ -186,7 +187,7 @@ export default function Header({ theme, onToggleTheme, onNavigate, currentPage }
           ))}
 
           <a
-            href="mailto:hello@somtochukwu.com"
+            href="mailto:okechukwugentlesomto@gmail.com"
             className="mobile-menu-item"
             onClick={() => setIsMenuOpen(false)}
           >

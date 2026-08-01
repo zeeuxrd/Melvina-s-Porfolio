@@ -1,10 +1,10 @@
 import React from 'react'
 import './Work.css'
-import firstCaseCover from 'C:/Users/Lenovo/.gemini/antigravity-ide/brain/d189ee92-2ad7-43f3-b2c8-4c42f3c69bd6/media__1785160138028.png'
-import secondCaseCover from 'C:/Users/Lenovo/.gemini/antigravity-ide/brain/d189ee92-2ad7-43f3-b2c8-4c42f3c69bd6/media__1785160961905.png'
-import thirdCaseCover from 'C:/Users/Lenovo/.gemini/antigravity-ide/brain/d189ee92-2ad7-43f3-b2c8-4c42f3c69bd6/media__1785165571132.jpg'
-import fourthCaseCover from 'C:/Users/Lenovo/.gemini/antigravity-ide/brain/d189ee92-2ad7-43f3-b2c8-4c42f3c69bd6/media__1785166951949.jpg'
-import porscheCoverNew from 'C:/Users/Lenovo/.gemini/antigravity-ide/brain/bc996f2b-f821-4882-a4b8-3fb1816f1c5f/media__1785442322253.jpg'
+import firstCaseCover from '../../images/assets/media__1785160138028.png'
+import secondCaseCover from '../../images/assets/media__1785160961905.png'
+import thirdCaseCover from '../../images/assets/media__1785165571132.jpg'
+import fourthCaseCover from '../../images/assets/media__1785166951949.jpg'
+import porscheCoverNew from '../../images/assets/fourth-case-study-cover.png'
 
 const caseStudies = [
   {
@@ -25,11 +25,12 @@ const caseStudies = [
   },
   {
     id: 'case-03',
-    name: 'AfriChef Recipe & Culinary UX',
+    name: 'RecipeGo Recipe & Culinary UX',
     year: '2024',
     sector: 'Food, Consumer Apps',
     coverImage: thirdCaseCover,
     gridClass: 'work-card--wide',
+    externalLink: 'https://www.behance.net/gallery/155555511/RecipeGo-UIUX-Case-study',
   },
   {
     id: 'case-04',
@@ -38,20 +39,22 @@ const caseStudies = [
     sector: 'Inclusive Design, WCAG Strategy',
     coverImage: porscheCoverNew,
     gridClass: 'work-card--wide',
+    externalLink: 'https://500womensvoices.dododesign.africa/',
   },
 ]
 
 export default function Work({ onSelectCase }) {
-  const handleCardClick = (studyId) => (e) => {
+  const handleCardClick = (study) => (e) => {
+    if (study.externalLink) return
     if (onSelectCase) {
       e.preventDefault()
-      onSelectCase(studyId)
+      onSelectCase(study.id)
     }
   }
 
   return (
     <section className="work-section" id="work" aria-label="Selected Work">
-      <div className="work-header">
+      <div className="work-header" data-reveal>
         <div className="work-header-content">
           <h2 className="work-heading">Selected works</h2>
           <p className="work-subheading">
@@ -67,12 +70,16 @@ export default function Work({ onSelectCase }) {
       </div>
 
       <div className="work-asymmetric-grid">
-        {caseStudies.map((study) => (
+        {caseStudies.map((study, idx) => (
           <a
-            href={`#${study.id}`}
+            href={study.externalLink || `#${study.id}`}
             className={`work-card ${study.gridClass}`}
             key={study.id}
-            onClick={handleCardClick(study.id)}
+            target={study.externalLink ? '_blank' : undefined}
+            rel={study.externalLink ? 'noopener noreferrer' : undefined}
+            onClick={handleCardClick(study)}
+            data-reveal
+            style={{ transitionDelay: `${idx * 0.08}s` }}
           >
             <div className="work-card-media">
               <div className="work-card-img-wrapper">

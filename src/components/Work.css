@@ -2,7 +2,7 @@
 
 .work-section {
   width: 100%;
-  padding: 5rem 2rem 9rem 2rem;
+  padding: 5rem 2rem 5rem 2rem;
 }
 
 /* Header Area */
@@ -107,7 +107,7 @@
   height: auto;
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-secondary);
+  background-color: transparent;
   border-radius: 0;
   border: none;
   outline: none;
@@ -152,7 +152,7 @@
 
 /* Metadata List Block Below Image */
 .work-card-meta-list {
-  background-color: #08090b;
+  background-color: transparent;
   padding: 0.5rem 0 0.85rem 0;
   display: flex;
   flex-direction: column;
@@ -166,7 +166,7 @@
   align-items: center;
   gap: 1rem;
   padding: 0.65rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid var(--border-color);
 }
 
 .work-card-meta-row:first-child {
@@ -179,7 +179,7 @@
   font-weight: 600;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: #8a8f9d;
+  color: var(--text-secondary);
   text-align: left;
 }
 
@@ -187,7 +187,7 @@
   font-family: var(--font-body);
   font-size: 0.9rem;
   font-weight: 500;
-  color: #f3f4f6;
+  color: var(--text-primary);
   text-align: right;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -223,7 +223,7 @@
 
 @media (max-width: 768px) {
   .work-section {
-    padding: 3.5rem 1.5rem 6rem 1.5rem;
+    padding: 2.5rem 18px 2.5rem 18px;
   }
 
   .work-header {
@@ -265,7 +265,7 @@
 
 @media (max-width: 480px) {
   .work-section {
-    padding: 3rem 1rem 4.5rem 1rem;
+    padding: 2.5rem 1rem 2.5rem 1rem;
   }
 
   .work-card-img-wrapper {

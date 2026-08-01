@@ -7,6 +7,7 @@ import Testimonials from './components/Testimonials'
 import Footer from './components/Footer'
 import AboutPage from './pages/AboutPage'
 import CaseStudyPage from './pages/CaseStudyPage'
+import useScrollReveal from './hooks/useScrollReveal'
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -15,6 +16,8 @@ function App() {
 
   const [currentPage, setCurrentPage] = useState('home');
   const [selectedCaseId, setSelectedCaseId] = useState('case-01');
+
+  useScrollReveal(`${currentPage}-${selectedCaseId}`);
 
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);

@@ -2,7 +2,7 @@
 
 .about-section {
   width: 100%;
-  padding: 6rem 2rem 9rem 2rem;
+  padding: 5rem 2rem 5rem 2rem;
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }
@@ -101,7 +101,7 @@
 /* Responsive Layout */
 @media (max-width: 768px) {
   .about-section {
-    padding: 4rem 1.5rem 6rem 1.5rem;
+    padding: 2.5rem 18px 2.5rem 18px;
   }
 
   .about-display-title {
@@ -119,6 +119,6 @@
 
 @media (max-width: 480px) {
   .about-section {
-    padding: 3rem 1rem 4.5rem 1rem;
+    padding: 2.5rem 18px 2.5rem 18px;
   }
 }

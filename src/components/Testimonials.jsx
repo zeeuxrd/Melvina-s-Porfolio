@@ -1,51 +1,83 @@
 import React from 'react'
 import './Testimonials.css'
 
+// Company Names
+const StacksLogo = () => (
+  <span className="company-name">NaijaTech</span>
+)
+
+const HurleyLogo = () => (
+  <span className="company-name">SwiftPay</span>
+)
+
+const ApexLogo = () => (
+  <span className="company-name">TerraNova</span>
+)
+
 const testimonials = [
   {
     id: 't1',
-    quote: '"Somtochukwu has a rare ability to turn messy, ambiguous problems into research that the whole team can rally around. Every read-out came with a clear point of view on what to do next."',
-    name: 'Jane Cooper',
-    role: 'Head of Product, Placeholder Co.',
+    theme: 'yellow',
+    quote: 'Elevated our product strategy. Their creative discovery research and targeted usability insights significantly boosted user interactions and drove notable traffic to our platform.',
+    name: 'Chinedu Okonkwo',
+    role: 'CEO at NaijaTech',
+    Logo: StacksLogo,
   },
   {
     id: 't2',
-    quote: '"Working together was refreshing — thoughtful, rigorous, and genuinely collaborative from kickoff to delivery. The findings changed how we prioritised our roadmap."',
-    name: 'Wade Warren',
-    role: 'Design Lead, Placeholder Co.',
+    theme: 'pink',
+    quote: 'We saw remarkable ROI improvement after partnering with Melvina. Her expert research team delivered insights and campaigns that increased our conversion rates by 35%.',
+    name: 'Emeka Adewale',
+    role: 'CEO at SwiftPay',
+    Logo: HurleyLogo,
   },
   {
     id: 't3',
-    quote: '"One of the few researchers I have worked with who can speak fluently to both engineers and executives. The insights always landed because the story was airtight."',
-    name: 'Esther Howard',
-    role: 'VP of Design, Placeholder Co.',
+    theme: 'rose',
+    quote: 'One of the few researchers who can speak fluently to both engineers and executives. The user insights always landed cleanly because the narrative was airtight and evidence-backed.',
+    name: 'Amara Eze',
+    role: 'VP of Design at TerraNova',
+    Logo: ApexLogo,
   },
 ]
 
 export default function Testimonials() {
   return (
     <section className="testimonials-section" id="testimonials" aria-label="Testimonials">
-      <h2 className="testimonials-heading">Testimonials</h2>
+      <div className="testimonials-header" data-reveal>
+        <h2 className="testimonials-heading">What Collaborators Say</h2>
+      </div>
 
-      <div className="testimonials-list">
-        {testimonials.map((t) => (
-          <div className="testimonial-card" key={t.id}>
-            <p className="testimonial-quote">{t.quote}</p>
-
-            <div className="testimonial-author">
-              <div className="testimonial-avatar" aria-hidden="true">
-                <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="18" cy="18" r="18" fill="#e5e7eb" />
-                  <path d="M18 10 C15.2 10 13 12.2 13 15 C13 17.8 15.2 20 18 20 C20.8 20 23 17.8 23 15 C23 12.2 20.8 10 18 10 Z M18 22 C13.5 22 9.5 24.5 9.5 27.5 C9.5 28.5 10.5 29 11.5 29 H24.5 C25.5 29 26.5 28.5 26.5 27.5 C26.5 24.5 22.5 22 18 22 Z" fill="#9ca3af" />
-                </svg>
+      <div className="testimonials-grid">
+        {testimonials.map((item, idx) => {
+          const LogoComp = item.Logo
+          return (
+            <div
+              className={`testimonial-card card-theme-${item.theme}`}
+              key={item.id}
+              data-reveal
+              style={{ transitionDelay: `${idx * 0.08}s` }}
+            >
+              <span className="testimonial-quote-mark" aria-hidden="true">"</span>
+              {/* Quote Content */}
+              <div className="card-quote-wrapper">
+                <p className="testimonial-quote">{item.quote}</p>
               </div>
-              <div className="testimonial-meta">
-                <p className="testimonial-name">{t.name}</p>
-                <p className="testimonial-role">{t.role}</p>
+
+              {/* Author Footer */}
+              <div className="testimonial-footer">
+                <div className="author-details">
+                  <h3 className="author-name">{item.name}</h3>
+                  <p className="author-role">{item.role}</p>
+                </div>
+
+                <div className="company-wrapper">
+                  <LogoComp />
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </section>
   )

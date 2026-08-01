@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import './AboutPage.css'
 import featureBannerImg from '../../images/assets/hero-image.png'
-import polaroidImgDesk from 'C:/Users/Lenovo/.gemini/antigravity-ide/brain/d189ee92-2ad7-43f3-b2c8-4c42f3c69bd6/media__1785187669727.jpg'
-import polaroidImgMatcha from 'C:/Users/Lenovo/.gemini/antigravity-ide/brain/d189ee92-2ad7-43f3-b2c8-4c42f3c69bd6/media__1785189117726.jpg'
-import polaroidImgWorkshop from 'C:/Users/Lenovo/.gemini/antigravity-ide/brain/d189ee92-2ad7-43f3-b2c8-4c42f3c69bd6/media__1785189276883.jpg'
-import polaroidImgBooks from 'C:/Users/Lenovo/.gemini/antigravity-ide/brain/d189ee92-2ad7-43f3-b2c8-4c42f3c69bd6/media__1785189547294.png'
+import polaroidImgDesk from '../../images/assets/media__1785187669727.jpg'
+import polaroidImgMatcha from '../../images/assets/media__1785189117726.jpg'
+import polaroidImgWorkshop from '../../images/assets/media__1785189276883.jpg'
+import polaroidImgBooks from '../../images/assets/media__1785189547294.png'
 
 const stats = [
   { number: '40+', label: 'Research Studies Led' },
@@ -298,8 +298,8 @@ export default function AboutPage({ onBackToHome }) {
                 <div className="music-vinyl-disc" />
               </div>
               <div className="music-meta">
-                <span className="music-title">Focus &amp; Flow</span>
-                <span className="music-artist">Tyla &bull; Water (Acoustic)</span>
+                <span className="music-title">Baruch Hashem</span>
+                <span className="music-artist">Dunsin Oyekan</span>
               </div>
             </div>
 
@@ -317,7 +317,7 @@ export default function AboutPage({ onBackToHome }) {
         </div>
 
         {/* 3. Core Philosophy & Big Stats */}
-        <div className="about-page-philosophy-block">
+        <div className="about-page-philosophy-block" data-reveal>
           <p className="about-page-philosophy-text">
             I help product organizations trade guesswork for <em>evidence-led decisions</em>,
             captivate audiences with <em>magnetic research insights</em>, align stakeholders around what users actually need, and ship experiences that drive <em>lasting retention</em>.
@@ -333,11 +333,8 @@ export default function AboutPage({ onBackToHome }) {
           </div>
         </div>
 
-        {/* Divider Line */}
-        <div className="about-page-section-divider" />
-
         {/* 4. Capabilities / Research Rigor List */}
-        <div className="about-page-capabilities-block">
+        <div className="about-page-capabilities-block" data-reveal>
           <div className="about-page-capabilities-header">
             <span className="about-page-sub-tag">SPECIALIZATIONS</span>
             <h2 className="about-page-section-heading">Research Capabilities &amp; Rigor</h2>
@@ -353,11 +350,8 @@ export default function AboutPage({ onBackToHome }) {
           </div>
         </div>
 
-        {/* Divider Line */}
-        <div className="about-page-section-divider" />
-
         {/* 5. Thought Leadership & Recognition Table */}
-        <div className="about-page-recognition-block">
+        <div className="about-page-recognition-block" data-reveal>
           <div className="about-page-recognition-header">
             <span className="about-page-sub-tag">RECOGNITION</span>
             <h2 className="about-page-section-heading">Speaking &amp; Publications</h2>
@@ -380,17 +374,14 @@ export default function AboutPage({ onBackToHome }) {
           </div>
         </div>
 
-        {/* Divider Line */}
-        <div className="about-page-section-divider" />
-
         {/* 6. Closing Inbound CTA */}
-        <div className="about-page-cta-block">
+        <div className="about-page-cta-block" data-reveal>
           <h2 className="about-page-cta-title">
             Interested in collaborating?<br />
             Let's discuss your next research initiative.
           </h2>
           <div className="about-page-cta-actions">
-            <a href="mailto:hello@somtochukwu.com" className="about-page-cta-btn primary">
+            <a href="mailto:okechukwugentlesomto@gmail.com" className="about-page-cta-btn primary">
               Get in Touch <span aria-hidden="true">→</span>
             </a>
             <a href="/resume.pdf" className="about-page-cta-btn secondary">

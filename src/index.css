@@ -73,15 +73,65 @@
 
 /* Light Theme overrides (No gradients, high contrast) */
 [data-theme="light"] {
-  --bg-primary: #f4f6f9;       /* Soft light background */
+  --bg-primary: #f3f3f3;       /* Neutral light background */
   --bg-secondary: #ffffff;     /* Pure white for containers/pills */
-  --bg-nav-pill: rgba(249, 249, 249, 0.9); /* Floating header light backing (#f9f9f9) */
+  --bg-nav-pill: rgba(243, 243, 243, 0.9); /* Floating header light backing (#f3f3f3) */
   --text-primary: #0f172a;     /* Dark slate for high contrast */
   --text-secondary: #475569;   /* Muted gray-slate for details */
   --accent-color: #0284c7;     /* Solid ocean blue (accessible on light background) */
   --accent-hover: #0369a1;     /* Darker blue on hover */
   --accent-gold: #b45309;      /* Dark gold/amber for high contrast */
   --border-color: #cbd5e1;     /* High-contrast border lines */
+}
+
+/* Remove card/component shadows in light mode */
+[data-theme="light"] .nav-pill,
+[data-theme="light"] .hero-inline-pill,
+[data-theme="light"] .testimonial-card,
+[data-theme="light"] .work-card .work-card-media,
+[data-theme="light"] .scalloped-blob-tag {
+  box-shadow: none !important;
+}
+
+[data-theme="light"] .scalloped-blob-tag {
+  filter: none !important;
+}
+
+[data-theme="light"] .adekoya-section-canvas,
+[data-theme="light"] .adekoya-hero-canvas {
+  background-color: transparent !important;
+  background: transparent !important;
+}
+
+[data-theme="light"] .impact-card {
+  background-color: #f7f7f7;
+  border: 0.75px solid #d9d9d9;
+}
+
+[data-theme="light"] .metric-tile {
+  background-color: #f5f5f5 !important;
+  border: 1px solid #e0e0e0 !important;
+  box-shadow: none !important;
+}
+
+[data-theme="light"] .metric-tile-val {
+  color: #0f172a !important;
+}
+
+[data-theme="light"] .metric-tile-lbl {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .fitflex-timeline-container .timeline-eyebrow-tag {
+  color: rgba(15, 23, 42, 0.6);
+}
+
+[data-theme="light"] .fitflex-timeline-container .timeline-headline {
+  color: #0f172a;
+}
+
+[data-theme="light"] .fitflex-timeline-container .timeline-narrative-block p {
+  color: rgba(15, 23, 42, 0.75);
 }
 
 /* Base Styles */
@@ -146,3 +196,43 @@ main {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--border-color);
 }
+
+/* Scroll Reveal - Safe Opt-In Animation System
+   DEFAULT: Everything visible (opacity:1). No blank screens ever.
+   ACTIVATED: JS adds .scroll-reveal-ready to <html>, then elements
+   below the viewport get hidden and animate in on scroll. */
+
+[data-reveal] {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Only hide elements AFTER JS has confirmed the system is ready */
+html.scroll-reveal-ready [data-reveal]:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+[data-reveal].is-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Stagger Delays for Grids & Sequences */
+[data-delay="1"] { transition-delay: 0.12s; }
+[data-delay="2"] { transition-delay: 0.24s; }
+[data-delay="3"] { transition-delay: 0.36s; }
+[data-delay="4"] { transition-delay: 0.48s; }
+
+/* Accessibility: Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  html.scroll-reveal-ready [data-reveal]:not(.is-visible) {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+

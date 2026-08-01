@@ -1,6 +1,6 @@
 import React from 'react'
 import './Footer.css'
-import peaceHandIcon from 'C:/Users/Lenovo/.gemini/antigravity-ide/brain/d189ee92-2ad7-43f3-b2c8-4c42f3c69bd6/media__1785194193745.png'
+import peaceHandIcon from '../../images/assets/media__1785194193745.png'
 
 // Bumpy scalloped cloud/bone blob path matching reference image
 const scallopedBlobPath = "M 45 10 C 52 2, 68 2, 75 10 C 82 2, 98 2, 105 10 C 112 2, 128 2, 135 10 C 147 2, 168 12, 172 25 C 180 35, 180 45, 172 55 C 168 68, 147 78, 135 70 C 128 78, 112 78, 105 70 C 98 78, 82 78, 75 70 C 68 78, 52 78, 45 70 C 33 78, 12 68, 8 55 C 0 45, 0 35, 8 25 C 12 12, 33 2, 45 10 Z"
@@ -36,18 +36,20 @@ const capabilityLinks = [
 ]
 
 const connectLinks = [
-  { label: 'LinkedIn ↗', href: 'https://linkedin.com', external: true },
+  { label: 'LinkedIn ↗', href: 'https://www.linkedin.com/in/somtochukwum-okechukwu/', external: true },
   { label: 'Twitter / X ↗', href: 'https://twitter.com', external: true },
   { label: 'Substack ↗', href: 'https://substack.com', external: true },
-  { label: 'Email ✉', href: 'mailto:hello@somtochukwu.com' },
+  { label: 'Email ✉', href: 'mailto:okechukwugentlesomto@gmail.com' },
 ]
 
 export default function Footer() {
+  const [hoveredIdx, setHoveredIdx] = React.useState(null)
+
   return (
     <footer className="footer-section" aria-label="Footer">
       
       {/* 1. Top Section: Big Bold Display Headline + Peace Sign Icon */}
-      <div className="footer-top">
+      <div className="footer-top" data-reveal>
         <div className="footer-heading-wrap">
           <h2 className="footer-heading">
             THANK YOU FOR YOUR CURIOSITY.<br />
@@ -107,26 +109,50 @@ export default function Footer() {
       {/* Dashed Divider Line 2 */}
       <div className="footer-divider" />
 
-      {/* 3. Bottom Section: Scattered Scalloped Blob Pill Tags */}
-      <div className="footer-blobs-canvas" aria-label="Interactive Capabilities Tags">
-        {blobTags.map((tag, idx) => (
-          <div
-            key={idx}
-            className="scalloped-blob-tag"
-            style={{
-              color: tag.color,
-              transform: `rotate(${tag.rot}deg)`,
-              top: `${tag.top}px`,
-              left: tag.left,
-              zIndex: idx + 1,
-            }}
-          >
-            <svg viewBox="0 0 180 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="blob-svg" aria-hidden="true">
-              <path d={scallopedBlobPath} fill="currentColor" />
-            </svg>
-            <span className="blob-label">{tag.label}</span>
-          </div>
-        ))}
+      {/* 3. Bottom Section: Scattered Scalloped Blob Pill Tags (Desktop Staggered Bouncy Drop / Mobile Infinite Marquee Loop) */}
+      <div className="footer-blobs-canvas" aria-label="Interactive Capabilities Tags" data-reveal>
+        <div className="footer-marquee-track">
+          {[...blobTags, ...blobTags].map((tag, idx) => {
+            const actualIdx = idx % blobTags.length
+            let pushClass = ''
+            if (hoveredIdx !== null) {
+              if (actualIdx === hoveredIdx) {
+                pushClass = 'is-hovered-jiggle'
+              } else if (actualIdx === hoveredIdx - 1) {
+                pushClass = 'is-pushed-left'
+              } else if (actualIdx === hoveredIdx + 1) {
+                pushClass = 'is-pushed-right'
+              } else if (actualIdx === hoveredIdx - 2) {
+                pushClass = 'is-pushed-far-left'
+              } else if (actualIdx === hoveredIdx + 2) {
+                pushClass = 'is-pushed-far-right'
+              }
+            }
+
+            return (
+              <div
+                key={idx}
+                className={`scalloped-blob-tag ${pushClass}`}
+                style={{
+                  color: tag.color,
+                  '--rot': `${tag.rot}deg`,
+                  '--pill-idx': actualIdx,
+                  transform: `rotate(${tag.rot}deg)`,
+                  top: `${tag.top}px`,
+                  left: tag.left,
+                  zIndex: actualIdx === hoveredIdx ? 100 : actualIdx + 1,
+                }}
+                onMouseEnter={() => setHoveredIdx(actualIdx)}
+                onMouseLeave={() => setHoveredIdx(null)}
+              >
+                <svg viewBox="0 0 180 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="blob-svg" aria-hidden="true">
+                  <path d={scallopedBlobPath} fill="currentColor" />
+                </svg>
+                <span className="blob-label">{tag.label}</span>
+              </div>
+            )
+          })}
+        </div>
       </div>
 
       <p className="footer-copyright">© {new Date().getFullYear()} Somtochukwu. Designed &amp; Developed with Evidence.</p>
