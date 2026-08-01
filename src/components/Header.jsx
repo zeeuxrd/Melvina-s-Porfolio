@@ -42,6 +42,7 @@ export default function Header({ theme, onToggleTheme, onNavigate, currentPage }
   }, [isMenuOpen]);
 
   return (
+    <>
     <header className="header-nav" aria-label="Main Navigation">
       <div className="nav-pill">
         {/* Left Side: Avatar & Brand Name */}
@@ -126,6 +127,7 @@ export default function Header({ theme, onToggleTheme, onNavigate, currentPage }
           </button>
         </nav>
       </div>
+    </header>
 
       {/* Full-Screen Mobile Menu Overlay */}
       <div className={`mobile-menu-overlay ${isMenuOpen ? 'is-open' : ''}`} aria-hidden={!isMenuOpen}>
@@ -198,6 +200,6 @@ export default function Header({ theme, onToggleTheme, onNavigate, currentPage }
           </a>
         </nav>
       </div>
-    </header>
+    </>
   )
 }

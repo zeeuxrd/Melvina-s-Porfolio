@@ -127,16 +127,6 @@ h1, h2, h3, h4, h5, h6, .display-font, .title-font {
 
 main {
   width: 100%;
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-/* Responsive Utilities */
-@media (max-width: 768px) {
-  main {
-    padding: 0 1rem;
-  }
 }
 
 /* Custom Scrollbar */

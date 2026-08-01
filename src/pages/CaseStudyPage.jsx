@@ -140,8 +140,8 @@ const caseStudyData = {
     title: 'Verse',
     heroImage: verseArchitectureImg,
     architectureImage: verseHeroImg,
-    tagline: 'Streamlining enterprise automotive financing workflows for North American dealerships.',
-    heroDescription: 'Verse is a B2B automotive financing portal connecting dealership finance & insurance (F&I) managers with multi-tier lending institutions. Legacy credit systems forced managers to spend up to 45 minutes re-typing buyer data across disconnected lender portals, causing deal slippage during live negotiations.',
+    tagline: 'Eliminating multi-portal friction in enterprise automotive financing for Nigerian dealerships.',
+    heroDescription: 'Verse is a B2B automotive financing portal connecting dealership finance & insurance (F&I) managers with multi-tier lending institutions. Legacy credit systems forced managers to spend up to 45 minutes re-typing buyer data across disconnected lender portals—time that directly fed deal slippage during live negotiations.',
     role: 'Senior UX Researcher & Systems Analyst',
     timeline: '2024',
     discipline: 'Fintech & Enterprise Systems',
@@ -150,21 +150,21 @@ const caseStudyData = {
       {
         id: 'overview',
         title: 'Overview',
-        text: 'Verse is an AI-powered enterprise automotive financing and smart mobility portal connecting North American franchise dealerships with multi-tier lending institutions. By integrating conversational AI assistants, real-time credit orchestration, and automated pre-screening, Verse enables dealership finance (F&I) managers to calculate payments, check damage inspection reports, pick insurance tiers, and arrange vehicle leases—such as Volvo EX30 electric crossover deployments—in under 5 minutes. Our research targeted eliminating multi-portal data re-entry, reducing deal completion time from 45 minutes down to 16 minutes.',
+        text: 'Verse is an AI-powered enterprise automotive financing and smart mobility portal connecting Nigerian franchise dealerships with multi-tier lending institutions. Conversational AI assistants, real-time credit orchestration, and automated pre-screening let dealership F&I managers calculate payments, review damage inspection reports, select insurance tiers, and arrange leases—such as Volvo EX30 electric crossover deployments—in under 5 minutes. The research goal was to eliminate multi-portal data re-entry and cut deal completion time from 45 minutes to 16.',
         mockLabel: 'AI Automotive Financing & System Architecture Portal',
         mockType: 'overview-modules-grid',
       },
       {
         id: 'challenge',
         title: 'Challenge',
-        text: 'Legacy credit software treated each lending institution as an isolated silo. Redundant data entry, unpredictable lender pre-approval rules, and frequent session timeouts created intense friction during live customer negotiations. 71% of finance managers reported they could not predict which lender would approve a buyer prior to formal submittal. Our research mandate was to dismantle multi-portal data entry and design an automated, single-entry credit orchestration system.',
+        text: 'Legacy credit software treated each lending institution as an isolated silo. Redundant data entry, unpredictable lender pre-approval rules, and frequent session timeouts created intense friction during live customer negotiations—71% of finance managers could not predict which lender would approve a buyer before formal submittal. The mandate: dismantle multi-portal data entry and design an automated, single-entry credit orchestration system.',
         mockLabel: 'Dealership Operational Friction & Task Analysis',
         mockType: 'problem-context-cards',
       },
       {
         id: 'research',
         title: 'Research & Discovery',
-        text: 'To map the true cost of fragmented credit workflows, we executed an 8-week field research program across 22 franchise dealerships in 5 major North American markets (Toronto, Chicago, Dallas, Atlanta, Phoenix). We conducted 20+ live contextual shadowing sessions during real customer deal closings, 24 semi-structured interviews with dealership F&I directors, and a technical integration audit of 6 legacy lender APIs. We benchmarked 400+ completed deal logs to pinpoint exact friction points from application origination to final contract execution.',
+        text: 'To quantify the true cost of fragmented credit workflows, we ran an 8-week field research program across 22 franchise dealerships in 5 major Nigerian markets (Lagos, Abuja, Port Harcourt, Ibadan, Kano). The protocol combined 20+ live contextual shadowing sessions during real customer deal closings, 24 semi-structured interviews with dealership F&I directors, and a technical integration audit of 6 legacy lender APIs. We benchmarked 400+ completed deal logs to pinpoint friction points from application origination to final contract execution.',
         mockLabel: 'Dealership Field Research & Shadow Logs Matrix',
         mockType: 'sticky-board',
         stickyNotes: [
@@ -173,7 +173,7 @@ const caseStudyData = {
             tag: 'FIELD SCOPE & SAMPLING (N=22 DEALERSHIPS)',
             lines: [
               '• Target: Franchise dealership finance managers & F&I directors handling live credit submittals.',
-              '• Markets: 5 North American metro regions (Toronto, Chicago, Dallas, Atlanta, Phoenix).',
+              '• Markets: 5 Nigerian metro regions (Lagos, Abuja, Port Harcourt, Ibadan, Kano).',
               '• Screening: Processing 15+ credit applications weekly across 2 or more lending institutions.',
             ],
           },
@@ -217,30 +217,30 @@ const caseStudyData = {
       {
         id: 'findings',
         title: 'Key Findings & Insights',
-        text: 'Synthesizing 400+ deal logs revealed three critical system breakdowns: (1) The "18-Minute Manual Entry Tax" where managers re-typed identical customer fields across 6 portals, (2) The Pre-Approval Predictability Gap where 71% of managers guessed lender fit blindly, and (3) Customer Trust Decay during long waiting periods while seated across from the finance director.',
+        text: 'Synthesizing 400+ deal logs surfaced three critical system breakdowns: (1) the "18-Minute Manual Entry Tax" of re-typing identical customer fields across 6 portals, (2) a Pre-Approval Predictability Gap where 71% of managers guessed lender fit blindly, and (3) Customer Trust Decay during long waiting periods with the buyer seated across the desk.',
         quote: '"If I lose 30 minutes fighting with credit entry screens while a customer sits in front of me, the deal is dead. They walk out to think about it and buy somewhere else."',
-        quoteAuthor: 'F&I Director — 12 Years Experience, Chicago Dealership',
+        quoteAuthor: 'F&I Director — 12 Years Experience, Lagos Dealership',
         mockLabel: 'Credit Processing Bottleneck & Time-Tax Analysis',
         mockType: 'findings-bar-chart',
       },
       {
         id: 'ideation',
         title: 'Ideation & Design Process',
-        text: 'Facilitated iterative co-design workshops with 15 dealership F&I managers, mapping user mental models and co-creating human-centered credit intake workflows. We synthesized research findings into 4 core UX principles: single-screen data entry, visual pre-approval guidance, transparent status feedback, and simplified contract review.',
+        text: 'Iterative co-design workshops with 15 dealership F&I managers mapped user mental models and co-created human-centered credit intake workflows. The findings distilled into 4 core UX principles: single-screen data entry, visual pre-approval guidance, transparent status feedback, and simplified contract review.',
         mockLabel: 'Single-Entry Orchestration & Pre-Screening Co-Design',
         mockType: 'ideation-slider-matrix',
       },
       {
         id: 'testing',
         title: 'Feedback & Testing Loops',
-        text: 'We validated the unified platform through 3 rounds of evaluative usability testing with 15 dealership finance managers using simulated live deal scenarios. We measured completion velocity, field error rates, and System Usability Scale (SUS) scores under realistic sales desk stress conditions.',
+        text: 'The unified platform was validated through 3 rounds of evaluative usability testing with 15 dealership finance managers using simulated live deal scenarios. We measured completion velocity, field error rates, and System Usability Scale (SUS) scores under realistic sales-desk stress conditions.',
         mockLabel: 'Evaluative Usability Testing Scorecard & Deal Velocity Benchmark',
         mockType: 'triple-card',
       },
       {
         id: 'impact',
         title: 'Outcome & Impact',
-        text: 'Deploying Verse across pilot dealerships reduced deal transaction time by 65% (45 mins → 16 mins), increased credit submittal approval rates by 31%, and achieved 98% finance manager adoption within 30 days of rollout—recovering an estimated $4.2M in annual deal slippage.',
+        text: 'Deploying Verse across pilot dealerships cut deal transaction time by 65% (45 mins → 16 mins), lifted credit submittal approval rates by 31%, and reached 98% finance manager adoption within 30 days of rollout—recovering an estimated $4.2M in annual deal slippage.',
         metrics: [
           { val: '-65%', lbl: 'Process Time (45m → 16m)' },
           { val: '+31%', lbl: 'Credit Approval Rate' },
@@ -252,7 +252,7 @@ const caseStudyData = {
       {
         id: 'reflections',
         title: 'Reflections',
-        text: 'Enterprise UX research is about eliminating systemic friction so domain experts can focus on high-value human relationships. In high-stakes fintech, reducing transaction time from 45 to 16 minutes does not just optimize software—it saves millions in business revenue.',
+        text: 'Enterprise UX research is about eliminating systemic friction so domain experts can focus on high-value human relationships. In high-stakes fintech, cutting transaction time from 45 to 16 minutes does not just optimize software—it saves millions in business revenue.',
         mockLabel: 'Enterprise Systems & Workflow Impact Framework',
         mockType: 'reflections-flow-impact',
       },
@@ -567,24 +567,13 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
                 <div className="modules-grid-container">
                   {caseStudyId === 'case-02' && (
                     <div className="verse-faq-path-container">
-                      {/* Top Header Row with Logo & Eyebrow */}
-                      <div className="faq-path-header">
-                        <div className="faq-brand-wrap">
-                          <div className="faq-brand-logo">
-                            <span className="logo-symbol">//V</span>
-                            <span className="logo-txt">VERSE FINTECH<br /><small>NORTH AMERICA &amp; GLOBAL</small></span>
-                          </div>
-                        </div>
-                        <span className="faq-eyebrow-tag">SYSTEM CONTEXT &amp; RESEARCH SCOPE</span>
-                      </div>
-
                       {/* 4 Tilted Cards in Portfolio Palette with Dashed S-Curve Path */}
                       <div className="faq-cards-path-wrap">
                         {/* SVG Dashed Connecting Path Line */}
                         <svg className="faq-dashed-path-svg" viewBox="0 0 900 600" fill="none" preserveAspectRatio="none">
                           <path
                             d="M 220 120 C 450 30, 650 150, 680 240 C 700 320, 250 340, 220 420 C 190 500, 550 560, 680 500"
-                            stroke="#FFFFFF"
+                            stroke="#d9d9d9"
                             strokeWidth="2.5"
                             strokeDasharray="6 6"
                             opacity="0.55"
@@ -598,7 +587,7 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
                           <p className="faq-card-a">
                             an enterprise credit orchestration portal designed to help finance managers streamline buyer submittals and eliminate <span className="faq-hl-tag hl-darkblue">multi-portal friction.</span>
                           </p>
-                          <span className="sparkle-accent sparkle-dark">✦</span>
+
                         </div>
 
                         {/* Card 2: Soft Lime Green */}
@@ -608,7 +597,7 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
                           <p className="faq-card-a">
                             finance managers spent up to 45 minutes re-typing customer fields into 6+ lender portals, leading to customer drop-off <span className="faq-hl-tag hl-darkgreen">during live negotiations.</span>
                           </p>
-                          <span className="sparkle-accent sparkle-dark">✦</span>
+
                         </div>
 
                         {/* Card 3: Soft Golden Butter */}
@@ -616,9 +605,9 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
                           <div className="faq-card-num-badge">3</div>
                           <h4 className="faq-card-q">What was our research scope ?</h4>
                           <p className="faq-card-a">
-                            shadowed 400+ live deal closings across 22 franchise dealerships in 5 North American hubs to trace exact bottlenecks and <span className="faq-hl-tag hl-darkamber">arrive at solutions early.</span>
+                            shadowed 400+ live deal closings across 22 franchise dealerships in 5 Nigerian hubs to trace exact bottlenecks and <span className="faq-hl-tag hl-darkamber">arrive at solutions early.</span>
                           </p>
-                          <span className="sparkle-accent sparkle-dark">✦</span>
+
                         </div>
 
                         {/* Card 4: Soft Blush Pink */}
@@ -628,7 +617,7 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
                           <p className="faq-card-a">
                             transaction time dropped by <span className="faq-hl-tag hl-darkpink">65% (45m to 16m)</span> and credit approvals increased by 31%, recovering an estimated $4.2M annually.
                           </p>
-                          <span className="sparkle-accent sparkle-dark">✦</span>
+
                         </div>
                       </div>
                     </div>
@@ -1205,7 +1194,7 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
                   </div>
                 </div>
               ) : sec.mockType === 'triple-card' ? (
-                <div className="mock-triple-grid">
+                <div className={`mock-triple-grid ${caseStudyId === 'case-02' ? 'mock-triple-grid--verse' : ''}`}>
                   {/* Card 01: Soft Purple Scalloped Cloud Card */}
                   <div className="scallop-card scallop-card--purple">
                     <div className="scallop-badge">
@@ -1271,11 +1260,11 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
                     {/* Testimonial Author Row */}
                     <div className="result-author-row">
                       <div className="result-avatar-circle">
-                        <img src={avatar1Img} alt="Marcus Vance" className="author-avatar-img" />
+                        <img src={avatar1Img} alt="Emeka Okafor" className="author-avatar-img" />
                       </div>
                       <div className="result-author-info">
-                        <span className="author-name">Marcus Vance</span>
-                        <span className="author-role">F&amp;I Director, Apex Automotive Group</span>
+                        <span className="author-name">Emeka Okafor</span>
+                        <span className="author-role">F&amp;I Director, Apex Motors Group</span>
                       </div>
                     </div>
 

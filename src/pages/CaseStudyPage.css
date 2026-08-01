@@ -1092,7 +1092,7 @@
 
 /* Dark Theme Variant Applied Strictly to Verse (case-02) Scalloped Cards */
 .scallop-card--dark {
-  background-color: #121418 !important;
+  background-color: #000000 !important;
   color: #FFFFFF !important;
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
@@ -1104,6 +1104,65 @@
 
 .scallop-card--dark .scallop-card-text {
   color: #CBD5E1 !important;
+}
+
+/* Verse (case-02) Challenge Card Badge Pills: purple, pink, lemon */
+.scallop-card--blue.scallop-card--dark .scallop-badge {
+  background-color: #A78BFA !important;
+}
+.scallop-card--blue.scallop-card--dark .scallop-badge-icon {
+  stroke: #000000 !important;
+}
+
+.scallop-card--lime.scallop-card--dark .scallop-badge {
+  background-color: #F9A8D4 !important;
+}
+.scallop-card--lime.scallop-card--dark .scallop-badge-icon {
+  stroke: #000000 !important;
+}
+
+.scallop-card--amber.scallop-card--dark .scallop-badge {
+  background-color: #FDE047 !important;
+}
+.scallop-card--amber.scallop-card--dark .scallop-badge-icon {
+  stroke: #000000 !important;
+}
+
+/* Verse (case-02) Testing Triple Cards: purple -> pink, butter -> orange */
+.mock-triple-grid--verse .scallop-card--purple {
+  background-color: #F9A8D4 !important;
+  color: #3B0512 !important;
+}
+.mock-triple-grid--verse .scallop-card--purple .scallop-card-num,
+.mock-triple-grid--verse .scallop-card--purple .scallop-card-title {
+  color: #4A0817 !important;
+}
+.mock-triple-grid--verse .scallop-card--purple .scallop-card-text {
+  color: #5A0F22 !important;
+}
+.mock-triple-grid--verse .scallop-card--purple .scallop-badge {
+  background-color: #EC4899 !important;
+}
+.mock-triple-grid--verse .scallop-card--purple .scallop-badge-icon {
+  stroke: #F9A8D4 !important;
+}
+
+.mock-triple-grid--verse .scallop-card--amber {
+  background-color: #D9F5C2 !important;
+  color: #123305 !important;
+}
+.mock-triple-grid--verse .scallop-card--amber .scallop-card-num,
+.mock-triple-grid--verse .scallop-card--amber .scallop-card-title {
+  color: #123305 !important;
+}
+.mock-triple-grid--verse .scallop-card--amber .scallop-card-text {
+  color: #184209 !important;
+}
+.mock-triple-grid--verse .scallop-card--amber .scallop-badge {
+  background-color: #184209 !important;
+}
+.mock-triple-grid--verse .scallop-card--amber .scallop-badge-icon {
+  stroke: #D9F5C2 !important;
 }
 
 /* Platform Capability Modules Grid (Verse Overview) */
@@ -3169,24 +3228,12 @@
 /* Press Pause Lagos Inspired FAQ Path Container for Verse Overview */
 .verse-faq-path-container {
   width: 100%;
-  background-color: #1a1a1a;
-  background-image: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 27px,
-    rgba(255, 255, 255, 0.08) 27px,
-    rgba(255, 255, 255, 0.08) 28px
-  );
-  border-radius: 32px;
   padding: 2.5rem 2.25rem 3rem 2.25rem;
-  color: #FFFFFF;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   box-shadow: none !important;
   margin-bottom: 2.5rem;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.12);
   position: relative;
 }
 
@@ -3215,7 +3262,7 @@
   font-weight: 900;
   font-size: 1.5rem;
   letter-spacing: -1px;
-  color: #FFFFFF;
+  color: #0D1C40;
 }
 
 .faq-brand-logo .logo-txt {
@@ -3224,13 +3271,13 @@
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: 0.5px;
-  color: #E2E8F0;
+  color: #334155;
 }
 
 .faq-brand-logo .logo-txt small {
   font-size: 0.65rem;
   font-weight: 600;
-  color: #94A3B8;
+  color: #64748B;
   letter-spacing: 1px;
 }
 
@@ -3240,11 +3287,11 @@
   font-weight: 800;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  color: #F1F5F9;
-  background: rgba(255, 255, 255, 0.1);
+  color: #0D1C40;
+  background: rgba(13, 28, 64, 0.08);
   padding: 0.4rem 0.85rem;
   border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(13, 28, 64, 0.2);
 }
 
 /* Cards Layout Container */
@@ -3325,76 +3372,76 @@
 }
 
 /* Palette Variants for Cards */
-/* 01. Soft Periwinkle Blue */
+/* 01. Soft Cream */
 .verse-card--blue {
-  background-color: #C6D8FF !important;
-  color: #0D1C40 !important;
+  background-color: #FFF8B6 !important;
+  color: #3D3200 !important;
   box-shadow: none !important;
   border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 .verse-card--blue .faq-card-q {
-  color: #1A3A7A !important;
+  color: #5C4A00 !important;
 }
 .verse-card--blue .faq-card-a {
-  color: #0D1C40 !important;
+  color: #3D3200 !important;
 }
 .verse-card--blue .faq-card-num-badge {
-  background-color: #1A3A7A !important;
-  color: #C6D8FF !important;
+  background-color: #5C4A00 !important;
+  color: #FFF8B6 !important;
 }
 
-/* 02. Soft Lime Green */
+/* 02. Baby Pastel Bright Pink */
 .verse-card--lime {
-  background-color: #D9F5C2 !important;
-  color: #123305 !important;
+  background-color: #FFB3C6 !important;
+  color: #5A0F22 !important;
   box-shadow: none !important;
   border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 .verse-card--lime .faq-card-q {
-  color: #184209 !important;
+  color: #7A1630 !important;
 }
 .verse-card--lime .faq-card-a {
-  color: #123305 !important;
+  color: #5A0F22 !important;
 }
 .verse-card--lime .faq-card-num-badge {
-  background-color: #184209 !important;
-  color: #D9F5C2 !important;
+  background-color: #B3125A !important;
+  color: #FFB3C6 !important;
 }
 
-/* 03. Soft Golden Butter */
+/* 03. Soft Pastel Blue */
 .verse-card--amber {
-  background-color: #FDE3B8 !important;
-  color: #382200 !important;
+  background-color: #B3E5FC !important;
+  color: #0B2A45 !important;
   box-shadow: none !important;
   border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 .verse-card--amber .faq-card-q {
-  color: #5C3800 !important;
+  color: #145080 !important;
 }
 .verse-card--amber .faq-card-a {
-  color: #382200 !important;
+  color: #0B2A45 !important;
 }
 .verse-card--amber .faq-card-num-badge {
-  background-color: #5C3800 !important;
-  color: #FDE3B8 !important;
+  background-color: #145080 !important;
+  color: #B3E5FC !important;
 }
 
-/* 04. Soft Blush Pink */
+/* 04. Soft Pastel Purple */
 .verse-card--pink {
-  background-color: #FBBFCA !important;
-  color: #3B0512 !important;
+  background-color: #E2D7FF !important;
+  color: #2A1060 !important;
   box-shadow: none !important;
   border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 .verse-card--pink .faq-card-q {
-  color: #4A0817 !important;
+  color: #3B1A85 !important;
 }
 .verse-card--pink .faq-card-a {
-  color: #3B0512 !important;
+  color: #2A1060 !important;
 }
 .verse-card--pink .faq-card-num-badge {
-  background-color: #4A0817 !important;
-  color: #FBBFCA !important;
+  background-color: #3B1A85 !important;
+  color: #E2D7FF !important;
 }
 
 /* Global Override: Remove all shadows across Case Study page cards and elements */
@@ -3432,22 +3479,22 @@
 }
 
 .hl-darkblue {
-  background-color: #1A3A7A;
+  background-color: #5C4A00;
   color: #FFFFFF;
 }
 
 .hl-darkgreen {
-  background-color: #184209;
+  background-color: #B3125A;
   color: #FFFFFF;
 }
 
 .hl-darkamber {
-  background-color: #5C3800;
+  background-color: #145080;
   color: #FFFFFF;
 }
 
 .hl-darkpink {
-  background-color: #4A0817;
+  background-color: #3B1A85;
   color: #FFFFFF;
 }
 

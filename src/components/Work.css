@@ -12,6 +12,9 @@
   justify-content: space-between;
   gap: 2rem;
   margin-bottom: 3.5rem;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .work-header-content {
@@ -72,6 +75,9 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 3.5rem 2.25rem;
   align-items: stretch;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Card Base - Sharp 90-degree corners, no border/demarcation */
