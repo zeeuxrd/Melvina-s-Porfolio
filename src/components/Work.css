@@ -41,7 +41,8 @@
 .work-header-action {
   width: 58px;
   height: 58px;
-  border-radius: 50%;
+  border-radius: 0;
+  box-shadow: none !important;
   background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
   display: flex;

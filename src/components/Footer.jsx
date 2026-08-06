@@ -56,7 +56,7 @@ export default function Footer() {
             LET’S BUILD SOMETHING COOL.
           </h2>
           <div className="footer-peace-icon" aria-hidden="true">
-            <img src={peaceHandIcon} alt="Peace Hand Sign" className="peace-hand-img" />
+            <img src={peaceHandIcon} alt="Peace Hand Sign" className="peace-hand-img" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>

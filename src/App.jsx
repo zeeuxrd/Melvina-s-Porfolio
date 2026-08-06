@@ -70,7 +70,7 @@ function App() {
         </main>
       ) : (
         <main>
-          <Hero />
+          <Hero onSelectCase={handleOpenCase} />
           <Work onSelectCase={handleOpenCase} />
           <About onReadMore={() => handleNavigate('about')} />
           <Testimonials />

@@ -88,6 +88,8 @@ export default function Work({ onSelectCase }) {
                     src={study.coverImage}
                     alt={study.name}
                     className="work-card-img"
+                    loading={idx === 0 ? 'eager' : 'lazy'}
+                    decoding="async"
                   />
                 ) : (
                   <div className="work-card-fallback-bg" />

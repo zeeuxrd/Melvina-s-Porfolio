@@ -50,8 +50,8 @@
   --text-secondary: #9ca3af;   /* Muted gray for description/details */
   
   /* Accent Colors (Solid, no gradients) */
-  --accent-color: #00f0ff;      /* Electric Cyan (inspired by the screenshot's teal-blue split) */
-  --accent-hover: #00b8c4;      /* Muted Cyan on hover */
+  --accent-color: #FF1493;      /* Deep Hot Pink (matching portfolio buttons) */
+  --accent-hover: #D8117E;      /* Rich Pink on hover */
   --accent-gold: #ffd700;       /* Solid Gold for highlights */
   --border-color: #22262d;      /* Thin premium borders */
 
@@ -78,10 +78,24 @@
   --bg-nav-pill: rgba(243, 243, 243, 0.9); /* Floating header light backing (#f3f3f3) */
   --text-primary: #0f172a;     /* Dark slate for high contrast */
   --text-secondary: #475569;   /* Muted gray-slate for details */
-  --accent-color: #0284c7;     /* Solid ocean blue (accessible on light background) */
-  --accent-hover: #0369a1;     /* Darker blue on hover */
+  --accent-color: #FF1493;     /* Deep Hot Pink */
+  --accent-hover: #D8117E;     /* Rich Pink on hover */
   --accent-gold: #b45309;      /* Dark gold/amber for high contrast */
   --border-color: #cbd5e1;     /* High-contrast border lines */
+}
+
+/* Global Button Rule: All buttons are squared (0 radius) and flat (no shadows) */
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+.btn,
+.hero-cta-btn,
+.about-page-cta-btn,
+.work-header-action,
+.mobile-menu-arrow-btn {
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
 /* Remove card/component shadows in light mode */
@@ -177,6 +191,15 @@ h1, h2, h3, h4, h5, h6, .display-font, .title-font {
 
 main {
   width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 0 1rem;
+  }
 }
 
 /* Custom Scrollbar */

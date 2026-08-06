@@ -31,7 +31,7 @@ export default function OverviewMobileFlowSection({ data }) {
         {/* Card 2: Full-Bleed Graphic Card (Middle Position) */}
         <div className="story-phone story-phone--graphic">
           <div className="phone-graphic-wrap">
-            <img src={data.overviewCard3Image || data.heroImage} alt="Fitflex Active Lifestyle" className="phone-graphic-img" />
+            <img src={data.overviewCard3Image || data.heroImage} alt="Fitflex Active Lifestyle" className="phone-graphic-img" loading="lazy" decoding="async" />
           </div>
           <div className="phone-graphic-overlay">
             <p className="phone-graphic-quote">Designing health that fits her new reality.</p>

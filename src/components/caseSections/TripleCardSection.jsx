@@ -60,10 +60,12 @@ export default function TripleCardSection({ caseId }) {
 
       {/* Card 02: Full-Bleed Image Card (Middle Position) */}
       <div className="triple-card-mock testing-video-card testing-video-card--full">
-        <img 
-          src={caseId === 'case-02' ? verseYellowCarImg : "https://assets.grok.com/users/a8dbd35a-7186-4f4d-9312-db52f52cdba5/generated/ab24a148-974d-4067-b8f4-e3b08abe52fa/image.jpg"} 
-          alt="Usability Testing Session" 
+        <img
+          src={caseId === 'case-02' ? verseYellowCarImg : "https://assets.grok.com/users/a8dbd35a-7186-4f4d-9312-db52f52cdba5/generated/ab24a148-974d-4067-b8f4-e3b08abe52fa/image.jpg"}
+          alt="Usability Testing Session"
           className="testing-full-video-media"
+          loading="lazy"
+          decoding="async"
         />
         <div className="testing-video-overlay">
           <p className="testing-video-quote">

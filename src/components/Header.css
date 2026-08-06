@@ -130,7 +130,8 @@
   justify-content: center;
   color: var(--text-secondary);
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 0;
+  box-shadow: none !important;
   transition: color var(--transition-speed) ease, background-color var(--transition-speed) ease, transform 0.2s ease;
 }
 
@@ -162,7 +163,8 @@
   justify-content: center;
   color: var(--text-secondary);
   cursor: pointer;
-  border-radius: 50%;
+  border-radius: 0;
+  box-shadow: none !important;
   transition: color var(--transition-speed) ease, background-color var(--transition-speed) ease;
 }
 
@@ -305,7 +307,8 @@
   flex-shrink: 0;
   width: 48px;
   height: 48px;
-  border-radius: 50%;
+  border-radius: 0;
+  box-shadow: none !important;
   background-color: var(--text-primary);
   color: var(--bg-primary);
   display: flex;

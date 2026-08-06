@@ -18,7 +18,7 @@ export default function ImpactDashboardGridSection({ caseId }) {
         {/* Testimonial Author Row */}
         <div className="result-author-row">
           <div className="result-avatar-circle">
-            <img src={avatar1Img} alt="Emeka Okafor" className="author-avatar-img" />
+            <img src={avatar1Img} alt="Emeka Okafor" className="author-avatar-img" loading="lazy" decoding="async" />
           </div>
           <div className="result-author-info">
             <span className="author-name">Emeka Okafor</span>
@@ -119,9 +119,9 @@ export default function ImpactDashboardGridSection({ caseId }) {
               <span className="segment-title">{caseId === 'case-02' ? '-65% Deal Friction Time' : '+42% 90-Day Retention'}</span>
             </div>
             <div className="segment-avatars">
-              <img src={avatar1Img} alt="Participant 1" className="avatar-circle-img" />
-              <img src={avatar2Img} alt="Participant 2" className="avatar-circle-img" />
-              <img src={avatar3Img} alt="Participant 3" className="avatar-circle-img" />
+              <img src={avatar1Img} alt="Participant 1" className="avatar-circle-img" loading="lazy" decoding="async" />
+              <img src={avatar2Img} alt="Participant 2" className="avatar-circle-img" loading="lazy" decoding="async" />
+              <img src={avatar3Img} alt="Participant 3" className="avatar-circle-img" loading="lazy" decoding="async" />
               <span className="avatar-count-pill">{caseId === 'case-02' ? '22 Dealerships' : '+22 Active Mothers'}</span>
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function ImpactDashboardGridSection({ caseId }) {
               <span className="segment-title">{caseId === 'case-02' ? '+31% Credit Approvals' : '-28% Churn Drop-Off'}</span>
             </div>
             <div className="segment-avatars">
-              <img src={avatar3Img} alt="Participant 4" className="avatar-circle-img" />
+              <img src={avatar3Img} alt="Participant 4" className="avatar-circle-img" loading="lazy" decoding="async" />
               <span className="avatar-count-pill">{caseId === 'case-02' ? '$4.2M Recovered' : '+2 Cohorts'}</span>
             </div>
           </div>

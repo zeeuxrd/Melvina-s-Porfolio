@@ -3,7 +3,7 @@
 .adekoya-case-page {
   width: 100%;
   min-height: 100vh;
-  padding: 6rem 3vw 6rem 3vw;
+  padding: 6rem clamp(1.25rem, 3vw, 2.75rem) 6rem clamp(1.25rem, 3vw, 2.75rem);
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }
@@ -80,29 +80,6 @@
   object-fit: cover;
   object-position: center;
   display: block;
-}
-
-/* Desktop only: show the Verse first image in full, uncropped (like mobile),
-   without letting its 4:3 aspect ratio balloon the canvas to 1000px+ tall. */
-@media (min-width: 961px) {
-  .adekoya-hero-canvas--verse {
-    height: auto;
-    min-height: 380px;
-    max-height: 640px;
-  }
-
-  .adekoya-hero-canvas--verse .adekoya-hero-image-wrap {
-    height: 100% !important;
-    min-height: 380px !important;
-    max-height: 640px !important;
-  }
-
-  .adekoya-hero-canvas--verse .adekoya-hero-img {
-    height: 100% !important;
-    min-height: 380px !important;
-    max-height: 640px !important;
-    object-fit: contain !important;
-  }
 }
 
 .adekoya-hero-overlay-brand {

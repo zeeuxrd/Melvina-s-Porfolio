@@ -378,10 +378,10 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
         </header>
 
         {/* Massive Hero Image Mockup Canvas */}
-        <div className={`adekoya-hero-canvas ${caseStudyId === 'case-02' ? 'adekoya-hero-canvas--verse' : ''}`} data-reveal>
+        <div className="adekoya-hero-canvas" data-reveal>
           {data.heroImage ? (
             <div className="adekoya-hero-image-wrap">
-              <img src={data.heroImage} alt={`${data.title} Main Product Hero Artifact`} className="adekoya-hero-img" />
+              <img src={data.heroImage} alt={`${data.title} Main Product Hero Artifact`} className="adekoya-hero-img" loading="eager" fetchpriority="high" />
             </div>
           ) : (
             <div className="hero-mock-placeholder">
@@ -424,7 +424,7 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
         {/* Full-Width Large Screen Mockup Container */}
         <div className="adekoya-section-canvas adekoya-section-canvas--flush margin-bottom-lg" data-reveal>
           {data.architectureImage ? (
-            <img src={data.architectureImage} alt={`${data.title} Product Architecture Overview`} className="adekoya-hero-img" />
+            <img src={data.architectureImage} alt={`${data.title} Product Architecture Overview`} className="adekoya-hero-img" loading="lazy" decoding="async" />
           ) : (
             <div className="mock-canvas-inner">
               <div className="large-screen-mock">

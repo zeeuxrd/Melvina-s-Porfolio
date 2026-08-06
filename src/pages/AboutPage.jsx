@@ -196,7 +196,7 @@ export default function AboutPage({ onBackToHome }) {
           <div className="sticker-card sticker-polaroid polaroid-1" {...getStickerProps('polaroid1')}>
             <div className="tape-accent" />
             <div className="polaroid-img-frame">
-              <img src={polaroidImgDesk} alt="Somtochukwu Workspace" className="polaroid-img" draggable="false" />
+              <img src={polaroidImgDesk} alt="Somtochukwu Workspace" className="polaroid-img" draggable="false" loading="lazy" decoding="async" />
             </div>
             <span className="polaroid-caption">Research Desk ✨</span>
           </div>
@@ -205,7 +205,7 @@ export default function AboutPage({ onBackToHome }) {
           <div className="sticker-card sticker-polaroid polaroid-2" {...getStickerProps('polaroid2')}>
             <div className="tape-accent" />
             <div className="polaroid-img-frame">
-              <img src={polaroidImgBooks} alt="Mindset, Growth & Readings" className="polaroid-img" draggable="false" />
+              <img src={polaroidImgBooks} alt="Mindset, Growth & Readings" className="polaroid-img" draggable="false" loading="lazy" decoding="async" />
             </div>
             <span className="polaroid-caption">Mindset &amp; Readings 📚</span>
           </div>
@@ -214,7 +214,7 @@ export default function AboutPage({ onBackToHome }) {
           <div className="sticker-card sticker-polaroid polaroid-3" {...getStickerProps('polaroid3')}>
             <div className="tape-accent" />
             <div className="polaroid-img-frame">
-              <img src={polaroidImgWorkshop} alt="Somtochukwu Leading Design Research Workshop" className="polaroid-img" draggable="false" />
+              <img src={polaroidImgWorkshop} alt="Somtochukwu Leading Design Research Workshop" className="polaroid-img" draggable="false" loading="lazy" decoding="async" />
             </div>
             <span className="polaroid-caption">Research Workshop 📋</span>
           </div>
@@ -223,7 +223,7 @@ export default function AboutPage({ onBackToHome }) {
           <div className="sticker-card sticker-polaroid polaroid-4" {...getStickerProps('polaroid4')}>
             <div className="tape-accent" />
             <div className="polaroid-img-frame">
-              <img src={polaroidImgMatcha} alt="Slow Mornings & Gratitude Journal" className="polaroid-img" draggable="false" />
+              <img src={polaroidImgMatcha} alt="Slow Mornings & Gratitude Journal" className="polaroid-img" draggable="false" loading="lazy" decoding="async" />
             </div>
             <span className="polaroid-caption">Slow Mornings 🍵</span>
           </div>

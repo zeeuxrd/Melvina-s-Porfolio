@@ -4,8 +4,8 @@
   position: relative;
   min-height: 100vh;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 12rem 2rem 5rem 2rem;
   overflow: hidden;
 }
@@ -18,14 +18,15 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
+  align-items: center;
+  text-align: center;
 }
 
 /* Intro line with leading emoji */
 .hero-intro {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.6rem;
   font-family: var(--font-body);
   font-size: 1.05rem;
@@ -44,6 +45,8 @@
   position: relative;
   width: 100%;
   max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .hero-title {
@@ -53,72 +56,135 @@
   line-height: 1.42;
   letter-spacing: -0.5px;
   color: var(--text-primary);
+  text-align: center;
 }
 
-/* Option 2: Inline Capsule Badges (Flows Inline with Text - Never Covers Text) */
-.hero-inline-pill {
+/* Hero CTA Buttons Container (Side-by-Side) */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.hero-cta-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  padding: 0.25rem 0.85rem;
-  border-radius: 999px;
-  font-family: var(--font-body);
-  font-size: clamp(0.98rem, 1.85vw, 1.38rem);
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.9rem 1.8rem;
+  border-radius: 0;
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.88rem;
   font-weight: 600;
-  vertical-align: middle;
-  margin: 0 0.18rem;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
-  transition: transform 0.25s ease;
-  cursor: default;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: none !important;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+  cursor: pointer;
 }
 
-.hero-inline-pill:hover {
-  transform: rotate(0deg) scale(1.08) !important;
+.hero-cta-btn--primary {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border: 1px solid var(--accent-color);
+  box-shadow: none !important;
 }
 
-.hero-pill-icon {
-  display: inline-flex;
+.hero-cta-btn--primary:hover {
+  transform: translateY(-2px);
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #ffffff;
+  box-shadow: none !important;
+}
+
+.hero-cta-btn--secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  box-shadow: none !important;
+}
+
+.hero-cta-btn--secondary:hover {
+  transform: translateY(-2px);
+  background-color: var(--bg-secondary);
+  border-color: var(--text-primary);
+  color: var(--text-primary);
+  box-shadow: none !important;
+}
+
+[data-theme="light"] .hero-cta-btn--primary {
+  background-color: var(--accent-color);
+  color: #ffffff;
+  border-color: var(--accent-color);
+  box-shadow: none !important;
+}
+
+[data-theme="light"] .hero-cta-btn--secondary {
+  background-color: #ffffff;
+  color: var(--text-primary);
+  border-color: var(--border-color);
+  box-shadow: none !important;
+}
+
+.hero-btn-icon {
   width: 1.1em;
   height: 1.1em;
   flex-shrink: 0;
+  transition: transform 0.2s ease;
 }
 
-.hero-pill-icon svg {
-  width: 100%;
-  height: 100%;
+.hero-cta-btn--primary:hover .hero-btn-icon {
+  transform: translateX(3px);
 }
 
-/* Decorative Rotations */
-.rotate-neg-5 { transform: rotate(-5deg); }
-.rotate-pos-4 { transform: rotate(4deg); }
-.rotate-neg-3 { transform: rotate(-3deg); }
-.rotate-neg-4 { transform: rotate(-4deg); }
-.rotate-pos-6 { transform: rotate(6deg); }
-
-/* Soft pastel fills with a deeper tone-matched label */
-.hero-sticker--green {
-  background-color: #d9f5c2;
-  color: #4a9c2f;
+.hero-cta-btn--secondary:hover .hero-btn-icon {
+  transform: translateY(2px);
 }
 
-.hero-sticker--blue {
-  background-color: #cfe4fd;
-  color: #3b82c4;
+/* Inline Highlighted Headline Words (Replacing Pill Badges) */
+.hero-highlight {
+  font-weight: 600;
+  display: inline;
+  position: relative;
+  transition: color 0.25s ease;
 }
 
-.hero-sticker--orange {
-  background-color: #fde3b8;
-  color: #d98324;
+.hero-highlight--purple {
+  color: #c084fc;
 }
 
-.hero-sticker--purple {
-  background-color: #e4d9fd;
-  color: #7c5cd6;
+.hero-highlight--pink {
+  color: #FF1493;
 }
 
-.hero-sticker--pink {
-  background-color: #fbd5e8;
-  color: #d1508f;
+.hero-highlight--green {
+  color: #4ade80;
+}
+
+.hero-highlight--orange {
+  color: #fbbf24;
+}
+
+[data-theme="light"] .hero-highlight--purple {
+  color: #7c3aed;
+}
+
+[data-theme="light"] .hero-highlight--pink {
+  color: #FF1493;
+}
+
+[data-theme="light"] .hero-highlight--green {
+  color: #16a34a;
+}
+
+[data-theme="light"] .hero-highlight--orange {
+  color: #d97706;
 }
 
 /* Responsiveness adjustments */
@@ -158,7 +224,20 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    padding: 8rem 18px 2.5rem 18px;
+    padding: 8rem 18px 4.5rem 18px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.85rem;
+    width: 100%;
+    margin-top: 1.75rem;
+  }
+
+  .hero-cta-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.4rem;
   }
 
   .hero-sticker {
@@ -169,5 +248,104 @@
   .hero-sticker-icon {
     width: 13px;
     height: 13px;
+  }
+}
+
+/* Edge Scroll Ticker for Design & Research Focus Areas */
+.hero-ticker-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  background: transparent;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0.9rem 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+.hero-ticker-wrapper::before,
+.hero-ticker-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-ticker-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg-primary), transparent);
+}
+
+.hero-ticker-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg-primary), transparent);
+}
+
+.hero-ticker-track {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  white-space: nowrap;
+  animation: heroTickerScroll 35s linear infinite;
+  will-change: transform;
+}
+
+.hero-ticker-wrapper:hover .hero-ticker-track {
+  animation-play-state: paused;
+}
+
+@keyframes heroTickerScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}
+
+.hero-ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.hero-ticker-item:hover {
+  color: var(--accent-color);
+}
+
+.hero-ticker-title {
+  font-family: 'General Sans', sans-serif;
+  font-weight: 600;
+  color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+.hero-ticker-item:hover .hero-ticker-title {
+  color: var(--accent-color);
+}
+
+.hero-ticker-dot {
+  color: var(--accent-color);
+  font-size: 0.85rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-ticker-track {
+    animation: none;
   }
 }

@@ -49,11 +49,13 @@ export default function Header({ theme, onToggleTheme, onNavigate, currentPage }
         {/* Left Side: Avatar & Brand Name */}
         <div className="nav-brand" onClick={handleNav('home')} title="Go to Homepage">
           {!imgError ? (
-            <img 
-              src={avatarPath} 
-              alt="Somtochukwu's Avatar" 
-              className="nav-avatar" 
+            <img
+              src={avatarPath}
+              alt="Somtochukwu's Avatar"
+              className="nav-avatar"
               onError={() => setImgError(true)}
+              loading="eager"
+              decoding="async"
             />
           ) : (
             <div className="nav-avatar-fallback" aria-label="Somtochukwu's Avatar Fallback">
