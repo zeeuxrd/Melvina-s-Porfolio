@@ -1,19 +1,19 @@
 /* Footer Section - Reference Layout Match */
 
 .footer-section {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  margin-left: -50vw;
+  width: 100%;
   padding: 5rem 4rem 3rem 4rem;
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  box-sizing: border-box;
 }
 
 .footer-top,
 .footer-main,
 .footer-blobs-canvas,
-.footer-copyright {
+.footer-copyright,
+.footer-divider {
+  width: 100%;
   max-width: var(--max-width);
   margin-left: auto;
   margin-right: auto;
@@ -59,8 +59,8 @@
 
 /* Dashed Dividers */
 .footer-divider {
-  max-width: var(--max-width);
-  margin: 3.5rem auto;
+  width: 100%;
+  margin: 3.5rem 0;
   border-top: 1px dashed rgba(255, 255, 255, 0.15);
 }
 

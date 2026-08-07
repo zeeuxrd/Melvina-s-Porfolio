@@ -2,11 +2,11 @@
 
 .hero-section {
   position: relative;
-  min-height: 100vh;
+  min-height: 130vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12rem 2rem 5rem 2rem;
+  padding: 15rem 2rem 7rem 2rem;
   overflow: hidden;
 }
 
@@ -20,6 +20,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transform: translateY(-20%);
 }
 
 /* Intro line with leading emoji */
@@ -75,7 +76,8 @@
   align-items: center;
   justify-content: center;
   gap: 0.65rem;
-  padding: 0.9rem 1.8rem;
+  height: 43px;
+  padding: 0 1.25rem;
   border-radius: 0;
   font-family: 'General Sans', sans-serif;
   font-size: 0.88rem;
@@ -106,14 +108,14 @@
 .hero-cta-btn--secondary {
   background-color: transparent;
   color: var(--text-primary);
-  border: 1px solid var(--border-color);
+  border: 0.7px solid rgba(255, 255, 255, 0.7);
   box-shadow: none !important;
 }
 
 .hero-cta-btn--secondary:hover {
   transform: translateY(-2px);
   background-color: var(--bg-secondary);
-  border-color: var(--text-primary);
+  border-color: #ffffff;
   color: var(--text-primary);
   box-shadow: none !important;
 }
@@ -126,9 +128,9 @@
 }
 
 [data-theme="light"] .hero-cta-btn--secondary {
-  background-color: #ffffff;
+  background-color: transparent !important;
   color: var(--text-primary);
-  border-color: var(--border-color);
+  border: 0.7px solid rgba(26, 26, 26, 0.7);
   box-shadow: none !important;
 }
 
@@ -147,45 +149,7 @@
   transform: translateY(2px);
 }
 
-/* Inline Highlighted Headline Words (Replacing Pill Badges) */
-.hero-highlight {
-  font-weight: 600;
-  display: inline;
-  position: relative;
-  transition: color 0.25s ease;
-}
 
-.hero-highlight--purple {
-  color: #c084fc;
-}
-
-.hero-highlight--pink {
-  color: #FF1493;
-}
-
-.hero-highlight--green {
-  color: #4ade80;
-}
-
-.hero-highlight--orange {
-  color: #fbbf24;
-}
-
-[data-theme="light"] .hero-highlight--purple {
-  color: #7c3aed;
-}
-
-[data-theme="light"] .hero-highlight--pink {
-  color: #FF1493;
-}
-
-[data-theme="light"] .hero-highlight--green {
-  color: #16a34a;
-}
-
-[data-theme="light"] .hero-highlight--orange {
-  color: #d97706;
-}
 
 /* Responsiveness adjustments */
 @media (max-width: 1024px) {
@@ -201,13 +165,33 @@
 
 @media (max-width: 768px) {
   .hero-section {
-    padding: 9rem 18px 2.5rem 18px;
+    padding: 9.5rem 18px 5rem 18px;
     min-height: auto;
+  }
+
+  .hero-content {
+    transform: translateY(-10%);
+    align-items: flex-start;
+    text-align: left;
   }
 
   .hero-intro {
     font-size: 0.95rem;
     margin-bottom: 1.25rem;
+    justify-content: flex-start;
+  }
+
+  .hero-headline-wrap {
+    text-align: left;
+    margin: 0;
+  }
+
+  .hero-title {
+    text-align: left;
+  }
+
+  .hero-actions {
+    justify-content: flex-start;
   }
 
   .hero-sticker {
@@ -224,7 +208,11 @@
 
 @media (max-width: 480px) {
   .hero-section {
-    padding: 8rem 18px 4.5rem 18px;
+    padding: 9rem 18px 5rem 18px;
+  }
+
+  .hero-content {
+    transform: translateY(-10%);
   }
 
   .hero-actions {
@@ -239,22 +227,12 @@
     justify-content: center;
     padding: 0.85rem 1.4rem;
   }
-
-  .hero-sticker {
-    font-size: 0.75rem;
-    padding: 0.35rem 0.6rem;
-  }
-
-  .hero-sticker-icon {
-    width: 13px;
-    height: 13px;
-  }
 }
 
 /* Edge Scroll Ticker for Design & Research Focus Areas */
 .hero-ticker-wrapper {
   position: absolute;
-  bottom: 0;
+  bottom: 5%;
   left: 0;
   width: 100%;
   overflow: hidden;

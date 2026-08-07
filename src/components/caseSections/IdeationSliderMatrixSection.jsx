@@ -101,60 +101,55 @@ export default function IdeationSliderMatrixSection({ caseId }) {
         </div>
       </div>
     ) : (
-      <div className="ideation-slider-container">
-        {/* Top Header Row with Title & Lime Badge */}
-        <div className="ideation-slider-header">
-          <h3 className="ideation-slider-title">User Research &amp; Co-Design Outcomes</h3>
-        </div>
-
-        {/* 3-Column Metric Progress Slider Matrix */}
-        <div className="ideation-slider-grid">
+      <div className="fitflex-roadmap-pipeline-container">
+        {/* 3-Column Milestone Pipeline Grid */}
+        <div className="roadmap-pipeline-grid">
           
-          {/* Column 1 */}
-          <div className="slider-col">
-            <div className="slider-track-wrap">
-              <div className="slider-pill-bar gradient-coral-yellow">
-                <div className="slider-pill-fill" style={{ width: '88%' }} />
-                <div className="slider-pill-rest" style={{ width: '12%' }} />
-              </div>
+          {/* Milestone 01 */}
+          <div className="roadmap-card card-phase-1">
+            <div className="roadmap-card-top">
+              <span className="roadmap-phase-badge badge-terracotta">PHASE 01</span>
             </div>
-            <div className="slider-stat-group">
-              <span className="slider-stat-num">88<span className="slider-stat-unit">%</span></span>
-              <p className="slider-stat-desc">
-                of nursing mothers preferred 5-to-15 minute energy-matched micro-stretches over fixed 45-minute workouts.
-              </p>
+
+            <h4 className="roadmap-card-title">Product Benchmarking</h4>
+            <p className="roadmap-card-desc">
+              Benchmarking product against other winning solutions in the industry.
+            </p>
+
+            <div className="roadmap-card-footer">
+              <span className="roadmap-outcome-pill pill-terracotta">BENCHMARKING</span>
             </div>
           </div>
 
-          {/* Column 2 */}
-          <div className="slider-col">
-            <div className="slider-track-wrap">
-              <div className="slider-pill-bar gradient-yellow-green">
-                <div className="slider-pill-fill" style={{ width: '64%' }} />
-                <div className="slider-pill-rest" style={{ width: '36%' }} />
-              </div>
+          {/* Milestone 02 */}
+          <div className="roadmap-card card-phase-2">
+            <div className="roadmap-card-top">
+              <span className="roadmap-phase-badge badge-amber">PHASE 02</span>
             </div>
-            <div className="slider-stat-group">
-              <span className="slider-stat-num">64<span className="slider-stat-unit">%</span></span>
-              <p className="slider-stat-desc">
-                reduction in self-reported post-natal guilt after replacing daily streak counters with flexible weekly rest targets.
-              </p>
+
+            <h4 className="roadmap-card-title">Healthcare &amp; Nutritionist Partnerships</h4>
+            <p className="roadmap-card-desc">
+              Exploring partnerships with healthcare providers and nutritionists for further support and resources.
+            </p>
+
+            <div className="roadmap-card-footer">
+              <span className="roadmap-outcome-pill pill-amber">PARTNERSHIPS</span>
             </div>
           </div>
 
-          {/* Column 3 */}
-          <div className="slider-col">
-            <div className="slider-track-wrap">
-              <div className="slider-pill-bar gradient-blue-green">
-                <div className="slider-pill-fill" style={{ width: '95%' }} />
-                <div className="slider-pill-rest" style={{ width: '5%' }} />
-              </div>
+          {/* Milestone 03 */}
+          <div className="roadmap-card card-phase-3">
+            <div className="roadmap-card-top">
+              <span className="roadmap-phase-badge badge-blue">PHASE 03</span>
             </div>
-            <div className="slider-stat-group">
-              <span className="slider-stat-num">95<span className="slider-stat-unit">%</span></span>
-              <p className="slider-stat-desc">
-                safety confidence score during Obstetric &amp; Diastasis Recti co-design workshops with healthcare specialists.
-              </p>
+
+            <h4 className="roadmap-card-title">Continuous Iteration &amp; Feedback</h4>
+            <p className="roadmap-card-desc">
+              Continuously iterating and refining the solution based on user feedback and testing results.
+            </p>
+
+            <div className="roadmap-card-footer">
+              <span className="roadmap-outcome-pill pill-blue">ITERATIVE LOOPS</span>
             </div>
           </div>
 

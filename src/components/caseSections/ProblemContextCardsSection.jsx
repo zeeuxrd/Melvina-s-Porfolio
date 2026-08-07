@@ -3,22 +3,6 @@ import React from 'react'
 export default function ProblemContextCardsSection({ caseId }) {
   return (
     <div className="problem-context-container">
-      {/* Top Skim Metrics Row: 3 Columns */}
-      <div className="problem-top-metrics-row">
-        <div className="problem-metric-col">
-          <span className="problem-metric-val">{caseId === 'case-02' ? '45 mins' : '78%'}</span>
-          <span className="problem-metric-lbl">{caseId === 'case-02' ? 'Average deal processing duration' : 'Churn Rate within 14 days of birth'}</span>
-        </div>
-        <div className="problem-metric-col">
-          <span className="problem-metric-val">{caseId === 'case-02' ? '22' : '32 hrs'}</span>
-          <span className="problem-metric-lbl">{caseId === 'case-02' ? 'Dealerships shadowed across 5 hubs' : 'In-home shadowing'}</span>
-        </div>
-        <div className="problem-metric-col">
-          <span className="problem-metric-val">{caseId === 'case-02' ? '71%' : '0'}</span>
-          <span className="problem-metric-lbl">{caseId === 'case-02' ? 'Lacked pre-approval predictability' : 'Adaptive routines in market apps'}</span>
-        </div>
-      </div>
-
       {/* 3 Vertical Color-Coded Scalloped Problem Cards Grid */}
       <div className="problem-cards-grid">
         
@@ -34,10 +18,10 @@ export default function ProblemContextCardsSection({ caseId }) {
           </div>
           <div className="scallop-card-body">
             <span className="scallop-card-num">01.</span>
-            <h4 className="scallop-card-title">{caseId === 'case-02' ? 'Redundant Data Entry' : 'Social Media & Guilt Spirals'}</h4>
+            <h4 className="scallop-card-title">{caseId === 'case-02' ? 'Inconvenient & Time-Consuming' : 'Social Media & Guilt Spirals'}</h4>
             <p className="scallop-card-text">
               {caseId === 'case-02'
-                ? 'Buyer and vehicle details were re-typed across 6+ disconnected lender portals on every single deal. F&I managers repeated the same keystrokes five or six times, while a customer sat waiting on the other side of the desk.'
+                ? 'Traditional vehicle purchasing requires lengthy, high-friction physical dealership visits that conflict with the busy work schedules of urban working professionals.'
                 : 'Fixed daily streak counters triggered intense self-blame when workouts were missed due to baby care.'}
             </p>
           </div>
@@ -55,10 +39,10 @@ export default function ProblemContextCardsSection({ caseId }) {
           </div>
           <div className="scallop-card-body">
             <span className="scallop-card-num">02.</span>
-            <h4 className="scallop-card-title">{caseId === 'case-02' ? 'Opaque Pre-Approval Rules' : 'Energy & Sleep Crises'}</h4>
+            <h4 className="scallop-card-title">{caseId === 'case-02' ? 'Opaque Pricing & Financing' : 'Energy & Sleep Crises'}</h4>
             <p className="scallop-card-text">
               {caseId === 'case-02'
-                ? '71% of F&I managers could not predict which lender would approve a buyer before formal submittal. Every application was a gamble, and the unpredictability made it impossible to set customer expectations or plan the close.'
+                ? 'Unclear vehicle pricing structures and hidden financing terms create uncertainty, preventing buyers from accessing predictable, flexible payment plans.'
                 : 'Severe sleep fragmentation meant rigid 45-minute workout plans were physically impossible.'}
             </p>
           </div>
@@ -76,10 +60,10 @@ export default function ProblemContextCardsSection({ caseId }) {
           </div>
           <div className="scallop-card-body">
             <span className="scallop-card-num">03.</span>
-            <h4 className="scallop-card-title">{caseId === 'case-02' ? 'Silent Customer Deal Loss' : 'Physical Trauma Fear'}</h4>
+            <h4 className="scallop-card-title">{caseId === 'case-02' ? 'Need for Trusted Online Retail' : 'Physical Trauma Fear'}</h4>
             <p className="scallop-card-text">
               {caseId === 'case-02'
-                ? '18 minutes were lost per deal to manual credit-field transfer — time that directly correlated with customers walking out during live negotiations. The longer a buyer waited in silence, the more likely the deal slipped away.'
+                ? 'Middle-income professionals in motorable Nigerian cities need a transparent, digital-first buying experience that delivers flexible payment options without physical dealership hassles.'
                 : '64% of mothers feared unadapted core exercises would worsen diastasis recti or post-natal recovery.'}
             </p>
           </div>

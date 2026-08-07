@@ -13,120 +13,94 @@ const caseStudyData = {
     heroImage: fitflexHeroImg,
     architectureImage: architectureImg,
     overviewCard3Image: overviewCard3Img,
-    tagline: 'Designing realistic post-natal health & retention solutions nursing mothers could trust.',
-    heroDescription: 'Fitflex is a privacy-first maternal health platform designed to help new mothers build healthy, realistic routines. Many new mothers abandon traditional fitness apps because existing routines impose aggressive goals that ignore post-natal recovery, sleep deprivation, and tight schedules.',
-    role: 'Lead UX Researcher & Product Strategist',
-    timeline: '2025',
-    discipline: 'Maternal UX & Health',
-    team: 'DODO Team & Health Experts',
+    tagline: 'A solution to help nursing mothers to lose weight and live a healthy lifestyle.',
+    heroDescription: 'This case study showcases the successful mentorship journey of three product design mentees, where I mentored and guided them through a transformative process to deepen their knowledge of the end-to-end design process, increase output quality, and improve their hirability.',
+    role: 'Lead Product Designer & Team Mentor',
+    timeline: '6 Weeks',
+    discipline: 'Maternal UX & Health Strategy',
+    team: '3 Product Design Mentees & Lead',
     
     sections: [
       {
         id: 'overview',
         title: 'Overview',
-        text: 'Fitflex set out to solve postpartum health retention for nursing mothers across West Africa. Research revealed that 78% of mothers abandoned traditional fitness apps within 14 days because current products impose high-intensity workouts that cause physical discomfort and emotional guilt during early motherhood.',
-        mockLabel: 'Executive Research Scope & Problem Context Artifact',
+        text: 'Fitflex is a weight loss and healthy lifestyle app designed for nursing mothers — a group whose post-natal realities make conventional fitness solutions ineffective. The project was structured as a dual-purpose engagement: to design a validated, user-centred product, and to mentor three early-career designers through a real-world end-to-end design process.',
+
+        mockLabel: 'Executive Scope & Mentorship Process Artifact',
         mockType: 'overview-mobile-flow',
       },
       {
         id: 'challenge',
-        title: 'Challenge',
-        text: 'Postpartum recovery is fraught with guilt and fatigue. Primary research highlighted that rigid daily workout notifications and unadapted core exercises created physical discomfort and anxiety. Our challenge was redesigning the core habit-building model around infant feeding schedules and post-natal physiological constraints.',
+        title: 'The Problem',
+        text: 'Over 2.8 million people globally, die annually from being overweight or obese (WHO, 2021), yet 75% of weight loss attempts end in failure (International Journal of Obesity, 2018). For nursing mothers in particular, weight management is especially challenging due to limited time, low motivation, knowledge gaps, and unhealthy eating habits. These struggles often lead to obesity, chronic disease risks, and reduced well-being highlighting the need for more supportive, realistic solutions.',
         mockLabel: 'Maternal Friction Pathway & Drop-Off Nodes',
         mockType: 'fitflex-wavy-challenge',
       },
       {
         id: 'research',
-        title: 'Research & Discovery',
-        text: 'To establish an evidence-led foundation, we executed a 12-week triangulated research protocol across 8 West African urban hubs (Lagos, Accra, Abuja, Abidjan, Dakar, Kumasi, Ibadan, Yaoundé). We combined 32 semi-structured qualitative interviews, 14 contextual in-home shadowing sessions during morning infant-care routines, and a 3-week WhatsApp diary study with 24 nursing mothers. Our research aimed to map the intersection between physical post-natal recovery, sleep fragmentation, and emotional guilt triggered by conventional fitness apps.',
-        mockLabel: 'Field Methodology & 8-Country Sampling Matrix',
+        title: 'Research Methodology & Strategy',
+        text: 'Secondary research revealed that 45% of women globally experience substantial weight gain (≥20 pounds) in the first year after childbirth (Journal of Women’s Health). Nursing mothers represent extreme users whose unique challenges amplify common barriers such as time, motivation, and lifestyle constraints. Success with this segment not only addresses a critical need but also ensures broader applicability to other user groups, maximizing both impact and business value.',
+        quote: '"I\'d never had a reason to go on a weightloss journey before childbirth"',
+        quoteAuthor: 'Adebisi, Nursing Mother and Project Manager (Research participant from indepth interview session)',
+        mockLabel: 'Field Methodology & Research Framework Matrix',
         mockType: 'sticky-board',
         stickyNotes: [
           {
             type: 'terracotta',
-            tag: 'FIELD SCOPE & SAMPLING (N=32)',
+            tag: 'EXTREME USER RATIONALE',
             lines: [
-              '• Target: First-time & multi-child nursing mothers (0-12 mos postpartum).',
-              '• Markets: 8 West African urban hubs (Lagos, Accra, Abidjan, Dakar).',
-              '• Screening: Experiencing fatigue, sleep fragmentation, or app abandonment within 30 days of birth.',
+              '• Target Segment: Postpartum nursing mothers facing extreme time, energy, and physical constraints.',
+              '• Strategic Value: Extreme user insights uncover deep friction points standard fitness apps ignore.',
+              '• Business Impact: Designing for extreme constraints ensures broader, more resilient product adoption.',
             ],
           },
           {
             type: 'yellow',
-            tag: 'TRIANGULATED METHODOLOGY PROTOCOL',
+            tag: 'RESEARCH METHODOLOGY PROTOCOL',
             checklist: [
-              '✓ 14 Contextual In-Home Shadowing Sessions (6 AM - 10 AM routines)',
-              '✓ 3-Week WhatsApp Diary Study (tracking energy levels 1-10)',
-              '✓ 18 Semi-Structured Remote Interviews (body image & spousal support)',
-              '✓ Quantitative Drop-Off Cohort Analysis (12,000 baseline installs)',
+              '✓ Secondary Research & Industry Benchmarking',
+              '✓ In-Depth User Interviews with Nursing Mothers',
+              '✓ Data Synthesis: Affinity Mapping & Impact-Value Matrix',
+              '✓ Rapid Interactive Prototyping & Usability Testing',
             ],
           },
           {
             type: 'pink',
-            tag: 'KEY BEHAVIORAL FRICTION FINDINGS',
+            tag: 'MENTORSHIP & PROJECT SCOPE',
             lines: [
-              '1. The "Guilt Spiral" (78% Churn): Fixed daily streak counters triggered intense self-blame when missed.',
-              '2. Infant-Governed Schedules: 92% reported baby feeding cycles rendered calendar notifications useless.',
-              '3. Physical Trauma Fear: 64% feared unadapted core workouts worsened diastasis recti.',
-            ],
-          },
-          {
-            type: 'lilac',
-            tag: 'DATA SYNTHESIS & FRAMEWORK',
-            lines: [
-              '• Dovetail Coding: 240+ tagged video clips & 18 affinity clusters.',
-              '• Framework Built: "Maternal Energy-Cap Model" sorting routines into 3 tiers (5-min stretch, 15-min low-impact, recovery).',
-              '• Strategy Shift: Replaced rigid streaks with "Zero-Guilt Adaptive Habits."',
-            ],
-          },
-          {
-            type: 'mint',
-            tag: 'RESEARCH RIGOR & METRICS',
-            lines: [
-              'Duration: 12-Week Sprint | Transcripts Coded: 32 Hours | Dovetail Tags: 240+ | Cross-Functional Alignment: 100% agreement from PM, Engineering, & Medical Consultants.',
+              '1. Lead Product Designer & Team Mentor guiding 3 product design mentees.',
+              '2. 6-Week Sprint: Miro (Synthesis) & Figma (Prototyping/Testing).',
+              '3. Goal: Deepen UXR process, elevate output quality & hirability.',
             ],
           },
         ],
       },
       {
         id: 'findings',
-        title: 'Key Findings & Insights',
-        text: 'Synthesizing qualitative data into Dovetail revealed three main themes: (1) Guilt & All-or-Nothing Mindsets when missing workouts, (2) Predictability Crises driven by baby sleep cycles, and (3) Post-Natal Physical Discomfort from standard unadapted exercise routines.',
-        quote: '"I don\'t need an app to tell me I failed today. I need an app that understands I spent 4 hours soothing my baby and offers a 5-minute stretch instead."',
-        quoteAuthor: 'Participant #14 — Nursing mother of 4-month-old',
-        mockLabel: 'Dovetail Thematic Coding & Affinity Cluster Canvas',
+        title: 'Key Findings & Opportunity Areas',
+        text: 'Through secondary research, we identified critical gaps in the existing landscape that our study could address. Our primary research further revealed recurring patterns, and by synthesizing user feedback, we identified two key opportunity areas with the highest potential for impact, using affinity mapping and an impact-value prioritization matrix. These themes emerged as the most frequent and recurring needs expressed by users, offering a clear direction for our solution to address.',
+        mockLabel: 'Two Key Opportunity Areas & How Might We Framework',
         mockType: 'findings-bar-chart',
       },
       {
-        id: 'ideation',
-        title: 'Ideation & Design Process',
-        text: 'Working cross-functionally with health specialists and product engineers, we facilitated Miro co-design workshops to frame "Adaptive Micro-Routines" and a "Post-Natal Safety Filter" that adjust workout recommendations based on real-time maternal energy levels.',
-        mockLabel: 'Miro Co-Design Workshops & Journey Maps',
-        mockType: 'ideation-slider-matrix',
-      },
-      {
         id: 'testing',
-        title: 'Feedback & Testing Loops',
-        text: 'We ran 3 iterative rounds of moderated usability testing labs with 24 nursing mothers. We measured task completion rates, comprehension of energy-based selection, and emotional confidence during session completion.',
+        title: 'Testing and Validating Digital Solution',
+        text: 'We conducted evaluative usability testing with 24 nursing mothers across 3 iterative rounds. Sessions focused on task completion, emotional response, and comprehension of key flows. Findings were used to refine interaction patterns, reduce friction, and confirm that the solution addressed real behavioural and motivational needs — not just surface-level usability.',
+
         mockLabel: 'Evaluative Usability Testing Scorecards & Task Logs',
         mockType: 'triple-card',
       },
       {
-        id: 'impact',
-        title: 'Outcome & Impact',
-        text: 'The research recommendations led to the launch of "Adaptive Micro-Routines" and a "Zero-Guilt System." 90-day retention increased by 42%, onboarding drop-off fell by 28%, and product teams permanently adopted our maternal mental model framework.',
-        metrics: [
-          { val: '+42%', lbl: '90-Day App Retention' },
-          { val: '94%', lbl: 'Task Completion Rate' },
-          { val: '3.8x', lbl: 'Habit Consistency' },
-        ],
-        mockLabel: 'Post-Launch Retention Analytics & Funnel Comparison',
-        mockType: 'impact-dashboard-grid',
+        id: 'ideation',
+        title: 'Note for Future Self',
+        text: 'To maintain momentum and ensure long-term product impact, we identified key strategic priorities for future iterations:',
+        mockLabel: 'Future Product Benchmarking & Roadmap Strategy',
+        mockType: 'ideation-slider-matrix',
       },
       {
         id: 'reflections',
         title: 'Reflections',
-        text: 'Designing for vulnerable user groups requires replacing growth hacks with authentic empathy. Complexity doesn\'t disappear when features are removed; it disappears when systems are organized around genuine human constraints.',
+        text: 'This project was quite unique for me because it wasn’t just about delivering value for the solution, but also because it provided an opportunity for me to transfer knowledge to younger designers, guide them to adopt proven design strategies, embrace industry best practices, and elevate the quality of their work, ultimately strengthening their confidence and hirability. Beyond that, I was reminded that meaningful design isn’t just about aesthetics—it adapts to real user needs, scales with them, and evolves through continuous feedback.',
         mockLabel: 'UXR Maturity & Project Timeline Framework',
         mockType: 'fitflex-timeline-reflection',
       },
@@ -137,79 +111,77 @@ const caseStudyData = {
     title: 'Verse',
     heroImage: verseArchitectureImg,
     architectureImage: verseHeroImg,
-    tagline: 'Eliminating multi-portal friction in enterprise automotive financing for Nigerian dealerships.',
-    heroDescription: 'Verse is a B2B automotive financing portal connecting dealership finance & insurance (F&I) managers with multi-tier lending institutions. Legacy credit systems forced managers to spend up to 45 minutes re-typing buyer data across disconnected lender portals—time that directly fed deal slippage during live negotiations.',
+    tagline: 'An enterprise B2B automotive financing platform transforming dealership credit orchestration.',
+    heroDescription: 'Verse is a B2B automotive retail platform designed to eliminate multi-portal data re-entry, automate credit decisioning, and streamline deal execution for dealership finance managers during live negotiations.',
     role: 'Senior UX Researcher & Systems Analyst',
-    timeline: '2024',
-    discipline: 'Fintech & Enterprise Systems',
-    team: 'Verse Product, Engineering & Lender API Partners',
+    toolStack: 'Miro, Figma, Google Slides',
     sections: [
       {
         id: 'overview',
         title: 'Overview',
-        text: 'Verse is an AI-powered enterprise automotive financing and smart mobility portal connecting Nigerian franchise dealerships with multi-tier lending institutions. Conversational AI assistants, real-time credit orchestration, and automated pre-screening let dealership F&I managers calculate payments, review damage inspection reports, select insurance tiers, and arrange leases—such as Volvo EX30 electric crossover deployments—in under 5 minutes. The research goal was to eliminate multi-portal data re-entry and cut deal completion time from 45 minutes to 16.',
+        text: 'The automotive industry has historically lagged in digital transformation, with 95% of car purchases still requiring physical dealership visits. Following the pandemic, consumer behavior shifted dramatically toward contactless purchasing and seamless online financing. Verse was designed to address these core friction points in the $1.3 trillion automotive retail market — delivering an end-to-end digital purchasing flow with the potential to increase buyer conversion rates by 40% compared to traditional dealerships.',
         mockLabel: 'AI Automotive Financing & System Architecture Portal',
         mockType: 'overview-modules-grid',
       },
       {
         id: 'challenge',
         title: 'Challenge',
-        text: 'Legacy credit software treated each lending institution as an isolated silo. Redundant data entry, unpredictable lender pre-approval rules, and frequent session timeouts created intense friction during live customer negotiations—71% of finance managers could not predict which lender would approve a buyer before formal submittal. The mandate: dismantle multi-portal data entry and design an automated, single-entry credit orchestration system.',
+        text: 'Traditional car buying is inconvenient, time-consuming, and lacks transparency in pricing and payment options for urban customers in Nigeria. Middle-income professionals living in motorable cities need a trusted, more convenient way to purchase vehicles with flexible payment options — eliminating the hassle and time constraints of traditional dealership visits to better meet their needs.',
         mockLabel: 'Dealership Operational Friction & Task Analysis',
         mockType: 'problem-context-cards',
       },
       {
         id: 'research',
-        title: 'Research & Discovery',
-        text: 'To quantify the true cost of fragmented credit workflows, we ran an 8-week field research program across 22 franchise dealerships in 5 major Nigerian markets (Lagos, Abuja, Port Harcourt, Ibadan, Kano). The protocol combined 20+ live contextual shadowing sessions during real customer deal closings, 24 semi-structured interviews with dealership F&I directors, and a technical integration audit of 6 legacy lender APIs. We benchmarked 400+ completed deal logs to pinpoint friction points from application origination to final contract execution.',
-        mockLabel: 'Dealership Field Research & Shadow Logs Matrix',
+        title: 'Product Discovery & Research Strategy',
+        text: 'Our research strategy spanned hypothesis prioritization, user research, feature ideation, and strategic metric alignment. We explored the Nigerian automotive market, conducted user surveys and interviews, mapped the end-to-end car-buying journey, and applied the MoSCoW framework to define an MVP roadmap aligned with key business OKRs.',
+        mockLabel: 'Product Strategy & Research Execution Framework Matrix',
         mockType: 'sticky-board',
         stickyNotes: [
           {
             type: 'terracotta',
-            tag: 'FIELD SCOPE & SAMPLING (N=22 DEALERSHIPS)',
+            tag: '01. DISCOVERY & HYPOTHESIS',
             lines: [
-              '• Target: Franchise dealership finance managers & F&I directors handling live credit submittals.',
-              '• Markets: 5 Nigerian metro regions (Lagos, Abuja, Port Harcourt, Ibadan, Kano).',
-              '• Screening: Processing 15+ credit applications weekly across 2 or more lending institutions.',
+              '• Explored the Nigerian car market through market research & expert stakeholder calls.',
+              '• Prioritized key hypotheses on trust, payments, inspections, & dealership networks.',
+              '• Mapped assumptions using a Product Assumption Map to guide risk mitigation.',
             ],
           },
           {
             type: 'yellow',
-            tag: 'TRIANGULATED METHODOLOGY PROTOCOL',
+            tag: '02. USER RESEARCH & MAPPING',
             checklist: [
-              '✓ 20+ Live Shadowing Sessions During Real Customer Deal Closings',
-              '✓ 24 Semi-Structured Interviews with Finance Directors & F&I Managers',
-              '✓ System Audit of 6 Legacy Lender Portals & Credit APIs',
-              '✓ Quantitative Deal-Time Benchmarking Across 400+ Closed Deals',
+              '✓ Conducted quantitative surveys & qualitative user interviews',
+              '✓ Mapped end-to-end buyer journeys across motorable cities',
+              '✓ Uncovered core needs: transparent pricing, flexible payments, & vehicle inspections',
+              '✓ Validated documentation & verification friction points',
             ],
           },
           {
             type: 'pink',
-            tag: 'KEY WORKFLOW FRICTION FINDINGS',
+            tag: '03. IDEATION & PRIORITIZATION',
             lines: [
-              '1. Redundant Data Entry (45-Min Average): Buyer & vehicle details re-typed across every disconnected lender portal.',
-              '2. Opaque Pre-Approval Logic: 71% of managers could not predict lender decisions before formal submission.',
-              '3. Silent Deal Loss: 18 minutes lost per deal to manual credit-field transfer directly correlated with walked customers.',
+              '1. Created comprehensive user stories & digital feature concepts.',
+              '2. Prioritized essential MVP features using the MoSCoW framework.',
+              '3. Focused sprint planning on critical user friction points first.',
             ],
           },
           {
             type: 'lilac',
-            tag: 'DATA SYNTHESIS & FRAMEWORK',
+            tag: '04. STRATEGY & BUSINESS OKRS',
             lines: [
-              '• Workflow Mapping: 400+ timed deal-completion logs & 12 lender-integration diagrams.',
-              '• Framework Built: "Single-Entry Orchestration Model" routing one buyer profile across every tiered lender simultaneously.',
-              '• Strategy Shift: Replaced sequential manual re-entry with real-time parallel pre-screening.',
-            ],
-          },
-          {
-            type: 'mint',
-            tag: 'RESEARCH RIGOR & METRICS',
-            lines: [
-              'Duration: 8-Week Sprint | Dealerships Visited: 22 | Deals Observed: 400+ | Cross-Functional Alignment: 100% agreement from Product, Engineering, & Lending Partners.',
+              '• Defined actionable MVP OKRs directly aligned with overarching business objectives.',
+              '• Goal: Become the most used car purchase platform in motorable Nigerian cities.',
+              '• Measured adoption velocity, user trust indicators, & deal conversion lift.',
             ],
           },
         ],
+      },
+      {
+        id: 'user-stories',
+        title: 'User Stories & Persona Insights',
+        text: 'Translating research insights into core user stories surfaced key requirements around pricing transparency, flexible financing options, and verified vehicle delivery for urban Nigerian professionals.',
+        mockLabel: 'Urban Buyer User Stories & Requirement Scenarios',
+        mockType: 'verse-user-stories',
       },
       {
         id: 'findings',
@@ -411,13 +383,15 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
               <span className="meta-val">{data.timeline}</span>
             </div>
             <div className="meta-row">
-              <span className="meta-key">DISCIPLINE</span>
-              <span className="meta-val">{data.discipline}</span>
+              <span className="meta-key">TOOL STACK</span>
+              <span className="meta-val">{data.toolStack || 'Miro, Figma, Google Slides'}</span>
             </div>
-            <div className="meta-row">
-              <span className="meta-key">TEAM</span>
-              <span className="meta-val">{data.team}</span>
-            </div>
+            {data.team && (
+              <div className="meta-row">
+                <span className="meta-key">TEAM</span>
+                <span className="meta-val">{data.team}</span>
+              </div>
+            )}
           </div>
         </div>
 

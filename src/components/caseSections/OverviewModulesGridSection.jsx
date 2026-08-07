@@ -21,41 +21,37 @@ export default function OverviewModulesGridSection({ caseId }) {
             {/* Card 1: Soft Periwinkle Blue */}
             <div className="verse-faq-card card-pos-1 verse-card--blue">
               <div className="faq-card-num-badge">1</div>
-              <h4 className="faq-card-q">What's Verse financing about ?</h4>
+              <h4 className="faq-card-q">What market opportunity does Verse target?</h4>
               <p className="faq-card-a">
-                an enterprise credit orchestration portal that unifies buyer data across every tiered lender, helping finance managers streamline submittals and eliminate <span className="faq-hl-tag hl-darkblue">multi-portal friction.</span>
+                Verse addresses key friction points in the <span className="faq-hl-tag hl-darkblue">$1.3 trillion automotive retail market</span> where traditional models have lagged in digital transformation.
               </p>
-
             </div>
 
             {/* Card 2: Soft Lime Green */}
             <div className="verse-faq-card card-pos-2 verse-card--lime">
               <div className="faq-card-num-badge">2</div>
-              <h4 className="faq-card-q">Why were dealerships losing deals ?</h4>
+              <h4 className="faq-card-q">Why has the industry lagged behind?</h4>
               <p className="faq-card-a">
-                finance managers spent up to 45 minutes re-typing customer and vehicle data into 6+ lender portals, wasting time and driving drop-off <span className="faq-hl-tag hl-darkgreen">during live negotiations.</span>
+                Over <span className="faq-hl-tag hl-darkgreen">95% of car purchases</span> still require physical in-person dealership visits, creating long wait times and paper-heavy friction.
               </p>
-
             </div>
 
             {/* Card 3: Soft Golden Butter */}
             <div className="verse-faq-card card-pos-3 verse-card--amber">
               <div className="faq-card-num-badge">3</div>
-              <h4 className="faq-card-q">What was our research scope ?</h4>
+              <h4 className="faq-card-q">How did buyer behavior shift?</h4>
               <p className="faq-card-a">
-                we shadowed 400+ live deal closings across 22 franchise dealerships in 5 Nigerian hubs, tracing exact bottlenecks in real time to <span className="faq-hl-tag hl-darkamber">arrive at solutions early.</span>
+                Post-pandemic consumer shifts revealed a strong preference for <span className="faq-hl-tag hl-darkamber">contactless purchasing experiences</span> and seamless online financing.
               </p>
-
             </div>
 
             {/* Card 4: Soft Blush Pink */}
             <div className="verse-faq-card card-pos-4 verse-card--pink">
               <div className="faq-card-num-badge">4</div>
-              <h4 className="faq-card-q">What business impact was achieved ?</h4>
+              <h4 className="faq-card-q">What impact does the digital flow deliver?</h4>
               <p className="faq-card-a">
-                transaction time dropped by <span className="faq-hl-tag hl-darkpink">65% (45m to 16m)</span>, credit approvals increased by 31%, and dealerships recovered an estimated $4.2M in annual deal slippage.
+                Designing an end-to-end digital retail flow holds potential to <span className="faq-hl-tag hl-darkpink">increase conversion rates by 40%</span> over traditional dealerships.
               </p>
-
             </div>
           </div>
         </div>

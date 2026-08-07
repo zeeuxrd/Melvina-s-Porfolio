@@ -10,20 +10,18 @@ export default function OverviewMobileFlowSection({ data }) {
           <div className="phone-body phone-body--padded">
             <div className="phone-top-content">
               <h3 className="phone-hero-title">
-                West Africa<br />
-                Maternal Health<br />
-                Scope 2025
+                Design. Mentor. Deliver.
               </h3>
               <p className="phone-hero-subtitle">
-                Hosted by DODO Team
+                Product Design · 6 Weeks · 2024
               </p>
               <p className="phone-hero-desc">
-                A 12-week research program studying postpartum recovery, sleep fragmentation, and app abandonment across 8 urban hubs.
+                A dual-purpose engagement — designing a validated weight loss product for nursing mothers while mentoring three early-career designers through a real-world end-to-end design process.
               </p>
             </div>
             <div className="phone-bottom-badge">
-              <span className="phone-tag">8 URBAN HUBS</span>
-              <p className="phone-tag-sub">Lagos • Accra • Abidjan • Dakar</p>
+              <span className="phone-tag">SCOPE</span>
+              <p className="phone-tag-sub">Product Design · Mentorship · UX Research</p>
             </div>
           </div>
         </div>
@@ -42,15 +40,14 @@ export default function OverviewMobileFlowSection({ data }) {
         <div className="story-phone story-phone--pink">
           <div className="phone-body phone-body--padded">
             <div className="phone-top-content">
-              <span className="phone-tag phone-tag--dark">CORE RESEARCH PROBLEM</span>
-              <h3 className="phone-stat-headline">78% 14-Day App Churn</h3>
+              <h3 className="phone-stat-headline">Research-Driven. Human-Centred.</h3>
               <p className="phone-statement-desc">
-                Rigid daily streak counters triggered emotional guilt among postpartum mothers. Fixed workout goals ignored sleep fragmentation, physical recovery timelines, and infant feeding demands.
+                Validate real nursing mother needs through rigorous UX research, then translate findings into a usable, realistic product — while building the next generation of design talent along the way.
               </p>
             </div>
             <div className="phone-bottom-badge phone-bottom-badge--pink">
-              <span className="phone-tag-sub-dark">KEY DESIGN DIRECTION</span>
-              <p className="phone-tag-sub-desc">Zero-Guilt Adaptive Micro-Routines &amp; Energy-Based Pacing</p>
+              <span className="phone-tag-sub-dark">DESIGN APPROACH</span>
+              <p className="phone-tag-sub-desc">Secondary Research · User Interviews · Synthesis · Prototyping · Testing</p>
             </div>
           </div>
         </div>
@@ -59,3 +56,4 @@ export default function OverviewMobileFlowSection({ data }) {
     </div>
   )
 }
+

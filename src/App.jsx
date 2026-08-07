@@ -30,7 +30,7 @@ function App() {
 
   const handleNavigate = (page, targetId) => {
     setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
 
     if (page === 'home' && targetId) {
       setTimeout(() => {

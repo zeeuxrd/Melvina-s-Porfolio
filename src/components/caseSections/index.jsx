@@ -11,6 +11,7 @@ import FindingsDotMatrixSection from './FindingsDotMatrixSection'
 import TripleCardSection from './TripleCardSection'
 import ImpactDashboardGridSection from './ImpactDashboardGridSection'
 import FitflexTimelineSection from './FitflexTimelineSection'
+import VerseUserStoriesSection from './VerseUserStoriesSection'
 import ReflectionsBentoSection from './ReflectionsBentoSection'
 import ReflectionsFlowImpactSection from './ReflectionsFlowImpactSection'
 import FallbackSection from './FallbackSection'
@@ -23,6 +24,7 @@ export const SECTION_RENDERERS = {
   'problem-context-cards': ProblemContextCardsSection,
   'findings-bar-chart': FindingsBarChartSection,
   'verse-miro-codesign': VerseMiroCodeSection,
+  'verse-user-stories': VerseUserStoriesSection,
   'ideation-slider-matrix': IdeationSliderMatrixSection,
   'ideation-bento-grid': IdeationBentoGridSection,
   'findings-dot-matrix': FindingsDotMatrixSection,

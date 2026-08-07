@@ -35,9 +35,9 @@ export default function WavyChallengeSection() {
           <div className="wavy-node-item node-pos-1">
             <div className="node-text-block">
               <span className="node-step-num">01.</span>
-              <h4 className="node-title">78% Postpartum Churn</h4>
+              <h4 className="node-title">Time Constraints</h4>
               <p className="node-desc">
-                Rigid daily streak counters triggered intense emotional guilt when workouts were missed due to infant care routines.
+                Juggling work, infant care, and domestic duties leaves nursing mothers with severe time limitations for structured weight loss.
               </p>
             </div>
             <div className="node-glowing-dot" />
@@ -47,9 +47,9 @@ export default function WavyChallengeSection() {
           <div className="wavy-node-item node-pos-2">
             <div className="node-text-block">
               <span className="node-step-num">02.</span>
-              <h4 className="node-title">Physical Trauma Fear</h4>
+              <h4 className="node-title">Low Motivation</h4>
               <p className="node-desc">
-                64% of nursing mothers feared standard unadapted core workouts would worsen diastasis recti or pelvic floor recovery.
+                Physical exhaustion and postpartum fatigue lead to low energy and reduced motivation to maintain consistent fitness habits.
               </p>
             </div>
             <div className="node-glowing-dot" />
@@ -60,9 +60,9 @@ export default function WavyChallengeSection() {
             <div className="node-glowing-dot" />
             <div className="node-text-block">
               <span className="node-step-num">03.</span>
-              <h4 className="node-title">Schedule Fragmentation</h4>
+              <h4 className="node-title">Knowledge Gaps</h4>
               <p className="node-desc">
-                92% reported baby feeding cycles rendered fixed daily calendar notifications completely useless.
+                Lack of clear, practical guidance tailored to postpartum nutritional needs and safe physical recovery.
               </p>
             </div>
           </div>
@@ -71,9 +71,9 @@ export default function WavyChallengeSection() {
           <div className="wavy-node-item node-pos-4">
             <div className="node-text-block">
               <span className="node-step-num">04.</span>
-              <h4 className="node-title">Sleep &amp; Energy Crises</h4>
+              <h4 className="node-title">Unhealthy Eating &amp; Cost</h4>
               <p className="node-desc">
-                Severe sleep deprivation made traditional 45-minute workout plans physically impossible during early motherhood.
+                Convenience-driven eating habits coupled with the high cost of specialized weight loss diets create ongoing barriers.
               </p>
             </div>
             <div className="node-glowing-dot" />

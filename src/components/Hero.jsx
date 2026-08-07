@@ -33,17 +33,10 @@ export default function Hero({ onSelectCase }) {
           Hey, I'm Somtochukwu, obsessed with…
         </p>
 
-        {/* Headline with Inline Highlighted Words */}
+        {/* Headline Display Text */}
         <div className="hero-headline-wrap">
           <h1 className="hero-title">
-            Turning complex human{' '}
-            <span className="hero-highlight hero-highlight--purple">realities</span>{' '}
-            into clear{' '}
-            <span className="hero-highlight hero-highlight--pink">decisions</span>{' '}
-            that drive change through{' '}
-            <span className="hero-highlight hero-highlight--green">research</span>{' '}
-            &amp; human-centered design{' '}
-            <span className="hero-highlight hero-highlight--orange">strategy</span>.
+            Turning complex human realities into clear decisions that drive change through research &amp; human-centered design strategy.
           </h1>
         </div>
 

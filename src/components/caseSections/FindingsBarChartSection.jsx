@@ -4,21 +4,6 @@ export default function FindingsBarChartSection({ caseId }) {
   return (
     caseId === 'case-02' ? (
       <div className="verse-stepped-insights-container">
-        {/* Top Report Header */}
-        <div className="stepped-report-header">
-          <div className="stepped-header-left">
-            <span className="stepped-brand-txt">Verse Dealership Insights: 2024 Report</span>
-            <span className="stepped-sub-txt">2024 Findings</span>
-          </div>
-        </div>
-
-        {/* Headline Banner */}
-        <div className="stepped-headline-wrap">
-          <h3 className="stepped-main-headline">
-            Of the 400+ live dealership deal closings observed during research...
-          </h3>
-        </div>
-
         {/* 5 Stepped Horizontal Ribbon Bars (Staggered Indented Starts) */}
         <div className="stepped-bars-stack">
           {/* Bar 1: Pink */}
@@ -58,61 +43,53 @@ export default function FindingsBarChartSection({ caseId }) {
         </div>
       </div>
     ) : (
-      <div className="findings-barchart-container">
-        {/* Left Column: Headline, Summary & Giant Stat Callout */}
-        <div className="findings-barchart-info">
-          <div className="barchart-header-tags">
-            <span className="barchart-tag">fitflex.research</span>
-          </div>
-
-          <div className="barchart-title-group">
-            <h3 className="barchart-main-title">Post-Natal Retention Breakdown</h3>
-            <p className="barchart-desc-text">
-              Primary research across 8 urban hubs revealed how streak guilt directly drives habit abandonment within the first 14 days of birth.
+      <div className="fitflex-opportunity-container">
+        <div className="opportunity-cards-grid">
+          {/* Opportunity Card 1: The Time Constraint (Soft Pastel Blue) */}
+          <div className="opportunity-card card-theme-blue">
+            <div className="opportunity-card-top">
+              <span className="opportunity-badge-pill">OPPORTUNITY AREA #1</span>
+              <h4 className="opportunity-card-title">The Time Constraint</h4>
+            </div>
+            
+            <p className="opportunity-body-desc">
+              Time constraints pose a significant challenge to maintaining a healthy lifestyle and achieving weight loss goals for nursing mothers who have to juggle between work and domestic duties.
             </p>
-          </div>
 
-          <div className="barchart-stat-anchor">
-            <span className="barchart-stat-num">78%</span>
-            <span className="barchart-stat-label">14-Day Churn Peak</span>
-          </div>
-        </div>
+            <blockquote className="opportunity-user-quote">
+              <p className="opp-quote-txt">"Not having time after a busy day affects my dedication to weight loss"</p>
+              <cite className="opp-quote-author">— Adebisi, Nursing Mother &amp; Project Manager (Research participant)</cite>
+            </blockquote>
 
-        {/* Right Column: 3 Vertical Progress Bar Tracks */}
-        <div className="findings-barchart-visual">
-          {/* Bar 1 */}
-          <div className="bar-track-col">
-            <div className="bar-track-shell">
-              <div className="bar-fill bar-fill--blue" style={{ height: '92%' }}>
-                <div className="bar-label-inner">
-                  <span className="bar-year">Day 01</span>
-                  <span className="bar-val">92% Active</span>
-                </div>
-              </div>
+            <div className="opportunity-hmw-box">
+              <span className="hmw-tag-lbl">HOW MIGHT WE</span>
+              <p className="hmw-question-txt">
+                How might we create effective means for a busy wife and nursing mother to lose weight and stay fit, regardless of her busy schedule?
+              </p>
             </div>
           </div>
 
-          {/* Bar 2 */}
-          <div className="bar-track-col">
-            <div className="bar-track-shell">
-              <div className="bar-fill bar-fill--lime" style={{ height: '48%' }}>
-                <div className="bar-label-inner">
-                  <span className="bar-year">Day 07</span>
-                  <span className="bar-val">48% Active</span>
-                </div>
-              </div>
+          {/* Opportunity Card 2: Expensive Dieting (Soft Pastel Pink) */}
+          <div className="opportunity-card card-theme-pink">
+            <div className="opportunity-card-top">
+              <span className="opportunity-badge-pill">OPPORTUNITY AREA #2</span>
+              <h4 className="opportunity-card-title">Expensive Dieting</h4>
             </div>
-          </div>
 
-          {/* Bar 3 */}
-          <div className="bar-track-col">
-            <div className="bar-track-shell">
-              <div className="bar-fill bar-fill--pink" style={{ height: '22%' }}>
-                <div className="bar-label-inner">
-                  <span className="bar-year">Day 14</span>
-                  <span className="bar-val">22% Active</span>
-                </div>
-              </div>
+            <p className="opportunity-body-desc">
+              Keeping up with dieting can be challenging for nursing mothers on a weight loss and fitness journey because of the cost of such meals.
+            </p>
+
+            <blockquote className="opportunity-user-quote">
+              <p className="opp-quote-txt">"Dieting [for weightloss and fitness] can be very expensive"</p>
+              <cite className="opp-quote-author">— Ann, Nursing Mother &amp; Fashion Designer (Research participant)</cite>
+            </blockquote>
+
+            <div className="opportunity-hmw-box">
+              <span className="hmw-tag-lbl">HOW MIGHT WE</span>
+              <p className="hmw-question-txt">
+                How might we create an alternative to expensive dieting that still works for a nursing mother to achieve her fitness goals?
+              </p>
             </div>
           </div>
         </div>

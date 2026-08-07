@@ -5,36 +5,64 @@ import polaroidImgDesk from '../../images/assets/media__1785187669727.jpg'
 import polaroidImgMatcha from '../../images/assets/media__1785189117726.jpg'
 import polaroidImgWorkshop from '../../images/assets/media__1785189276883.jpg'
 import polaroidImgBooks from '../../images/assets/media__1785189547294.png'
+import polaroidImgVacation from '../../images/assets/fifth-about-image.png'
+import polaroidImgSixth from '../../images/assets/sixth-about-image.png'
+import outsideUxImg1 from '../../images/assets/outside-of-ux.png'
+import outsideUxImg2 from '../../images/assets/outisde-of-ux-too.jpg'
+import outsideUxImg3 from '../../images/assets/ouside-of-ux-third image.png'
 
 const stats = [
-  { number: '40+', label: 'Research Studies Led' },
-  { number: '95%', label: 'Stakeholder Alignment' },
-  { number: '25+', label: 'Product Decisions Influenced' },
+  { number: '300+', label: 'Women Researched Across Nigeria' },
+  { number: '45%', label: 'BOSSCAB Crash Reduction' },
+  { number: '300+', label: 'Young Beginners Mentored' },
+]
+
+const workExperience = [
+  {
+    company: 'DODO DESIGN LIMITED',
+    period: '2023 - PRESENT',
+    role: 'UX Researcher & Strategy Lead',
+    highlights: [
+      'Collaborated with design team to conduct comprehensive research in Northern and Southern Nigeria, capturing insights from 300+ women and translating them into strategies that improved adoption, engagement, and health outcomes.',
+      'Developed a design critique tool that made feedback more actionable and forward-looking, increasing the quality of tracked and prioritized feedback by an estimated 20–40% compared to unstructured sessions.',
+      'Optimized the design review process, leveraging strategic planning sessions to improve team efficiency, reducing cycle time by 20%.',
+    ],
+  },
+  {
+    company: 'NUGI TECHNOLOGIES',
+    period: '2021 - 2023',
+    role: 'Product Researcher & Usability Lead',
+    highlights: [
+      'Led usability testing for a ride-hailing product BOSSCAB, achieving a 45% reduction in app crashes and boosting user retention and trust.',
+    ],
+  },
+  {
+    company: 'UTIVA',
+    period: 'JAN. 2021 - MAR. 2021',
+    role: 'Product Trainer & Cross-Functional Lead',
+    highlights: [
+      'Led a cross-functional team through product planning, roadmapping, and execution, resulting in the successful training of over 300 young beginners in programming and product design in Enugu State, Nigeria.',
+    ],
+  },
 ]
 
 const capabilities = [
   {
-    title: 'Discovery & Generative Research',
-    description: 'In-depth user interviews, contextual inquiry, field studies, and mental model mapping to uncover core user needs and unmet opportunities.',
+    title: 'Discovery & Generative Fieldwork',
+    description: 'Conducting comprehensive field research across diverse regions (e.g. Northern & Southern Nigeria), capturing authentic insights to shape strategic adoption and health/social outcomes.',
   },
   {
-    title: 'Evaluative & Usability Testing',
-    description: 'Moderated and unmoderated usability labs, concept testing, A/B validation, and WCAG accessibility compliance across digital touchpoints.',
+    title: 'Evaluative Testing & Crash Reduction',
+    description: 'Leading usability testing labs (e.g. BOSSCAB ride-hailing app), identifying critical user pain points to achieve a 45% crash reduction and boost retention.',
   },
   {
-    title: 'Synthesis & Strategic Alignment',
-    description: 'Customer journey mapping, persona synthesis, opportunity framing, and collaborative workshops that align cross-functional product teams.',
+    title: 'Critique Tooling & Review Optimization',
+    description: 'Developing custom design critique tools that make feedback actionable, boosting tracked feedback quality by 20–40% and cutting review cycle times by 20%.',
   },
   {
-    title: 'Product Impact & Metrics',
-    description: 'Prioritization matrices, usability benchmarking, and tracking post-launch behavioral metrics to measure genuine business and user outcomes.',
+    title: 'Community Building & Mentorship',
+    description: 'Leading cross-functional teams to plan and execute training programs, actively mentoring over 300 young beginners in product design and programming.',
   },
-]
-
-const recognition = [
-  { event: 'UXR Summit 2024', topic: 'De-risking AI Product Features Through User Research', year: '2024' },
-  { event: 'Design & Strategy Journal', topic: 'Synthesizing Ambiguous Qualitative Feedback at Scale', year: '2023' },
-  { event: 'Global HCD Conference', topic: 'Participatory Workshop Frameworks for Enterprise SaaS', year: '2023' },
 ]
 
 const initialPositions = {
@@ -156,8 +184,11 @@ export default function AboutPage({ onBackToHome }) {
         {/* 1. Hero Headline Statement */}
         <div className="about-page-hero-block">
           <h1 className="about-page-hero-title">
-            I am Somtochukwu; a <em>UX researcher</em> specialized in turning ambiguous user behaviour into <em>evidence-led product strategy</em>.
+            With a background in <em>Chemical Engineering</em>, I’ve always been drawn to systems, problem-solving, and the <em>"why"</em> behind details.
           </h1>
+          <p className="about-page-hero-sub">
+            Coupled with my strength as an active listener, design became the space where these skills come together to create meaningful impact. The process most times is what makes the difference, so I thrive in making sense of the fuzziness of the design process.
+          </p>
         </div>
 
         {/* 2. Expanded Interactive Draggable Sticker Canvas */}
@@ -171,25 +202,42 @@ export default function AboutPage({ onBackToHome }) {
             </div>
           )}
           
-          {/* Sticker 1: Main Terracotta Note */}
-          <div className="sticker-card sticker-terracotta" {...getStickerProps('terracotta')}>
-            <div className="sticker-holes">
-              <span className="hole" />
-              <span className="hole" />
-              <span className="hole" />
-              <span className="hole" />
+          {/* Polaroid Photo Sticker: Sixth About Image */}
+          <div className="sticker-card sticker-polaroid polaroid-terracotta" {...getStickerProps('terracotta')}>
+            <div className="tape-accent" />
+            <div className="polaroid-img-frame">
+              <img src={polaroidImgSixth} alt="Design Process & Systems" className="polaroid-img" draggable="false" loading="lazy" decoding="async" />
             </div>
-            <p className="sticker-terracotta-text">
-              Somtochukwu is a strategic UX researcher with a passion for human behavior, evidence-led design, storytelling, and complex product systems.
-            </p>
+            <span className="polaroid-caption">Systems &amp; Storytelling ✨</span>
           </div>
 
-          {/* Sticker 2: Peach Folded Note */}
-          <div className="sticker-card sticker-peach" {...getStickerProps('peach')}>
-            <p className="sticker-peach-text">
-              Spearheading user research &amp; strategy across Fintech, SaaS, and consumer apps—tinkering with AI workflows and probably drinking green tea.
+          {/* Sticker 4: Yellow Method Checklist Note */}
+          <div className="sticker-card sticker-yellow" {...getStickerProps('yellow')}>
+            <div className="pin-accent" />
+            <span className="sticker-yellow-title">IMPACT SNAPSHOT</span>
+            <ul className="sticker-checklist">
+              <li>✓ 300+ Women Health Research</li>
+              <li>✓ BOSSCAB: 45% Crash Cut</li>
+              <li>✓ Critique Tool: 20-40% Lift</li>
+              <li>✓ Review Cycle: 20% Faster</li>
+            </ul>
+          </div>
+
+          {/* Arch Portal Photo Sticker: Sun & Sea Vacation */}
+          <div className="sticker-card sticker-arch-portal polaroid-singing" {...getStickerProps('peach')}>
+            <div className="tape-accent" />
+            <div className="arch-img-frame">
+              <img src={polaroidImgVacation} alt="Sun, Sea & Vacation Vibes" className="arch-img" draggable="false" loading="lazy" decoding="async" />
+            </div>
+            <span className="arch-caption">Sun, Sea &amp; Naps 🌸</span>
+          </div>
+
+          {/* Sticker 5: Lilac AI & Future Research Note */}
+          <div className="sticker-card sticker-lilac" {...getStickerProps('lilac')}>
+            <span className="sticker-lilac-tag">CRITIQUE FRAMEWORKS</span>
+            <p className="sticker-lilac-text">
+              Developing design review &amp; critique tools that turn feedback into actionable forward-looking design direction.
             </p>
-            <div className="sticker-fold" />
           </div>
 
           {/* Polaroid Photo Sticker 1: Tulips & Laptop */}
@@ -198,7 +246,13 @@ export default function AboutPage({ onBackToHome }) {
             <div className="polaroid-img-frame">
               <img src={polaroidImgDesk} alt="Somtochukwu Workspace" className="polaroid-img" draggable="false" loading="lazy" decoding="async" />
             </div>
-            <span className="polaroid-caption">Research Desk ✨</span>
+            <span className="polaroid-caption">Research Desk &amp; Tulips 🌷</span>
+          </div>
+
+          {/* Sticker 6: Mint Green Ticket Stamp */}
+          <div className="sticker-card sticker-mint" {...getStickerProps('mint')}>
+            <span className="mint-code">CHEMICAL ENG ➔ UXR</span>
+            <span className="mint-title">SYSTEMS &amp; HUMAN PROCESS</span>
           </div>
 
           {/* Polaroid Photo Sticker 2: Mindset & Books */}
@@ -207,7 +261,13 @@ export default function AboutPage({ onBackToHome }) {
             <div className="polaroid-img-frame">
               <img src={polaroidImgBooks} alt="Mindset, Growth & Readings" className="polaroid-img" draggable="false" loading="lazy" decoding="async" />
             </div>
-            <span className="polaroid-caption">Mindset &amp; Readings 📚</span>
+            <span className="polaroid-caption">Strategy &amp; Mindset 📚</span>
+          </div>
+
+          {/* Sticker 11: Baby Pink Pastel Note */}
+          <div className="sticker-card sticker-coral" {...getStickerProps('coral')}>
+            <span className="coral-emoji">🎙️</span>
+            <p className="coral-text">Singing, Long Naps &amp; Road Trips</p>
           </div>
 
           {/* Polaroid Photo Sticker 3: Research Workshop */}
@@ -216,64 +276,7 @@ export default function AboutPage({ onBackToHome }) {
             <div className="polaroid-img-frame">
               <img src={polaroidImgWorkshop} alt="Somtochukwu Leading Design Research Workshop" className="polaroid-img" draggable="false" loading="lazy" decoding="async" />
             </div>
-            <span className="polaroid-caption">Research Workshop 📋</span>
-          </div>
-
-          {/* Polaroid Photo Sticker 4: Matcha & Gratitude Journal */}
-          <div className="sticker-card sticker-polaroid polaroid-4" {...getStickerProps('polaroid4')}>
-            <div className="tape-accent" />
-            <div className="polaroid-img-frame">
-              <img src={polaroidImgMatcha} alt="Slow Mornings & Gratitude Journal" className="polaroid-img" draggable="false" loading="lazy" decoding="async" />
-            </div>
-            <span className="polaroid-caption">Slow Mornings 🍵</span>
-          </div>
-
-          {/* Sticker 4: Yellow Method Checklist Note */}
-          <div className="sticker-card sticker-yellow" {...getStickerProps('yellow')}>
-            <div className="pin-accent" />
-            <span className="sticker-yellow-title">TOOLKIT &amp; METHODS</span>
-            <ul className="sticker-checklist">
-              <li>✓ In-Depth Interviews</li>
-              <li>✓ Usability Testing Labs</li>
-              <li>✓ Customer Journey Maps</li>
-              <li>✓ Mental Model Framing</li>
-              <li>✓ Dovetail &amp; Miro Synthesis</li>
-            </ul>
-          </div>
-
-          {/* Sticker 5: Lilac AI & Future Research Note */}
-          <div className="sticker-card sticker-lilac" {...getStickerProps('lilac')}>
-            <span className="sticker-lilac-tag">CURRENT FOCUS</span>
-            <p className="sticker-lilac-text">
-              Exploring how AI agents &amp; LLMs enhance qualitative synthesis while preserving authentic human nuance.
-            </p>
-          </div>
-
-          {/* Sticker 6: Mint Green Ticket Stamp */}
-          <div className="sticker-card sticker-mint" {...getStickerProps('mint')}>
-            <span className="mint-code">UXR-2025 // GLOBAL</span>
-            <span className="mint-title">EVIDENCE-LED STRATEGY</span>
-          </div>
-
-          {/* Sticker 7: Lime Tag */}
-          <div className="sticker-card sticker-lime" {...getStickerProps('lime')}>
-            <span>RESEARCH &amp; STRATEGY</span>
-          </div>
-
-          {/* Sticker 8: Sky Blue Emoticon Badge */}
-          <div className="sticker-card sticker-blue" {...getStickerProps('blue')}>
-            <span className="sticker-emoji">(o) .-(|,' \|/</span>
-          </div>
-
-          {/* Sticker 9: Washi Tape Quote Strip */}
-          <div className="sticker-card sticker-quote-strip" {...getStickerProps('quote')}>
-            <span>"Trade guesswork for evidence."</span>
-          </div>
-
-          {/* Sticker 11: Baby Pink Pastel Note (Right of Orange Card) */}
-          <div className="sticker-card sticker-coral" {...getStickerProps('coral')}>
-            <span className="coral-emoji">💡</span>
-            <p className="coral-text">Qualitative Deep-Diver &amp; User-Obsessed</p>
+            <span className="polaroid-caption">Mentorship &amp; Labs 📋</span>
           </div>
 
           {/* Sticker 10: Spotify-Style Now Playing Music Card */}
@@ -284,7 +287,7 @@ export default function AboutPage({ onBackToHome }) {
             title={isPlaying ? 'Click to pause sound equalizer' : 'Click to play sound equalizer'}
           >
             <div className="music-header">
-              <span className="music-tag">ON REPEAT 🎵</span>
+              <span className="music-tag">ROAD TRIP VIBES 🎵</span>
               <div className="music-equalizer">
                 <span className="bar bar-1" />
                 <span className="bar bar-2" />
@@ -309,18 +312,30 @@ export default function AboutPage({ onBackToHome }) {
               </div>
               <div className="music-time">
                 <span>1:42</span>
-                <span>3:15</span>
+                <span>3:50</span>
               </div>
             </div>
           </div>
 
+          {/* Polaroid Photo Sticker 4: Matcha & Gratitude Journal */}
+          <div className="sticker-card sticker-polaroid polaroid-4" {...getStickerProps('polaroid4')}>
+            <div className="tape-accent" />
+            <div className="polaroid-img-frame">
+              <img src={polaroidImgMatcha} alt="Slow Mornings & Gratitude Journal" className="polaroid-img" draggable="false" loading="lazy" decoding="async" />
+            </div>
+            <span className="polaroid-caption">Matcha &amp; Slow Mornings 🍵</span>
+          </div>
+
+          {/* Sticker 9: Washi Tape Quote Strip */}
+          <div className="sticker-card sticker-quote-strip" {...getStickerProps('quote')}>
+            <span>"The process is what makes the difference."</span>
+          </div>
         </div>
 
         {/* 3. Core Philosophy & Big Stats */}
         <div className="about-page-philosophy-block" data-reveal>
           <p className="about-page-philosophy-text">
-            I help product organizations trade guesswork for <em>evidence-led decisions</em>,
-            captivate audiences with <em>magnetic research insights</em>, align stakeholders around what users actually need, and ship experiences that drive <em>lasting retention</em>.
+            I bridge the gap between <em>users and businesses</em> to deliver measurable impact by designing systems, services, and digital experiences rooted in human-centered approaches. Through transforming deep user research into <em>design direction</em>, I ensure organizations move from <em>uncertainty to clarity</em> in decision-making.
           </p>
 
           <div className="about-page-stats-grid">
@@ -333,44 +348,56 @@ export default function AboutPage({ onBackToHome }) {
           </div>
         </div>
 
-        {/* 4. Capabilities / Research Rigor List */}
+        {/* 4. Structured Work Experience Timeline & Impact */}
         <div className="about-page-capabilities-block" data-reveal>
           <div className="about-page-capabilities-header">
-            <span className="about-page-sub-tag">SPECIALIZATIONS</span>
-            <h2 className="about-page-section-heading">Research Capabilities &amp; Rigor</h2>
+            <span className="about-page-sub-tag">CAREER HISTORY</span>
+            <h2 className="about-page-section-heading">Overview of Work Experience</h2>
           </div>
 
-          <div className="about-page-capabilities-list">
-            {capabilities.map((item) => (
-              <div className="about-page-capability-row" key={item.title}>
-                <h3 className="about-page-capability-title">{item.title}</h3>
-                <p className="about-page-capability-desc">{item.description}</p>
+          <div className="about-page-experience-list">
+            {workExperience.map((exp) => (
+              <div className="about-page-experience-card" key={exp.company}>
+                <div className="experience-card-header">
+                  <div>
+                    <h3 className="experience-company-title">{exp.company}</h3>
+                    <span className="experience-role-lbl">{exp.role}</span>
+                  </div>
+                  <span className="experience-period-badge">{exp.period}</span>
+                </div>
+                <ul className="experience-bullets-list">
+                  {exp.highlights.map((bullet, i) => (
+                    <li key={i} className="experience-bullet-item">
+                      <span className="bullet-dot" aria-hidden="true">•</span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             ))}
           </div>
         </div>
 
-        {/* 5. Thought Leadership & Recognition Table */}
-        <div className="about-page-recognition-block" data-reveal>
+        {/* 5. Outside of UX & Mentorship Section */}
+        <div className="about-page-recognition-block" data-reveal style={{ marginTop: '5rem' }}>
           <div className="about-page-recognition-header">
-            <span className="about-page-sub-tag">RECOGNITION</span>
-            <h2 className="about-page-section-heading">Speaking &amp; Publications</h2>
+            <span className="about-page-sub-tag">LIFE &amp; COMMUNITY</span>
+            <h2 className="about-page-section-heading">Outside of UX</h2>
           </div>
 
-          <div className="about-page-table">
-            <div className="about-page-table-header">
-              <span>Event / Platform</span>
-              <span>Topic / Title</span>
-              <span className="text-right">Year</span>
-            </div>
+          <div className="about-page-outside-card">
+            <p className="about-page-outside-text">
+              I sing, take a ride or go on a road trip, read or take long naps, spend time with family and friends. I’m also passionate about mentorship—having benefited from it myself, I actively guide younger designers and have mentored several over the years.
+            </p>
 
-            {recognition.map((item) => (
-              <div className="about-page-table-row" key={item.event}>
-                <span className="about-page-table-col1">{item.event}</span>
-                <span className="about-page-table-col2">{item.topic}</span>
-                <span className="about-page-table-col3">{item.year}</span>
+            <div className="about-page-outside-collage">
+              {/* Main Anchor Hero Image */}
+              <div className="outside-main-card">
+                <div className="outside-main-img-frame">
+                  <img src={outsideUxImg1} alt="Somtochukwu Outside of UX Main" className="outside-main-img" loading="lazy" decoding="async" />
+                </div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
 
