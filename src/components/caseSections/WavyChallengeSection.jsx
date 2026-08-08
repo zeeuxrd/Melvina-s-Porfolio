@@ -3,14 +3,11 @@ import React from 'react'
 export default function WavyChallengeSection() {
   return (
     <div className="fitflex-wavy-container">
-      {/* Header info bar */}
-      <div className="wavy-top-header">
-        <span className="wavy-eyebrow">MATERNAL FRICTION PATHWAY</span>
-        <span className="wavy-subtitle">4 Key Behavioral Obstacles Mapped</span>
-      </div>
-
       {/* Wavy Node Canvas */}
       <div className="wavy-path-stage">
+        {/* Centered Pathway Label */}
+        <span className="wavy-eyebrow wavy-eyebrow-center">MATERNAL FRICTION PATHWAY</span>
+
         {/* SVG S-Curve Line Connector with Dashed Pink Stroke & Arrowhead */}
         <svg className="wavy-svg-stroke" viewBox="0 0 900 380" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           <defs>

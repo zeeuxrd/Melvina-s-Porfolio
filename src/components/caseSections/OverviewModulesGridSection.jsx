@@ -14,43 +14,43 @@ export default function OverviewModulesGridSection({ caseId }) {
                 stroke="#d9d9d9"
                 strokeWidth="2.5"
                 strokeDasharray="6 6"
-                opacity="0.55"
+                opacity="0.66"
               />
             </svg>
 
             {/* Card 1: Soft Periwinkle Blue */}
             <div className="verse-faq-card card-pos-1 verse-card--blue">
               <div className="faq-card-num-badge">1</div>
-              <h4 className="faq-card-q">What market opportunity does Verse target?</h4>
+              <h4 className="faq-card-q">Why has the industry lagged behind?</h4>
               <p className="faq-card-a">
-                Verse addresses key friction points in the <span className="faq-hl-tag hl-darkblue">$1.3 trillion automotive retail market</span> where traditional models have lagged in digital transformation.
+                The automotive industry has been slow to adapt to digital transformation, with <span className="faq-hl-tag hl-darkblue">95% of car purchases</span> still requiring physical in-person dealership visits. Dealership visits bring long wait times, paper-heavy processes, and no reliable price or payment transparency. Buyers are left comparing offers offline, with limited flexibility in how they pay.
               </p>
             </div>
 
             {/* Card 2: Soft Lime Green */}
             <div className="verse-faq-card card-pos-2 verse-card--lime">
               <div className="faq-card-num-badge">2</div>
-              <h4 className="faq-card-q">Why has the industry lagged behind?</h4>
+              <h4 className="faq-card-q">How did buyer behavior shift?</h4>
               <p className="faq-card-a">
-                Over <span className="faq-hl-tag hl-darkgreen">95% of car purchases</span> still require physical in-person dealership visits, creating long wait times and paper-heavy friction.
+                Post-pandemic consumer behavior revealed a strong preference for <span className="faq-hl-tag hl-darkgreen">contactless purchasing experiences</span> and seamless online financing. Shoppers now expect to browse, compare, and secure credit from anywhere. The demand for a trusted, convenient ownership journey that removes the hassle of dealership visits has only grown.
               </p>
             </div>
 
             {/* Card 3: Soft Golden Butter */}
             <div className="verse-faq-card card-pos-3 verse-card--amber">
               <div className="faq-card-num-badge">3</div>
-              <h4 className="faq-card-q">How did buyer behavior shift?</h4>
+              <h4 className="faq-card-q">What pain do urban buyers face?</h4>
               <p className="faq-card-a">
-                Post-pandemic consumer shifts revealed a strong preference for <span className="faq-hl-tag hl-darkamber">contactless purchasing experiences</span> and seamless online financing.
+                For middle-income professionals in Nigeria's motorable cities, traditional car buying is <span className="faq-hl-tag hl-darkamber">inconvenient, time-consuming, and lacks transparency</span> in pricing and payment options. Every dealership visit taxes their limited time, while unclear offers make it hard to trust the process. They need flexible payment options that bend around real budgets and schedules.
               </p>
             </div>
 
             {/* Card 4: Soft Blush Pink */}
             <div className="verse-faq-card card-pos-4 verse-card--pink">
               <div className="faq-card-num-badge">4</div>
-              <h4 className="faq-card-q">What impact does the digital flow deliver?</h4>
+              <h4 className="faq-card-q">How does Verse close the gap?</h4>
               <p className="faq-card-a">
-                Designing an end-to-end digital retail flow holds potential to <span className="faq-hl-tag hl-darkpink">increase conversion rates by 40%</span> over traditional dealerships.
+                By eliminating multi-portal data re-entry and automating credit decisioning, Verse's end-to-end flow has the potential to <span className="faq-hl-tag hl-darkpink">increase conversion rates by 40%</span> over traditional dealerships. Deal finance managers get a single source of truth for every deal, while buyers enjoy a faster, more transparent path to ownership.
               </p>
             </div>
           </div>

@@ -14,7 +14,7 @@
 .footer-copyright,
 .footer-divider {
   width: 100%;
-  max-width: var(--max-width);
+  max-width: calc(var(--max-width) - 8rem);
   margin-left: auto;
   margin-right: auto;
 }
@@ -242,7 +242,7 @@ html.scroll-reveal-ready .footer-blobs-canvas[data-reveal]:not(.is-visible) .sca
 
 @media (max-width: 900px) {
   .footer-section {
-    padding: 2.5rem 18px 2.5rem 18px;
+    padding: 2.5rem 34px 2.5rem 34px;
   }
 
   .footer-heading-wrap {

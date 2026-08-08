@@ -14,7 +14,7 @@ const caseStudyData = {
     architectureImage: architectureImg,
     overviewCard3Image: overviewCard3Img,
     tagline: 'A solution to help nursing mothers to lose weight and live a healthy lifestyle.',
-    heroDescription: 'This case study showcases the successful mentorship journey of three product design mentees, where I mentored and guided them through a transformative process to deepen their knowledge of the end-to-end design process, increase output quality, and improve their hirability.',
+    heroDescription: 'This case study showcases the successful mentorship journey of three product design mentees, guided through a transformative end-to-end process to deepen their UX research knowledge, elevate output quality, and improve hirability   delivering Fitflex, a validated weight-loss and healthy-lifestyle app designed around the real constraints of postpartum life. The work was grounded in secondary research, in-depth user interviews, and iterative usability testing with nursing mothers.',
     role: 'Lead Product Designer & Team Mentor',
     timeline: '6 Weeks',
     discipline: 'Maternal UX & Health Strategy',
@@ -24,7 +24,7 @@ const caseStudyData = {
       {
         id: 'overview',
         title: 'Overview',
-        text: 'Fitflex is a weight loss and healthy lifestyle app designed for nursing mothers — a group whose post-natal realities make conventional fitness solutions ineffective. The project was structured as a dual-purpose engagement: to design a validated, user-centred product, and to mentor three early-career designers through a real-world end-to-end design process.',
+        text: 'Fitflex is a weight loss and healthy lifestyle app designed for nursing mothers   a group whose post-natal realities make conventional fitness solutions ineffective. Late-night feeds, broken sleep, unpredictable schedules, and the physical recovery demands of childbirth mean that one-size-fits-all workout plans and strict calorie regimes simply do not survive contact with a new mother\'s day. Fitflex was conceived as an alternative: an evidence-led product built around the real constraints of postpartum life, helping nursing mothers lose weight and build sustainable healthy habits without guilt or unrealistic expectations.\n\nBeyond the product itself, the project was structured as a dual-purpose engagement. The first objective was to design a validated, user-centred solution grounded in rigorous UX research   from in-depth interviews with nursing mothers and secondary benchmarking, through affinity synthesis, to rapid prototyping and iterative usability testing with real users. The second was to mentor three early-career product designers through the full end-to-end process over a 6-week sprint, strengthening their confidence and hirability.',
 
         mockLabel: 'Executive Scope & Mentorship Process Artifact',
         mockType: 'overview-mobile-flow',
@@ -32,14 +32,14 @@ const caseStudyData = {
       {
         id: 'challenge',
         title: 'The Problem',
-        text: 'Over 2.8 million people globally, die annually from being overweight or obese (WHO, 2021), yet 75% of weight loss attempts end in failure (International Journal of Obesity, 2018). For nursing mothers in particular, weight management is especially challenging due to limited time, low motivation, knowledge gaps, and unhealthy eating habits. These struggles often lead to obesity, chronic disease risks, and reduced well-being highlighting the need for more supportive, realistic solutions.',
+        text: 'Over 2.8 million people globally, die annually from being overweight or obese (WHO, 2021), yet 75% of weight loss attempts end in failure (International Journal of Obesity, 2018). For nursing mothers in particular, weight management is especially challenging due to limited time, low motivation, knowledge gaps, and unhealthy eating habits. These struggles often lead to obesity, chronic disease risks, and reduced well-being highlighting the need for more supportive, realistic solutions.\n\nFitflex answers this need with a deeply human approach: a weight loss and healthy lifestyle app built around the realities of postpartum life, not against them. It pairs realistic, sustainable habit design with meal and activity guidance that bends around a new mother\'s unpredictable day rather than demanding rigid schedules. Underpinned by rigorous research with nursing mothers, the product validates its core assumptions at every step, ensuring what it asks of users is achievable and what it delivers is genuinely effective. The result is a supportive companion that helps nursing mothers lose weight and build lasting healthy habits without guilt, burnout, or unrealistic expectations.',
         mockLabel: 'Maternal Friction Pathway & Drop-Off Nodes',
         mockType: 'fitflex-wavy-challenge',
       },
       {
         id: 'research',
         title: 'Research Methodology & Strategy',
-        text: 'Secondary research revealed that 45% of women globally experience substantial weight gain (≥20 pounds) in the first year after childbirth (Journal of Women’s Health). Nursing mothers represent extreme users whose unique challenges amplify common barriers such as time, motivation, and lifestyle constraints. Success with this segment not only addresses a critical need but also ensures broader applicability to other user groups, maximizing both impact and business value.',
+        text: 'Secondary research revealed that 45% of women globally experience substantial weight gain (≥20 pounds) in the first year after childbirth (Journal of Women\'s Health). Nursing mothers represent extreme users whose unique challenges amplify common barriers such as time, motivation, and lifestyle constraints. Success with this segment not only addresses a critical need but also ensures broader applicability to other user groups, maximizing both impact and business value. The same protocol that validated the product doubled as the mentees\' hands-on runway, so every research stage built their independence as practitioners alongside the evidence for the design.',
         quote: '"I\'d never had a reason to go on a weightloss journey before childbirth"',
         quoteAuthor: 'Adebisi, Nursing Mother and Project Manager (Research participant from indepth interview session)',
         mockLabel: 'Field Methodology & Research Framework Matrix',
@@ -67,10 +67,10 @@ const caseStudyData = {
           {
             type: 'pink',
             tag: 'MENTORSHIP & PROJECT SCOPE',
-            lines: [
-              '1. Lead Product Designer & Team Mentor guiding 3 product design mentees.',
-              '2. 6-Week Sprint: Miro (Synthesis) & Figma (Prototyping/Testing).',
-              '3. Goal: Deepen UXR process, elevate output quality & hirability.',
+            checklist: [
+              '✓ Lead Product Designer & Team Mentor guiding 3 product design mentees.',
+              '✓ 6-Week Sprint: Miro (Synthesis) & Figma (Prototyping/Testing).',
+              '✓ Goal: Deepen UXR process, elevate output quality & hirability.',
             ],
           },
         ],
@@ -85,7 +85,7 @@ const caseStudyData = {
       {
         id: 'testing',
         title: 'Testing and Validating Digital Solution',
-        text: 'We conducted evaluative usability testing with 24 nursing mothers across 3 iterative rounds. Sessions focused on task completion, emotional response, and comprehension of key flows. Findings were used to refine interaction patterns, reduce friction, and confirm that the solution addressed real behavioural and motivational needs — not just surface-level usability.',
+        text: 'We conducted evaluative usability testing with 24 nursing mothers across 3 iterative rounds. Sessions focused on task completion, emotional response, and comprehension of key flows. Findings were used to refine interaction patterns, reduce friction, and confirm that the solution addressed real behavioural and motivational needs   not just surface-level usability.',
 
         mockLabel: 'Evaluative Usability Testing Scorecards & Task Logs',
         mockType: 'triple-card',
@@ -93,14 +93,14 @@ const caseStudyData = {
       {
         id: 'ideation',
         title: 'Note for Future Self',
-        text: 'To maintain momentum and ensure long-term product impact, we identified key strategic priorities for future iterations:',
+        text: 'To maintain momentum and ensure long-term product impact, we identified key strategic priorities for future iterations: Fitflex is designed to grow with its users, from pregnancy through early motherhood and beyond. Each future phase keeps maternal safety and accessibility at the core while expanding evidence-based support.',
         mockLabel: 'Future Product Benchmarking & Roadmap Strategy',
         mockType: 'ideation-slider-matrix',
       },
       {
         id: 'reflections',
         title: 'Reflections',
-        text: 'This project was quite unique for me because it wasn’t just about delivering value for the solution, but also because it provided an opportunity for me to transfer knowledge to younger designers, guide them to adopt proven design strategies, embrace industry best practices, and elevate the quality of their work, ultimately strengthening their confidence and hirability. Beyond that, I was reminded that meaningful design isn’t just about aesthetics—it adapts to real user needs, scales with them, and evolves through continuous feedback.',
+        text: 'This project was quite unique for me because it wasn\'t just about delivering value for the solution, but also because it provided an opportunity for me to transfer knowledge to younger designers, guide them to adopt proven design strategies, embrace industry best practices, and elevate the quality of their work, ultimately strengthening their confidence and hirability. Beyond that, I was reminded that meaningful design isn\'t just about aesthetics it adapts to real user needs, scales with them, and evolves through continuous feedback.',
         mockLabel: 'UXR Maturity & Project Timeline Framework',
         mockType: 'fitflex-timeline-reflection',
       },
@@ -111,22 +111,22 @@ const caseStudyData = {
     title: 'Verse',
     heroImage: verseArchitectureImg,
     architectureImage: verseHeroImg,
-    tagline: 'An enterprise B2B automotive financing platform transforming dealership credit orchestration.',
-    heroDescription: 'Verse is a B2B automotive retail platform designed to eliminate multi-portal data re-entry, automate credit decisioning, and streamline deal execution for dealership finance managers during live negotiations.',
+    tagline: 'Streamlining B2B dealership credit orchestration.',
+    heroDescription: 'Designed a comprehensive flow for a platform that addresses key pain points in the $1.3 trillion automotive retail market, with potential to increase conversion rates by 40% compared to traditional dealerships.',
     role: 'Senior UX Researcher & Systems Analyst',
     toolStack: 'Miro, Figma, Google Slides',
     sections: [
       {
         id: 'overview',
         title: 'Overview',
-        text: 'The automotive industry has historically lagged in digital transformation, with 95% of car purchases still requiring physical dealership visits. Following the pandemic, consumer behavior shifted dramatically toward contactless purchasing and seamless online financing. Verse was designed to address these core friction points in the $1.3 trillion automotive retail market — delivering an end-to-end digital purchasing flow with the potential to increase buyer conversion rates by 40% compared to traditional dealerships.',
+        text: 'The automotive industry has been slow to adapt to digital transformation, with 95% of car purchases still requiring physical dealership visits. Post-pandemic consumer behavior revealed a strong preference for contactless purchasing experiences. Verse was designed to close this gap   delivering an end-to-end digital purchasing flow for the $1.3 trillion automotive retail market, with the potential to increase buyer conversion rates by 40% compared to traditional dealerships. Built around the realities of dealership finance managers, Verse eliminates multi-portal data re-entry, automates credit decisioning, and streamlines deal execution during live negotiations. The result is a trusted, convenient path to vehicle ownership that removes the hassle of traditional dealership visits while meeting the flexible payment needs of urban buyers.',
         mockLabel: 'AI Automotive Financing & System Architecture Portal',
         mockType: 'overview-modules-grid',
       },
       {
         id: 'challenge',
         title: 'Challenge',
-        text: 'Traditional car buying is inconvenient, time-consuming, and lacks transparency in pricing and payment options for urban customers in Nigeria. Middle-income professionals living in motorable cities need a trusted, more convenient way to purchase vehicles with flexible payment options — eliminating the hassle and time constraints of traditional dealership visits to better meet their needs.',
+        text: 'Traditional car buying is inconvenient, time-consuming, and lacks transparency in pricing and payment options for urban customers in Nigeria. Middle-income professionals living in motorable cities need a trusted, more convenient way to purchase vehicles with flexible payment options   eliminating the hassle and time constraints of traditional dealership visits to better meet their needs.',
         mockLabel: 'Dealership Operational Friction & Task Analysis',
         mockType: 'problem-context-cards',
       },
@@ -188,7 +188,7 @@ const caseStudyData = {
         title: 'Key Findings & Insights',
         text: 'Synthesizing 400+ deal logs surfaced three critical system breakdowns: (1) the "18-Minute Manual Entry Tax" of re-typing identical customer fields across 6 portals, (2) a Pre-Approval Predictability Gap where 71% of managers guessed lender fit blindly, and (3) Customer Trust Decay during long waiting periods with the buyer seated across the desk.',
         quote: '"If I lose 30 minutes fighting with credit entry screens while a customer sits in front of me, the deal is dead. They walk out to think about it and buy somewhere else."',
-        quoteAuthor: 'F&I Director — 12 Years Experience, Lagos Dealership',
+        quoteAuthor: 'F&I Director   12 Years Experience, Lagos Dealership',
         mockLabel: 'Credit Processing Bottleneck & Time-Tax Analysis',
         mockType: 'findings-bar-chart',
       },
@@ -209,7 +209,7 @@ const caseStudyData = {
       {
         id: 'impact',
         title: 'Outcome & Impact',
-        text: 'Deploying Verse across pilot dealerships cut deal transaction time by 65% (45 mins → 16 mins), lifted credit submittal approval rates by 31%, and reached 98% finance manager adoption within 30 days of rollout—recovering an estimated $4.2M in annual deal slippage.',
+        text: 'Deploying Verse across pilot dealerships cut deal transaction time by 65% (45 mins → 16 mins), lifted credit submittal approval rates by 31%, and reached 98% finance manager adoption within 30 days of rollout recovering an estimated $4.2M in annual deal slippage.',
         metrics: [
           { val: '-65%', lbl: 'Process Time (45m → 16m)' },
           { val: '+31%', lbl: 'Credit Approval Rate' },
@@ -221,7 +221,7 @@ const caseStudyData = {
       {
         id: 'reflections',
         title: 'Reflections',
-        text: 'Enterprise UX research is about eliminating systemic friction so domain experts can focus on high-value human relationships. In high-stakes fintech, cutting transaction time from 45 to 16 minutes does not just optimize software—it saves millions in business revenue.',
+        text: 'Enterprise UX research is about eliminating systemic friction so domain experts can focus on high-value human relationships. In high-stakes fintech, cutting transaction time from 45 to 16 minutes does not just optimize software it saves millions in business revenue.',
         mockLabel: 'Enterprise Systems & Workflow Impact Framework',
         mockType: 'reflections-flow-impact',
       },
@@ -243,8 +243,8 @@ const caseStudyData = {
       { id: 'findings', title: 'Key Findings & Insights', text: 'Identified hands-free navigation and regional ingredient substitution anxiety as top churn factors.', quote: '"I want to cook authentic Jollof, but I can\'t touch my phone screen with oil on my hands!"', quoteAuthor: 'Diaspora Home Cook', mockLabel: 'Kitchen Mental Model Synthesis', mockType: 'single-large' },
       { id: 'ideation', title: 'Ideation & Design Process', text: 'Framed hands-free voice guidance and dynamic ingredient substitution options.', mockLabel: 'Voice Navigation Flow Diagrams', mockType: 'single-large' },
       { id: 'testing', title: 'Feedback & Testing Loops', text: 'Evaluative testing confirmed an 88% recipe completion rate using voice mode.', mockLabel: 'Voice Usability Testing Scorecard', mockType: 'triple-card' },
-      { id: 'impact', title: 'Outcome & Impact', text: 'Increased recipe completion by 55% and achieved a 4.9★ App Store rating.', metrics: [{ val: '+55%', lbl: 'Recipe Completion' }, { val: '88%', lbl: 'Voice Adoption' }, { val: '4.9★', lbl: 'App Rating' }], mockLabel: 'Recipe Completion Funnel', mockType: 'single-large' },
-      { id: 'reflections', title: 'Reflections', text: 'Physical context—like sticky fingers in a kitchen—matters just as much as digital UI.', mockLabel: 'Contextual Research Notes', mockType: 'single-large' },
+        { id: 'impact', title: 'Outcome & Impact', text: 'Increased recipe completion by 55% and achieved a 4.9★ App Store rating.', metrics: [{ val: '+55%', lbl: 'Recipe Completion' }, { val: '88%', lbl: 'Voice Adoption' }, { val: '4.9★', lbl: 'App Rating' }], mockLabel: 'Recipe Completion Funnel', mockType: 'single-large' },
+      { id: 'reflections', title: 'Reflections', text: 'Physical context like sticky fingers in a kitchen matters just as much as digital UI.', mockLabel: 'Contextual Research Notes', mockType: 'single-large' },
     ],
   },
 
@@ -357,8 +357,8 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
             </div>
           ) : (
             <div className="hero-mock-placeholder">
-              <span className="hero-mock-icon">💻</span>
-              <span className="hero-mock-text">{data.title} — Main Product Hero Artifact</span>
+              <span className="hero-mock-icon">ðŸ’»</span>
+              <span className="hero-mock-text">{data.title}   Main Product Hero Artifact</span>
             </div>
           )}
         </div>
@@ -377,10 +377,6 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
             <div className="meta-row">
               <span className="meta-key">ROLE</span>
               <span className="meta-val">{data.role}</span>
-            </div>
-            <div className="meta-row">
-              <span className="meta-key">TIMELINE</span>
-              <span className="meta-val">{data.timeline}</span>
             </div>
             <div className="meta-row">
               <span className="meta-key">TOOL STACK</span>
@@ -425,7 +421,7 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
                 {sec.quote && (
                   <blockquote className="section-quote">
                     <p className="quote-body">{sec.quote}</p>
-                    <cite className="quote-cite">— {sec.quoteAuthor}</cite>
+                    <cite className="quote-cite">  {sec.quoteAuthor}</cite>
                   </blockquote>
                 )}
 
@@ -444,7 +440,7 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
             </div>
 
             {/* Massive Full-Width Light Grey / Dark Container for Visual Artifacts */}
-            <div className="adekoya-section-canvas" data-reveal data-delay="1">
+            <div className={`adekoya-section-canvas ${sec.mockType === 'overview-mobile-flow' ? 'adekoya-section-canvas--bleed' : ''}`} data-reveal data-delay="1">
               {(() => {
                 const SectionRenderer = SECTION_RENDERERS[sec.mockType] || FallbackSection
                 const safeSec = normalizeSection(sec)

@@ -11,7 +11,6 @@ export default function StickyBoardSection({ sec, stickyPos = {}, drag = null, z
           key={noteIdx}
           className={`research-sticky sticky-${note.type} ${drag && drag.id === id ? 'is-dragging' : ''}`}
           onMouseDown={onStickyDown(id)}
-          onTouchStart={onStickyDown(id)}
           style={{
             '--sx': `${pos.x}px`,
             '--sy': `${pos.y}px`,

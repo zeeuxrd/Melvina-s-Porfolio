@@ -3,7 +3,7 @@
 .adekoya-case-page {
   width: 100%;
   min-height: 100vh;
-  padding: 6rem clamp(1.25rem, 3vw, 2.75rem) 6rem clamp(1.25rem, 3vw, 2.75rem);
+  padding: 9rem clamp(1.25rem, 3vw, 2.75rem) 6rem clamp(1.25rem, 3vw, 2.75rem);
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }
@@ -11,6 +11,19 @@
 @media (max-width: 768px) {
   .adekoya-case-page {
     padding: 5rem 18px 5rem 18px !important;
+  }
+
+  /* Keep the pink band flush to screen edges */
+  .adekoya-section-canvas--bleed {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+  }
+
+  .overview-story-flow-container {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
   }
 }
 
@@ -44,7 +57,7 @@
   width: 100%;
   height: auto;
   min-height: 380px;
-  max-height: 640px;
+  max-height: 720px;
   background: rgba(26, 26, 26, 0.35);
   border: none;
   border-radius: 16px;
@@ -65,7 +78,7 @@
   width: 100%;
   height: 100%;
   min-height: 440px;
-  max-height: 640px;
+  max-height: 720px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,7 +89,7 @@
   width: 100%;
   height: 100%;
   min-height: 440px;
-  max-height: 640px;
+  max-height: 720px;
   object-fit: cover;
   object-position: center;
   display: block;
@@ -137,7 +150,7 @@
 
 .overview-headline {
   font-family: 'General Sans', sans-serif;
-  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-size: clamp(2.08rem, 3.25vw, 2.86rem);
   font-weight: 600;
   line-height: 1.25;
   letter-spacing: -0.4px;
@@ -360,10 +373,18 @@
 /* Triple Card Grid inside Canvas */
 .mock-triple-grid {
   width: 100%;
-  max-width: 1040px;
+  max-width: 1100px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+@media (max-width: 900px) {
+  .mock-triple-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
 }
 
 .triple-card-mock {
@@ -456,7 +477,6 @@
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   user-select: none;
   transform: rotate(var(--srot, 0deg)) translate(var(--sx, 0px), var(--sy, 0px));
-  touch-action: none;
   /* Ruled Notebook Paper Background Lines */
   background-image: repeating-linear-gradient(
     transparent,
@@ -480,9 +500,9 @@
 /* Sticky 1: Terracotta Ruled Note */
 .sticky-terracotta {
   width: min(340px, 85vw);
-  background-color: #E04524;
-  color: #FFFFFF;
-  --ink: #FFFFFF;
+  background-color: #FF914D;
+  color: #4A1D00;
+  --ink: #4A1D00;
   --srot: -3deg;
 }
 
@@ -513,6 +533,14 @@
   font-family: var(--font-serif);
   font-size: 0.98rem;
   line-height: 1.6;
+}
+
+/* Sticky 1 text rhymes with the other notes' typewriter font */
+.sticky-terracotta .sticky-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  font-weight: 700;
 }
 
 /* Sticky 2: Yellow Pinned Checklist Note */
@@ -555,7 +583,8 @@
 /* Typewriter Reveal for All Research Sticky Notes
    Animation only starts once the sticky-board canvas is in view (.is-visible) */
 .sticky-line,
-.sticky-yellow .sticky-checklist li {
+.sticky-yellow .sticky-checklist li,
+.sticky-pink .sticky-checklist li {
   display: block;
   color: transparent;
   background-image: linear-gradient(90deg, var(--ink, currentColor), var(--ink, currentColor));
@@ -566,20 +595,23 @@
 }
 
 .adekoya-section-canvas.is-visible .sticky-line,
-.adekoya-section-canvas.is-visible .sticky-yellow .sticky-checklist li {
+.adekoya-section-canvas.is-visible .sticky-yellow .sticky-checklist li,
+.adekoya-section-canvas.is-visible .sticky-pink .sticky-checklist li {
   animation: stickyTyping 1.5s steps(28, end) forwards;
   animation-delay: calc(var(--type-i, 0) * 1.7s);
 }
 
 .sticky-line::after,
-.sticky-yellow .sticky-checklist li::after {
+.sticky-yellow .sticky-checklist li::after,
+.sticky-pink .sticky-checklist li::after {
   content: '▍';
   color: var(--ink, currentColor);
   opacity: 0;
 }
 
 .adekoya-section-canvas.is-visible .sticky-line::after,
-.adekoya-section-canvas.is-visible .sticky-yellow .sticky-checklist li::after {
+.adekoya-section-canvas.is-visible .sticky-yellow .sticky-checklist li::after,
+.adekoya-section-canvas.is-visible .sticky-pink .sticky-checklist li::after {
   animation: stickyCaret 0.6s steps(2, start) infinite;
   animation-delay: calc(var(--type-i, 0) * 1.7s + 1.4s);
 }
@@ -594,14 +626,16 @@
 
 @media (prefers-reduced-motion: reduce) {
   .sticky-line,
-  .sticky-yellow .sticky-checklist li {
+  .sticky-yellow .sticky-checklist li,
+  .sticky-pink .sticky-checklist li {
     background-size: 100% 100% !important;
     color: var(--ink, currentColor) !important;
     animation: none !important;
   }
 
   .sticky-line::after,
-  .sticky-yellow .sticky-checklist li::after {
+  .sticky-yellow .sticky-checklist li::after,
+  .sticky-pink .sticky-checklist li::after {
     display: none;
   }
 }
@@ -693,28 +727,47 @@
 }
 
 /* Custom 4-Mobile Story Flow Walkthrough Component */
+/* Full-bleed canvas variant: stretch the canvas itself edge-to-edge, no inner padding/clipping */
+.adekoya-section-canvas--bleed {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 0;
+  overflow: visible;
+  background: transparent;
+  border-radius: 0;
+}
+
 .overview-story-flow-container {
-  width: 100%;
-  max-width: 100%;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(-50vw + 50%);
   display: flex;
   justify-content: center;
-  padding: 1rem 0;
+  padding: 2.5rem;
+  background-color: rgba(211, 211, 211, 0.3);
+}
+
+@media (min-width: 901px) {
+  .overview-story-flow-container {
+    padding: 3.4125rem 2.5rem 3.25rem 2.5rem;
+  }
 }
 
 .overview-story-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   justify-items: center;
-  gap: 1.5rem;
+  gap: 0.2625rem;
   width: 100%;
-  max-width: 100%;
+  max-width: calc(min(100vw, var(--max-width)) - 4rem - 2 * clamp(1.25rem, 3vw, 2.75rem));
 }
 
 /* Phone Frame Shell */
 .story-phone {
   position: relative;
   width: 100%;
-  max-width: 420px;
+  max-width: 363px;
   height: 400px;
   border-radius: 28px;
   overflow: hidden;
@@ -850,7 +903,7 @@
 
 /* Phone 2: Pink Card */
 .story-phone--pink {
-  background-color: #FF85A1;
+  background-color: rgba(255, 77, 141, 0.8);
   color: #380415;
 }
 
@@ -863,7 +916,7 @@
 .phone-stat-headline {
   font-family: 'General Sans', sans-serif;
   font-size: clamp(1.4rem, 2.2vw, 1.85rem);
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: -0.5px;
   color: #380415;
   margin: 0.4rem 0 0.6rem 0;
@@ -872,9 +925,9 @@
 
 .phone-statement-desc {
   font-family: var(--font-body);
-  font-size: 0.88rem;
-  line-height: 1.55;
-  font-weight: 550;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  font-weight: 500;
   color: #3D0617;
   margin: 0;
 }
@@ -898,7 +951,7 @@
 
 .phone-tag-sub-desc {
   font-family: var(--font-body);
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: #380415;
   margin: 0;
@@ -1072,19 +1125,25 @@
 
 /* 3 Vertical Color-Coded Scalloped Problem Cards Grid */
 .problem-cards-grid {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.5rem;
   width: 100%;
   padding-top: 1rem;
+}
+
+@media (max-width: 900px) {
+  .problem-cards-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Scalloped / Cloud Card Container */
 /* Black Theme for Scalloped Challenge Cards while preserving Sticker Badge Colors */
 .scallop-card {
   position: relative;
-  width: 300px;
+  width: 100%;
+  max-width: 100%;
   height: 400px;
   padding: 3.25rem 2rem 2.5rem 2rem;
   display: flex;
@@ -1170,6 +1229,13 @@
   letter-spacing: -0.6px;
   color: inherit;
   margin-top: -0.4rem;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .scallop-card-text {
@@ -1286,13 +1352,13 @@
   color: #CBD5E1 !important;
 }
 
-/* Verse (case-02) Challenge Cards: wider cards + one-line titles */
+/* Verse (case-02) Challenge Cards: wider cards + two-line titles */
 .problem-cards-grid .scallop-card--dark {
   width: 380px;
 }
 
 .scallop-card--dark .scallop-card-title {
-  white-space: nowrap;
+  white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 100%;
@@ -1385,7 +1451,11 @@
 .mock-triple-grid--row .scallop-card,
 .mock-triple-grid--row .triple-card-mock {
   width: 100%;
-  max-width: 380px;
+  max-width: 321px; /* Increased card width by 8% (from 297px to 321px) */
+}
+
+.mock-triple-grid--row .scallop-card {
+  padding: 2.5rem 1.25rem 2rem 1.25rem;
 }
 
 .mock-triple-grid--row .scallop-card-title {
@@ -3779,74 +3849,74 @@
 /* Palette Variants for Cards */
 /* 01. Soft Cream */
 .verse-card--blue {
-  background-color: #FFF8B6 !important;
-  color: #3D3200 !important;
+  background-color: #86EFAC !important;
+  color: #062E13 !important;
   box-shadow: none !important;
   border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 .verse-card--blue .faq-card-q {
-  color: #5C4A00 !important;
+  color: #0B421F !important;
 }
 .verse-card--blue .faq-card-a {
-  color: #3D3200 !important;
+  color: #062E13 !important;
 }
 .verse-card--blue .faq-card-num-badge {
-  background-color: #5C4A00 !important;
-  color: #FFF8B6 !important;
+  background-color: #0B421F !important;
+  color: #86EFAC !important;
 }
 
 /* 02. Baby Pastel Bright Pink */
 .verse-card--lime {
-  background-color: #FFB3C6 !important;
-  color: #5A0F22 !important;
+  background-color: #FF369B !important;
+  color: #FFFFFF !important;
   box-shadow: none !important;
   border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 .verse-card--lime .faq-card-q {
-  color: #7A1630 !important;
+  color: #FFFFFF !important;
 }
 .verse-card--lime .faq-card-a {
-  color: #5A0F22 !important;
+  color: #FFFFFF !important;
 }
 .verse-card--lime .faq-card-num-badge {
-  background-color: #B3125A !important;
-  color: #FFB3C6 !important;
+  background-color: #FFFFFF !important;
+  color: #FF369B !important;
 }
 
 /* 03. Soft Pastel Blue */
 .verse-card--amber {
-  background-color: #B3E5FC !important;
-  color: #0B2A45 !important;
+  background-color: #FF8A3D !important;
+  color: #FFFFFF !important;
   box-shadow: none !important;
   border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 .verse-card--amber .faq-card-q {
-  color: #145080 !important;
+  color: #FFFFFF !important;
 }
 .verse-card--amber .faq-card-a {
-  color: #0B2A45 !important;
+  color: #FFFFFF !important;
 }
 .verse-card--amber .faq-card-num-badge {
-  background-color: #145080 !important;
-  color: #B3E5FC !important;
+  background-color: #FFFFFF !important;
+  color: #FF8A3D !important;
 }
 
 /* 04. Soft Pastel Purple */
 .verse-card--pink {
-  background-color: #E2D7FF !important;
-  color: #2A1060 !important;
+  background-color: #7C4DFF !important;
+  color: #FFFFFF !important;
   box-shadow: none !important;
   border: 1px solid rgba(255, 255, 255, 0.5) !important;
 }
 .verse-card--pink .faq-card-q {
-  color: #3B1A85 !important;
+  color: #FFFFFF !important;
 }
 .verse-card--pink .faq-card-a {
-  color: #2A1060 !important;
+  color: #FFFFFF !important;
 }
 .verse-card--pink .faq-card-num-badge {
-  background-color: #3B1A85 !important;
-  color: #E2D7FF !important;
+  background-color: #FFFFFF !important;
+  color: #7C4DFF !important;
 }
 
 /* Global Override: Remove all shadows across Case Study page cards and elements */
@@ -3876,7 +3946,7 @@
   font-weight: 500;
   opacity: 0.96;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -3890,7 +3960,7 @@
 }
 
 .hl-darkblue {
-  background-color: #5C4A00;
+  background-color: #16A34A;
   color: #FFFFFF;
 }
 
@@ -3900,12 +3970,12 @@
 }
 
 .hl-darkamber {
-  background-color: #145080;
+  background-color: #E85D04;
   color: #FFFFFF;
 }
 
 .hl-darkpink {
-  background-color: #3B1A85;
+  background-color: #5E35B1;
   color: #FFFFFF;
 }
 
@@ -5146,22 +5216,24 @@
   overflow: hidden;
 }
 
-.wavy-top-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid rgba(74, 8, 23, 0.2);
-  padding-bottom: 1.25rem;
-  width: 100%;
-}
-
 .wavy-eyebrow {
   font-family: 'General Sans', sans-serif;
   font-size: 0.82rem;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: #B3125A;
+}
+
+.wavy-eyebrow-center {
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 0.6888rem;
 }
 
 .wavy-subtitle {
@@ -5230,16 +5302,16 @@
 /* Desktop Node Positions — anchored to the SVG curve (viewBox 900x380) via %
    so dots stay exactly on the dashed stroke at every desktop width */
 .node-pos-1 .node-glowing-dot { left: 27.78%; top: 17.89%; }
-.node-pos-1 .node-text-block { top: 12px; text-align: right; }
+.node-pos-1 .node-text-block { top: 12px; text-align: left; align-items: flex-start; }
 
 .node-pos-2 .node-glowing-dot { left: 37.78%; top: 77.63%; }
-.node-pos-2 .node-text-block { bottom: 20px; text-align: right; }
+.node-pos-2 .node-text-block { bottom: 20px; text-align: left; align-items: flex-start; }
 
 .node-pos-3 .node-glowing-dot { left: 62.22%; top: 77.63%; }
-.node-pos-3 .node-text-block { bottom: 20px; text-align: left; }
+.node-pos-3 .node-text-block { bottom: 20px; text-align: left; align-items: flex-start; }
 
 .node-pos-4 .node-glowing-dot { left: 72.22%; top: 17.89%; }
-.node-pos-4 .node-text-block { top: 12px; text-align: left; }
+.node-pos-4 .node-text-block { top: 12px; text-align: left; align-items: flex-start; }
 
 /* Text sits on the outer side of the S-curve, in symmetric left/right columns */
 .node-pos-1 .node-text-block,
@@ -5254,14 +5326,14 @@
 
 .node-step-num {
   font-family: 'General Sans', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.72rem;
   font-weight: 800;
   color: #B3125A;
 }
 
 .node-title {
   font-family: 'General Sans', sans-serif;
-  font-size: 1.05rem;
+  font-size: 0.9rem;
   font-weight: 700;
   line-height: 1.2;
   color: #4A0817;
@@ -5270,7 +5342,7 @@
 
 .node-desc {
   font-family: var(--font-body);
-  font-size: 0.78rem;
+  font-size: 0.67rem;
   line-height: 1.5;
   color: rgba(74, 8, 23, 0.8);
   margin: 0;
@@ -5319,6 +5391,16 @@
     gap: 0.85rem;
   }
 
+  .wavy-eyebrow-center {
+    position: relative;
+    left: auto;
+    top: -1.26rem;
+    transform: none;
+    align-self: flex-start;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
   .node-glowing-dot {
     position: absolute;
     left: -2.35rem !important;
@@ -5336,6 +5418,46 @@
     max-width: 100% !important;
     text-align: left !important;
   }
+}
+
+/* Light Theme — Problem Section Pink Card Inverts to Black */
+[data-theme="light"] .fitflex-wavy-container {
+  background-color: #000000;
+}
+
+[data-theme="light"] .fitflex-wavy-container .wavy-eyebrow,
+[data-theme="light"] .fitflex-wavy-container .node-step-num,
+[data-theme="light"] .fitflex-wavy-container .node-title {
+  color: #FF1493;
+}
+
+[data-theme="light"] .fitflex-wavy-container .node-desc {
+  color: #FFFFFF;
+}
+
+[data-theme="light"] .fitflex-wavy-container .node-glowing-dot {
+  background-color: #FF1493;
+  box-shadow: 0 0 16px #FF1493, 0 0 32px rgba(255, 20, 147, 0.6);
+}
+
+[data-theme="light"] .fitflex-wavy-container .wavy-svg-stroke path {
+  stroke: #FF1493;
+}
+
+[data-theme="light"] .fitflex-wavy-container #pink-arrowhead path {
+  fill: #FF1493;
+}
+
+[data-theme="light"] .fitflex-wavy-container .wavy-nodes-layer {
+  border-left-color: #FF1493;
+}
+
+[data-theme="light"] .fitflex-wavy-container .wavy-eyebrow {
+  color: #FF1493;
+}
+
+[data-theme="light"] .fitflex-wavy-container .wavy-eyebrow-center {
+  color: #FFFFFF;
 }
 
 /* Verse Ideation Section — Miro Whiteboard Co-Design Canvas */
@@ -5944,7 +6066,18 @@
   }
 
   /* Stretch Overview & Artifact Cards to align flush with paragraph text on mobile */
-  .overview-story-flow-container,
+  .adekoya-section-canvas--bleed {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+  }
+
+  .overview-story-flow-container {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+  }
+
   .verse-faq-path-container,
   .modules-grid-container,
   .ideation-bento-container,
@@ -5972,6 +6105,14 @@
     margin-right: 0 !important;
   }
 
+  .overview-story-grid {
+    width: 100% !important;
+    max-width: calc(min(100vw, var(--max-width)) - 4rem - 2 * clamp(1.25rem, 3vw, 2.75rem)) !important;
+    justify-self: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
   /* Explore Selected Works Link: Underlined on Mobile without Arrow */
   .next-title-btn {
     font-size: clamp(1.2rem, 5.5vw, 1.75rem) !important;
@@ -5981,6 +6122,20 @@
 
   .next-title-arrow {
     display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .overview-story-flow-container {
+    padding: 2.5rem 34px !important;
+  }
+
+  .overview-story-grid {
+    width: 100% !important;
+    max-width: 100% !important;
+    justify-self: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 
@@ -6364,20 +6519,46 @@
 }
 
 .roadmap-card {
-  border-radius: 20px;
+  border-radius: 6px;
   padding: 1.85rem 1.65rem;
   display: flex;
   flex-direction: column;
   box-shadow: none;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
   position: relative;
-  background-color: var(--bg-primary) !important;
-  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.12)) !important;
+  user-select: none;
+  /* Ruled Notebook Paper Background Lines */
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 27px,
+    rgba(0, 0, 0, 0.08) 28px
+  );
 }
 
 .roadmap-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.14);
+  box-shadow: none;
+}
+
+/* Phase 1: Purple Ruled Note (matches Research sticky board) */
+.card-phase-1 {
+  background-color: #7C4DFF;
+  color: #FFFFFF;
+  transform: rotate(-1.5deg);
+}
+
+/* Phase 2: Golden Butter Note */
+.card-phase-2 {
+  background-color: #FFF275;
+  color: #2C2802;
+  transform: rotate(1.5deg);
+}
+
+/* Phase 3: Blush Pink Tape Note */
+.card-phase-3 {
+  background-color: #FF85A1;
+  color: #380415;
+  transform: rotate(-0.5deg);
 }
 
 .roadmap-card-top {
@@ -6397,23 +6578,103 @@
 }
 
 .badge-terracotta {
-  background-color: #FEE8D6;
-  color: #8C3200;
+  background-color: rgba(255, 255, 255, 0.22);
+  color: #FFFFFF;
 }
 
 .badge-amber {
-  background-color: #FFF3C2;
-  color: #6E5000;
+  background-color: rgba(0, 0, 0, 0.08);
+  color: #2C2802;
+}
+
+.badge-blue {
+  background-color: rgba(255, 255, 255, 0.35);
+  color: #380415;
+}
+
+.roadmap-outcome-pill {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 0.28rem 0.65rem;
+  border-radius: 6px;
+}
+
+.roadmap-outcome-pill.pill-terracotta {
+  background-color: rgba(255, 255, 255, 0.22) !important;
+  color: #FFFFFF !important;
 }
 
 .roadmap-outcome-pill.pill-amber {
-  background-color: #FFF6C2 !important;
-  color: #9A7200 !important;
+  background-color: rgba(0, 0, 0, 0.08) !important;
+  color: #2C2802 !important;
 }
 
 .roadmap-outcome-pill.pill-blue {
-  background-color: #D7E8FF !important;
-  color: #2B52B0 !important;
+  background-color: rgba(255, 255, 255, 0.35) !important;
+  color: #380415 !important;
+}
+
+/* Card titles & text inherit sticky-note ink colors */
+.roadmap-card-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 0.4rem;
+  color: inherit;
+}
+
+.roadmap-card-desc {
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: inherit;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Sticky-note tape/pin accents (matches Research sticky board) */
+.card-phase-1::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  z-index: 2;
+}
+
+.card-phase-2::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background-color: #E63946;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.card-phase-3::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 70px;
+  height: 22px;
+  background-color: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
 }
 
 @media (max-width: 900px) {
@@ -6828,7 +7089,593 @@
   }
 }
 
+/* FitFlex Key Findings & Opportunity Areas 2x2 Bento Box Grid Inspired by research-methodoloy-fitflex.png */
+.fitflex-bento-findings-container {
+  width: 100%;
+  padding: 1.5rem 0;
+}
 
+.fitflex-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+  width: 100%;
+}
 
+@media (max-width: 900px) {
+  .fitflex-bento-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
 
+.fitflex-bento-card {
+  position: relative;
+  border-radius: 28px;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
 
+.fitflex-bento-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Card Themes matching reference image */
+.bento-card-light {
+  background-color: #FFFFFF;
+  color: #111827;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.bento-card-blue {
+  background-color: #7C4DFF;
+  color: #FFFFFF;
+  box-shadow: 0 12px 36px rgba(124, 77, 255, 0.3);
+}
+
+.bento-card-pink {
+  background-color: #FF369B;
+  color: #FFFFFF;
+  box-shadow: 0 12px 36px rgba(255, 54, 155, 0.3);
+}
+
+.pill-white-badge {
+  background-color: #FFFFFF;
+  color: #BE123C;
+}
+
+.pill-pink-rotated {
+  background-color: #FFF1F2;
+  color: #9F1239;
+  transform: rotate(3deg);
+}
+
+.pill-pink {
+  background-color: #FF369B;
+  color: #FFFFFF;
+}
+
+.bento-card-pink .bento-quote-pink {
+  background: rgba(255, 255, 255, 0.15);
+  border-left: 3px solid #FFFFFF;
+}
+
+.bento-card-pink .pink-cite {
+  color: #FFFFFF;
+}
+
+.bento-card-pink .pink-hmw-lbl {
+  color: #FFFFFF;
+}
+
+.bento-card-pink .bento-hmw-pink {
+  background: rgba(76, 5, 25, 0.22);
+}
+
+.bento-card-dark-blue {
+  background-color: #FFD6E8;
+  color: #4A1D33;
+  box-shadow: 0 12px 36px rgba(255, 107, 167, 0.25);
+}
+
+.bento-card-dark-blue .bento-card-title.white-text {
+  color: #4A1D33;
+}
+
+.bento-card-dark-blue .bento-sub-text.white-text-muted,
+.bento-card-dark-blue .bento-body-desc.white-text-muted,
+.bento-card-dark-blue .bento-footnote-txt.white-text-muted {
+  color: rgba(74, 29, 51, 0.85);
+}
+
+.bento-card-dark-blue .bento-quote-box {
+  background: rgba(255, 255, 255, 0.55);
+  border-left: 3px solid #FF369B;
+}
+
+.bento-card-dark-blue .bento-quote-txt {
+  color: #4A1D33;
+}
+
+.bento-card-dark-blue .bento-quote-author {
+  color: #FF369B;
+}
+
+.bento-card-dark-blue .bento-hmw-container {
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.bento-card-dark-blue .bento-hmw-label {
+  color: #FF369B;
+}
+
+.bento-card-dark-blue .bento-hmw-text {
+  color: #4A1D33;
+}
+
+/* Framed Inset Photo Container (matching research-methodoloy-fitflex.png Quadrant 1) */
+.bento-card-framed {
+  background-color: #FFFFFF;
+  color: #111827;
+}
+
+.bento-framed-img-wrap {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0.75rem 0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.bento-framed-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.bento-framed-img-wrap:hover .bento-framed-img {
+  transform: scale(1.03);
+}
+
+.rotated-tag-float {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  z-index: 5;
+  transform: rotate(-4deg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.border-top-light {
+  border-top: 1px solid #E5E7EB;
+}
+
+.z-relative {
+  position: relative;
+  z-index: 3;
+}
+
+/* Header & Titles */
+.bento-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.bento-header-top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.bento-tag-stack {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.bento-card-title {
+  font-family: 'General Sans', 'Outfit', sans-serif;
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.4px;
+  margin: 0;
+}
+
+.bento-card-title.dark-text {
+  color: #111827;
+}
+
+.bento-card-title.white-text {
+  color: #FFFFFF;
+}
+
+.bento-sub-text {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.bento-sub-text.dark-text-muted {
+  color: #6B7280;
+}
+
+.bento-sub-text.white-text-muted {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Body & Description */
+.bento-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.bento-body-desc {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.bento-body-desc.dark-text {
+  color: #374151;
+}
+
+.bento-body-desc.white-text-muted {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Quote Callout inside Bento Card */
+.bento-quote-box {
+  background: rgba(255, 255, 255, 0.12);
+  border-left: 3px solid #C4FF00;
+  padding: 1rem 1.25rem;
+  border-radius: 0 14px 14px 0;
+  margin: 0;
+}
+
+.bento-quote-txt {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #FFFFFF;
+  margin-bottom: 0.4rem;
+}
+
+.bento-quote-author {
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #C4FF00;
+  display: block;
+}
+
+/* HMW Container Box */
+.bento-hmw-container {
+  background: rgba(0, 0, 0, 0.22);
+  border-radius: 16px;
+  padding: 1.1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: 0.5rem;
+}
+
+.bento-hmw-label {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #C4FF00;
+}
+
+.bento-hmw-text {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #FFFFFF;
+}
+
+/* Pill Badges & Rotated Tags */
+.bento-pill-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.pill-lime {
+  background-color: #C4FF00;
+  color: #0A192F;
+}
+
+.pill-blue {
+  background-color: #0A57FF;
+  color: #FFFFFF;
+}
+
+.pill-orange {
+  background-color: #FF6B2C;
+  color: #FFFFFF;
+}
+
+.pill-bright-green {
+  background-color: #00E676;
+  color: #00391A;
+}
+
+.pill-purple {
+  background-color: #7C4DFF;
+  color: #FFFFFF;
+}
+
+.rotated-tag-left {
+  transform: rotate(-4deg);
+  margin-bottom: 0.5rem;
+}
+
+.bento-pill-badge.pill-lime-rotated {
+  background-color: #C4FF00;
+  color: #0A192F;
+  transform: rotate(3deg);
+}
+
+.rotated-tag-right {
+  transform: rotate(-2deg);
+}
+
+/* Quadrant 3: Chart & Metrics Component */
+.bento-metrics-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.bento-hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.hero-stat-val {
+  font-family: 'General Sans', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.hero-stat-sub {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #C4FF00;
+}
+
+/* 5-Bar Pill Chart visual directly matching research-methodoloy-fitflex.png */
+.bento-pill-chart-wrap {
+  width: 100%;
+  margin: 1.25rem 0;
+}
+
+.bento-pill-bars-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
+  height: 273px; /* Additional 50% increase on desktop from 182px */
+  align-items: flex-end;
+}
+
+@media (max-width: 900px) {
+  .bento-pill-bars-container {
+    height: 130px;
+  }
+}
+
+.bento-bar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100%;
+}
+
+.bento-bar-slot {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.bento-bar-fill {
+  width: 100%;
+  border-radius: 999px;
+  transition: height 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bar-fill-white {
+  background-color: #FFFFFF;
+}
+
+.bar-fill-lime {
+  background-color: #C4FF00;
+  box-shadow: 0 0 16px rgba(196, 255, 0, 0.6);
+}
+
+.bento-bar-lbl {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bar-lbl-lime {
+  color: #C4FF00;
+  font-weight: 800;
+}
+
+/* Footers */
+.bento-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+}
+
+.border-top-translucent {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.bento-footnote-txt {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+/* Reimagined Problem Section for Fitflex matching problem-reimagine.png layout */
+.fitflex-reimagined-problem-container {
+  width: 100%;
+  background-color: var(--bg-card, #FFFFFF);
+  border-radius: 28px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+[data-theme="dark"] .fitflex-reimagined-problem-container {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.reimagined-problem-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.reimagined-problem-title {
+  font-family: 'General Sans', 'Outfit', sans-serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+.reimagined-problem-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+  background-color: #C4FF00;
+  color: #0F172A;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.reimagined-problem-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.25rem;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .reimagined-problem-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.reimagined-problem-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Gradient Slider Pill Component matching reference image */
+.gradient-slider-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.slider-tick-mark {
+  position: absolute;
+  top: 0;
+  left: 55%;
+  transform: translateX(-50%);
+  font-size: 0.75rem;
+  color: var(--text-secondary, #64748B);
+  opacity: 0.8;
+  line-height: 1;
+}
+
+.gradient-bar-pill {
+  width: 100%;
+  height: 28px;
+  border-radius: 9999px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bar-gradient-orange-yellow {
+  background: linear-gradient(90deg, #FF6B52 0%, #FFB800 60%, #FACC15 100%);
+}
+
+.bar-gradient-yellow-blue {
+  background: linear-gradient(90deg, #EAB308 0%, #84CC16 40%, #06B6D4 100%);
+}
+
+.bar-gradient-blue-green {
+  background: linear-gradient(90deg, #0EA5E9 0%, #10B981 60%, #84CC16 100%);
+}
+
+.reimagined-col-heading {
+  font-family: 'General Sans', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.reimagined-col-desc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0;
+}
