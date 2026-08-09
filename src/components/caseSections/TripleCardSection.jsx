@@ -4,22 +4,6 @@ import verseYellowCarImg from '../../../images/assets/media__1785534267008.jpg'
 export default function TripleCardSection({ caseId }) {
   return (
     <div className={caseId === 'case-01' || caseId === 'case-02' ? 'problem-context-container' : undefined}>
-      {caseId === 'case-02' && (
-        <div className="problem-top-metrics-row">
-          <div className="problem-metric-col">
-            <span className="problem-metric-val">65%</span>
-            <span className="problem-metric-lbl">Process time gain (45m → 16m)</span>
-          </div>
-          <div className="problem-metric-col">
-            <span className="problem-metric-val">15</span>
-            <span className="problem-metric-lbl">Dealership F&I managers tested</span>
-          </div>
-          <div className="problem-metric-col">
-            <span className="problem-metric-val">86.5</span>
-            <span className="problem-metric-lbl">System Usability Scale (SUS) score</span>
-          </div>
-        </div>
-      )}
       <div className={`mock-triple-grid ${caseId === 'case-01' || caseId === 'case-02' ? 'mock-triple-grid--row' : ''} ${caseId === 'case-02' ? 'mock-triple-grid--verse' : ''}`}>
         {/* Card 01: Soft Purple Scalloped Cloud Card */}
         <div className="scallop-card scallop-card--purple">
@@ -32,11 +16,11 @@ export default function TripleCardSection({ caseId }) {
             </svg>
           </div>
           <div className="scallop-card-body">
-            <span className="scallop-card-num">{caseId === 'case-02' ? '65%' : '92%'}</span>
-            <h4 className="scallop-card-title">{caseId === 'case-02' ? 'Process Time Gain' : 'Task Success Rate'}</h4>
+            <span className="scallop-card-num">{caseId === 'case-02' ? '40%' : '92%'}</span>
+            <h4 className="scallop-card-title">{caseId === 'case-02' ? 'Buyer Conversion Uplift' : 'Task Success Rate'}</h4>
             <p className="scallop-card-text">
               {caseId === 'case-02'
-                ? '15 dealership finance managers completed deal submittals in 16 minutes — down from 45 minutes on legacy portals. Across 3 iterative rounds, completion velocity climbed steadily while field error rates dropped.'
+                ? 'Task-based sessions with urban buyers confirmed that transparent pricing, instant eligibility pre-screens, and one-tap financing removed the trust and delay blockers behind dealership drop-off — validating the projected 40% conversion uplift over traditional dealership visits.'
                 : '22 of 24 nursing mothers successfully completed core goal selection and daily lifestyle tracking flows during testing. Focused validation confirmed that simplified routines reduced friction and supported consistent engagement.'}
             </p>
           </div>
@@ -54,7 +38,7 @@ export default function TripleCardSection({ caseId }) {
           <div className="testing-video-overlay">
             <p className="testing-video-quote">
               {caseId === 'case-02'
-                ? 'Validated at speed, under real sales-desk pressure.'
+                ? 'Validated at speed — across the buyer journey and the real sales desk.'
                 : 'Direct real-world feedback gathered from nursing mothers across 3 testing rounds.'}
             </p>
           </div>

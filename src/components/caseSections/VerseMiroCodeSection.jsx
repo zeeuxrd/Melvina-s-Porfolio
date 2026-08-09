@@ -74,15 +74,15 @@ export default function VerseMiroCodeSection() {
               </p>
             </div>
 
-            {/* Brief Description Yellow Sticky Notes */}
+            {/* Brief Description Pastel Sticky Notes */}
             <div className="miro-sticky-cluster">
-              <div className="miro-sticky-note note-yellow">
+              <div className="miro-sticky-note note-pink">
                 <p>Must submit credit profile in &lt; 5 mins during live customer talks.</p>
               </div>
-              <div className="miro-sticky-note note-yellow">
+              <div className="miro-sticky-note note-purple">
                 <p>Frustrated by re-typing buyer details into 6 separate lender portals.</p>
               </div>
-              <div className="miro-sticky-note note-yellow">
+              <div className="miro-sticky-note note-blue">
                 <p>Wants instant visibility into pre-approval odds before submitting.</p>
               </div>
             </div>
@@ -108,22 +108,22 @@ export default function VerseMiroCodeSection() {
                 <p className="principle-desc">Unified 6 lender portal logins into one single-screen credit intake form.</p>
               </div>
 
-              {/* Principle 02 - Green Note */}
-              <div className="miro-principle-card note-green">
+              {/* Principle 02 - Orange Note */}
+              <div className="miro-principle-card note-orange">
                 <span className="principle-badge">02</span>
                 <h4 className="principle-title">Multi-Lender Orchestration</h4>
                 <p className="principle-desc">Simultaneous pre-approval routing engine across tiered lending institutions.</p>
               </div>
 
-              {/* Principle 03 - Yellow Note */}
-              <div className="miro-principle-card note-yellow">
+              {/* Principle 03 - Bright Yellow Note */}
+              <div className="miro-principle-card note-bright-yellow">
                 <span className="principle-badge">03</span>
                 <h4 className="principle-title">Instant Eligibility Pre-Screen</h4>
                 <p className="principle-desc">Real-time credit checks flag likely approvals before formal submittal.</p>
               </div>
 
-              {/* Principle 04 - Coral Note */}
-              <div className="miro-principle-card note-coral">
+              {/* Principle 04 - Pink Note */}
+              <div className="miro-principle-card note-pink">
                 <span className="principle-badge">04</span>
                 <h4 className="principle-title">Automated Contract Execution</h4>
                 <p className="principle-desc">Auto-populated compliance disclosures pulled directly from single deal record.</p>

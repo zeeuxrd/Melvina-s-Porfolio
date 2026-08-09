@@ -93,7 +93,7 @@ export default function IdeationSliderMatrixSection({ caseId }) {
               <span className="flow-step-num">Step 04</span>
               <h4 className="flow-pillar-title">Fast Contract Review</h4>
               <p className="flow-pillar-desc">
-                Auto-filled complex disclosure forms, cutting deal time to 16 mins.
+                Auto-fills complex disclosure forms, removing manual re-entry during contract execution.
               </p>
             </div>
           </div>

@@ -5,6 +5,7 @@ import Work from './components/Work'
 import About from './components/About'
 import Testimonials from './components/Testimonials'
 import Footer from './components/Footer'
+import Preloader from './components/Preloader'
 import AboutPage from './pages/AboutPage'
 import CaseStudyPage from './pages/CaseStudyPage'
 import useScrollReveal from './hooks/useScrollReveal'
@@ -14,6 +15,8 @@ function App() {
     return localStorage.getItem('theme') || 'dark';
   });
 
+  const [isLoading, setIsLoading] = useState(true);
+  const [contentRevealed, setContentRevealed] = useState(false);
   const [currentPage, setCurrentPage] = useState('home');
   const [selectedCaseId, setSelectedCaseId] = useState('case-01');
 
@@ -50,34 +53,43 @@ function App() {
 
   return (
     <div className="app-container">
-      <Header 
-        theme={theme} 
-        onToggleTheme={toggleTheme} 
-        onNavigate={handleNavigate}
-        currentPage={currentPage}
-      />
-
-      {currentPage === 'about' ? (
-        <main>
-          <AboutPage onBackToHome={() => handleNavigate('home')} />
-        </main>
-      ) : currentPage === 'case-study' ? (
-        <main>
-          <CaseStudyPage 
-            caseStudyId={selectedCaseId} 
-            onBackToWork={() => handleNavigate('home', 'work')} 
-          />
-        </main>
-      ) : (
-        <main>
-          <Hero onSelectCase={handleOpenCase} />
-          <Work onSelectCase={handleOpenCase} />
-          <About onReadMore={() => handleNavigate('about')} />
-          <Testimonials />
-        </main>
+      {isLoading && (
+        <Preloader
+          onExitStart={() => setContentRevealed(true)}
+          onComplete={() => setIsLoading(false)}
+        />
       )}
 
-      <Footer />
+      <div className={`app-reveal ${contentRevealed || !isLoading ? 'app-reveal--visible' : ''}`}>
+        <Header
+          theme={theme}
+          onToggleTheme={toggleTheme}
+          onNavigate={handleNavigate}
+          currentPage={currentPage}
+        />
+
+        {currentPage === 'about' ? (
+          <main>
+            <AboutPage onBackToHome={() => handleNavigate('home')} />
+          </main>
+        ) : currentPage === 'case-study' ? (
+          <main>
+            <CaseStudyPage
+              caseStudyId={selectedCaseId}
+              onBackToWork={() => handleNavigate('home', 'work')}
+            />
+          </main>
+        ) : (
+          <main>
+            <Hero onSelectCase={handleOpenCase} />
+            <Work onSelectCase={handleOpenCase} />
+            <About onReadMore={() => handleNavigate('about')} />
+            <Testimonials />
+          </main>
+        )}
+
+        <Footer />
+      </div>
     </div>
   )
 }

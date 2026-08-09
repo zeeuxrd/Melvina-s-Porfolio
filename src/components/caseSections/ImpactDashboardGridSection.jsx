@@ -7,97 +7,29 @@ export default function ImpactDashboardGridSection({ caseId }) {
   return (
     caseId === 'case-02' ? (
       <div className="verse-result-showcase-container">
-        {/* Eyebrow */}
-        <span className="result-eyebrow">Result</span>
-
-        {/* Main Headline / Impact Statement */}
-        <h3 className="result-main-headline">
-          Achieve measurable financing velocity with single-screen credit intake, real-time lender pre-screening, and automated contract execution for dealership growth
-        </h3>
-
-        {/* Testimonial Author Row */}
-        <div className="result-author-row">
-          <div className="result-avatar-circle">
-            <img src={avatar1Img} alt="Emeka Okafor" className="author-avatar-img" loading="lazy" decoding="async" />
-          </div>
-          <div className="result-author-info">
-            <span className="author-name">Emeka Okafor</span>
-            <span className="author-role">F&amp;I Director, Apex Motors Group</span>
-          </div>
-        </div>
-
-        {/* Bottom Grid: 2 Visual Cards + Summary & 3 Stat Counters */}
-        <div className="result-bottom-grid">
-          
-          {/* Visual Analytics Column (2 Soft Cards) */}
-          <div className="result-cards-column">
-            
-            {/* Card 1: Grow Credit Approvals (Bar Chart) */}
-            <div className="res-visual-card">
-              <div className="res-card-top">
-                <span className="res-card-label">Grow Approvals</span>
-                <span className="res-card-num">+31%</span>
-              </div>
-              <div className="res-bar-chart">
-                {['Jan', 'Feb', 'Mar', 'Apr', 'Jun', 'Jul', 'Aug'].map((month, idx) => {
-                  const heights = ['40%', '60%', '85%', '65%', '92%', '75%', '95%'];
-                  return (
-                    <div key={month} className="res-bar-col">
-                      <div className="res-bar-track">
-                        <div className="res-bar-fill" style={{ height: heights[idx] }} />
-                      </div>
-                      <span className="res-bar-month">{month}</span>
-                    </div>
-                  )
-                })}
-              </div>
-            </div>
-
-            {/* Card 2: Deal Time Reduction (Donut Ring Chart) */}
-            <div className="res-visual-card">
-              <div className="res-card-top">
-                <span className="res-card-label">Deal Time Saved</span>
-                <span className="res-card-num">-65%</span>
-              </div>
-              <div className="res-donut-chart">
-                <svg viewBox="0 0 120 120" className="donut-svg">
-                  <circle cx="60" cy="60" r="45" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="16" />
-                  <circle cx="60" cy="60" r="45" fill="none" stroke="#D9F5C2" strokeWidth="16" strokeDasharray="283" strokeDashoffset="180" strokeLinecap="round" transform="rotate(-90 60 60)" />
-                  <circle cx="60" cy="60" r="45" fill="none" stroke="#8C75FF" strokeWidth="16" strokeDasharray="283" strokeDashoffset="100" strokeLinecap="round" transform="rotate(20 60 60)" />
-                </svg>
-                <div className="donut-center-text">
-                  <span className="donut-val">$4.2M</span>
-                  <span className="donut-lbl">Recovered</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          {/* Right Column: Narrative Summary & 3 Metric Counters */}
-          <div className="result-details-column">
-            <p className="result-summary-text">
-              Deploying Verse across pilot dealerships eliminated multi-portal data entry friction, enabling finance directors to close deals faster while increasing customer trust at the sales desk.
+        {/* Outcome Cards Grid */}
+        <div className="result-outcomes-grid">
+          <div className="res-visual-card res-outcome-card res-outcome-card--pink">
+            <h4 className="res-outcome-title">Adoption &amp; Conversion</h4>
+            <p className="res-outcome-text">
+              Buyers are more willing to complete the journey online, lifting adoption and conversion rates compared to traditional dealerships.
             </p>
-
-            <div className="result-counters-row">
-              <div className="result-counter-item">
-                <span className="res-counter-num">08</span>
-                <span className="res-counter-lbl">Weeks of field study</span>
-              </div>
-              <div className="result-counter-item">
-                <span className="res-counter-num">22</span>
-                <span className="res-counter-lbl">Dealerships evaluated</span>
-              </div>
-              <div className="result-counter-item">
-                <span className="res-counter-num">400+</span>
-                <span className="res-counter-lbl">Live deal logs analyzed</span>
-              </div>
-            </div>
           </div>
 
-        </div>
+          <div className="res-visual-card res-outcome-card res-outcome-card--purple">
+            <h4 className="res-outcome-title">Virtual Documentation</h4>
+            <p className="res-outcome-text">
+              Secured, convenient virtual documentation replaces paper-heavy processes and finalizes the deal without extra dealership visits.
+            </p>
+          </div>
 
+          <div className="res-visual-card res-outcome-card res-outcome-card--green">
+            <h4 className="res-outcome-title">Inspection &amp; Payment</h4>
+            <p className="res-outcome-text">
+              Vehicle inspection and flexible payment options build the trust and accessibility urban buyers need to commit.
+            </p>
+          </div>
+        </div>
       </div>
     ) : (
       <div className="impact-dashboard-container">
@@ -133,7 +65,7 @@ export default function ImpactDashboardGridSection({ caseId }) {
             </div>
             <div className="segment-avatars">
               <img src={avatar3Img} alt="Participant 4" className="avatar-circle-img" loading="lazy" decoding="async" />
-              <span className="avatar-count-pill">{caseId === 'case-02' ? '$4.2M Recovered' : '+2 Cohorts'}</span>
+              <span className="avatar-count-pill">{caseId === 'case-02' ? '98% Adoption' : '+2 Cohorts'}</span>
             </div>
           </div>
         </div>

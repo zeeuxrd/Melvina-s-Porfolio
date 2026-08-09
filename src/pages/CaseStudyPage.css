@@ -10,7 +10,7 @@
 
 @media (max-width: 768px) {
   .adekoya-case-page {
-    padding: 5rem 18px 5rem 18px !important;
+    padding: 5rem 0 5rem 0 !important;
   }
 
   /* Keep the pink band flush to screen edges */
@@ -500,9 +500,9 @@
 /* Sticky 1: Terracotta Ruled Note */
 .sticky-terracotta {
   width: min(340px, 85vw);
-  background-color: #FF914D;
-  color: #4A1D00;
-  --ink: #4A1D00;
+  background-color: #A8D8EA;
+  color: #1A3A4A;
+  --ink: #1A3A4A;
   --srot: -3deg;
 }
 
@@ -726,6 +726,23 @@
   font-weight: 700;
 }
 
+/* Mobile: keep sticky notes rotated but fully inside the container — no clipping, clean scroll alignment */
+@media (max-width: 900px) {
+  .research-sticky-board {
+    min-height: auto;
+    padding: 1.5rem 2.25rem;
+    gap: 1.5rem;
+  }
+
+  .research-sticky {
+    width: 100%;
+    max-width: min(320px, 82vw);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+}
+
 /* Custom 4-Mobile Story Flow Walkthrough Component */
 /* Full-bleed canvas variant: stretch the canvas itself edge-to-edge, no inner padding/clipping */
 .adekoya-section-canvas--bleed {
@@ -745,6 +762,10 @@
   display: flex;
   justify-content: center;
   padding: 2.5rem;
+  background-color: var(--bg-primary);
+}
+
+[data-theme="light"] .overview-story-flow-container {
   background-color: rgba(211, 211, 211, 0.3);
 }
 
@@ -1627,6 +1648,31 @@
 .reflection-dark-card {
   background-color: #000000;
   color: #EEF0E7;
+}
+
+.reflection-pink-card {
+  background-color: var(--accent-color, #FF1493) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+}
+
+.reflection-pink-card .principles-card-tag {
+  color: #FFFFFF !important;
+  opacity: 0.9 !important;
+}
+
+.reflection-pink-card .principle-num {
+  color: #FFFFFF !important;
+  opacity: 0.75 !important;
+}
+
+.reflection-pink-card .principle-title {
+  color: #FFFFFF !important;
+}
+
+.reflection-pink-card .principle-text {
+  color: #FFFFFF !important;
+  opacity: 0.95 !important;
 }
 
 [data-theme="light"] .reflection-dark-card {
@@ -4570,10 +4616,10 @@
   display: flex;
   flex-direction: column;
   background-color: transparent;
-  padding: 1rem 0;
+  padding: 0;
   color: var(--text-primary, #FFFFFF);
   gap: 2rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 0;
 }
 
 .result-eyebrow {
@@ -4686,6 +4732,58 @@
   line-height: 1;
 }
 
+/* Outcome Cards Grid (Verse Impact Section) */
+.result-outcomes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.res-outcome-card {
+  gap: 1rem;
+  justify-content: flex-start;
+  min-height: auto;
+}
+
+.res-outcome-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0F172A;
+  margin: 0;
+  line-height: 0.78;
+}
+
+.res-outcome-text {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: #475569;
+  margin: 0;
+}
+
+.res-visual-card.res-outcome-card.res-outcome-card--pink {
+  border: 2px solid #EC4899 !important;
+  background-color: #FCE7F3 !important;
+}
+
+.res-visual-card.res-outcome-card.res-outcome-card--purple {
+  border: 2px solid #8B5CF6 !important;
+  background-color: #F3E8FF !important;
+}
+
+.res-visual-card.res-outcome-card.res-outcome-card--green {
+  border: 2px solid #22C55E !important;
+  background-color: #DCFCE7 !important;
+}
+
+@media (max-width: 900px) {
+  .result-outcomes-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Bar Chart inside Card 1 */
 .res-bar-chart {
   display: flex;
@@ -4744,6 +4842,14 @@
 [data-theme="light"] .res-counter-lbl,
 [data-theme="light"] .donut-lbl,
 [data-theme="light"] .result-summary-text {
+  color: #475569 !important;
+}
+
+[data-theme="light"] .res-outcome-title {
+  color: #0F172A !important;
+}
+
+[data-theme="light"] .res-outcome-text {
   color: #475569 !important;
 }
 
@@ -5092,10 +5198,11 @@
 }
 
 .card-duration {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  font-weight: 600;
-  opacity: 0.7;
+  font-family: 'General Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 1;
+  text-align: left;
 }
 
 .card-pills-wrap {
@@ -5122,6 +5229,12 @@
   border-color: #FFF275;
 }
 
+.timeline-pill.pill-highlight-pink {
+  background-color: #FF369B;
+  color: #FFFFFF;
+  border-color: #FF369B;
+}
+
 .timeline-pill.pill-dark {
   border: 1px solid rgba(44, 40, 2, 0.25);
   background-color: rgba(44, 40, 2, 0.08);
@@ -5135,23 +5248,47 @@
   min-height: 280px;
 }
 
+.card-strategy .card-title {
+  color: #FFFFFF;
+}
+
 /* Card 2: Discovery */
 .card-discovery {
-  background-color: #17181C;
-  color: #FFFFFF;
+  background-color: #FCE4EC;
+  color: #4A1D33;
   min-height: 360px;
+}
+
+.card-discovery .card-title,
+.card-discovery .card-duration {
+  color: #4A1D33;
+}
+
+.card-discovery .card-duration {
+  text-align: left;
+}
+
+.card-discovery .timeline-pill {
+  border: 1px solid rgba(74, 29, 51, 0.3);
+  background-color: rgba(74, 29, 51, 0.08);
+  color: #4A1D33;
 }
 
 /* Card 3: Solution (Soft Sticky Note Pastel Yellow) */
 .card-solution {
-  background-color: #FFF275;
-  color: #2C2802;
+  background-color: #F9A8D4;
+  color: #5A0F22;
   min-height: 440px;
 }
 
 .card-solution .card-title,
 .card-solution .card-duration {
-  color: #2C2802;
+  color: #5A0F22;
+}
+
+.card-solution .card-title {
+  font-size: 1.25rem;
+  text-align: left;
 }
 
 /* Responsive Media Queries */
@@ -5806,14 +5943,18 @@
 .note-blue { background-color: #BAE6FD !important; color: #032854 !important; }
 .note-green { background-color: #BBF7D0 !important; color: #052E16 !important; }
 .note-coral { background-color: #FECDD3 !important; color: #4C0519 !important; }
+.note-pink { background-color: #FBCFE8 !important; color: #500724 !important; }
+.note-purple { background-color: #E9D5FF !important; color: #3B0764 !important; }
+.note-orange { background-color: #FED7AA !important; color: #431407 !important; }
+.note-bright-yellow { background-color: #FFD60A !important; color: #3B2F00 !important; }
 
-.note-yellow *, .note-blue *, .note-green *, .note-coral * {
+.note-yellow *, .note-blue *, .note-green *, .note-coral *, .note-pink *, .note-purple *, .note-orange *, .note-bright-yellow * {
   color: inherit !important;
 }
 
 .miro-job-card {
-  background-color: #111827;
-  border: 1px solid #1F2937;
+  background-color: #EC4899;
+  border: 1px solid #BE185D;
   border-radius: 16px;
   padding: 1.5rem;
   display: flex;
@@ -5823,22 +5964,22 @@
 }
 
 [data-theme="light"] .miro-job-card {
-  background-color: #FFFFFF;
-  border: 1px solid #E5E7EB;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  background-color: #EC4899;
+  border: 1px solid #BE185D;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
 .job-card-label {
   font-family: 'General Sans', sans-serif;
   font-size: 0.78rem;
   font-weight: 800;
-  color: #38BDF8;
+  color: #FDF2F8;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 [data-theme="light"] .job-card-label {
-  color: #0284C7;
+  color: #FDF2F8;
 }
 
 .job-card-text {
@@ -5846,11 +5987,11 @@
   font-size: 0.9rem;
   font-weight: 600;
   line-height: 1.55;
-  color: #F9FAFB;
+  color: #FFFFFF;
 }
 
 [data-theme="light"] .job-card-text {
-  color: #0F172A;
+  color: #FFFFFF;
 }
 
 /* Lower Row: Solution Principles Grid */
@@ -6127,7 +6268,7 @@
 
 @media (max-width: 768px) {
   .overview-story-flow-container {
-    padding: 2.5rem 34px !important;
+    padding: 2.5rem 16px !important;
   }
 
   .overview-story-grid {
@@ -7097,7 +7238,7 @@
 
 .fitflex-bento-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.75rem;
   width: 100%;
 }
@@ -7126,8 +7267,14 @@
 }
 
 /* Card Themes matching reference image */
+.bento-card-light,
+.bento-card-pink,
+.bento-card-dark-blue {
+  width: 100%;
+}
+
 .bento-card-light {
-  background-color: #FFFFFF;
+  background-color: #F5F5F5;
   color: #111827;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
@@ -7139,19 +7286,21 @@
 }
 
 .bento-card-pink {
-  background-color: #FF369B;
+  background-color: rgba(255, 54, 155, 0.78);
   color: #FFFFFF;
   box-shadow: 0 12px 36px rgba(255, 54, 155, 0.3);
 }
 
 .pill-white-badge {
-  background-color: #FFFFFF;
-  color: #BE123C;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
 }
 
 .pill-pink-rotated {
-  background-color: #FFF1F2;
-  color: #9F1239;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
   transform: rotate(3deg);
 }
 
@@ -7178,7 +7327,7 @@
 }
 
 .bento-card-dark-blue {
-  background-color: #FFD6E8;
+  background-color: #FCE4EC;
   color: #4A1D33;
   box-shadow: 0 12px 36px rgba(255, 107, 167, 0.25);
 }
@@ -7194,7 +7343,7 @@
 }
 
 .bento-card-dark-blue .bento-quote-box {
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(233, 183, 201, 0.7);
   border-left: 3px solid #FF369B;
 }
 
@@ -7207,7 +7356,7 @@
 }
 
 .bento-card-dark-blue .bento-hmw-container {
-  background: rgba(255, 255, 255, 0.55);
+  background: #E9B7C9;
 }
 
 .bento-card-dark-blue .bento-hmw-label {
@@ -7235,7 +7384,7 @@
 
 .bento-framed-img {
   width: 100%;
-  height: 240px;
+  height: 343px;
   object-fit: cover;
   object-position: center 20%;
   display: block;
@@ -7679,3 +7828,350 @@
   color: var(--text-secondary);
   margin: 0;
 }
+
+/* ==========================================
+   Verse User Persona 2x2 Grid Component Styles
+   ========================================== */
+.verse-persona-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem 0;
+  color: var(--text-primary, #121418);
+}
+
+.verse-persona-header-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+.verse-persona-title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.verse-persona-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #6C5CE7;
+  color: #FFFFFF;
+  padding: 0.35rem 0.85rem;
+  border-radius: 100px;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  width: fit-content;
+}
+
+.persona-badge-num {
+  width: 20px;
+  height: 20px;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.verse-persona-main-heading {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+  color: var(--text-primary, #121418);
+  margin: 0;
+}
+
+.heading-light {
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+.heading-bold {
+  font-weight: 800;
+}
+
+.verse-persona-top-subtext {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-secondary, #64748B);
+  max-width: 38ch;
+  margin: 0;
+}
+
+/* 2x2 Persona Grid */
+.verse-persona-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* Base Card Style */
+.persona-card {
+  background-color: #F8F9FA;
+  border-radius: 28px;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 340px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* 1. Persona Profile Card (Top-Left) */
+.persona-profile-card {
+  background: linear-gradient(135deg, #6C5CE7 0%, #7C4DFF 100%);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 380px;
+  color: #FFFFFF;
+  border: none !important;
+}
+
+.persona-star-badge {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  z-index: 5;
+}
+
+.persona-image-wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.persona-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Empty Photo Placeholder Slot */
+.persona-img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 2rem;
+  padding-bottom: 5.5rem;
+  color: rgba(255, 255, 255, 0.85);
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.15) 0%, transparent 70%);
+}
+
+.placeholder-icon-ring {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px dashed rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.25rem;
+}
+
+.placeholder-lbl {
+  font-family: 'General Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.placeholder-sublbl {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+
+/* Glassmorphic Name Overlay */
+.persona-glass-banner {
+  position: relative;
+  z-index: 4;
+  margin: 1.25rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  color: #FFFFFF;
+}
+
+.persona-name {
+  font-family: 'General Sans', sans-serif;
+  font-size: 1.65rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin: 0 0 0.2rem 0;
+  color: #FFFFFF;
+}
+
+.persona-role {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.9;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Card Title */
+.persona-card-title {
+  font-family: 'General Sans', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #121418;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.3px;
+}
+
+/* Bullet List */
+.persona-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.persona-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  color: #334155;
+}
+
+.persona-list-item strong {
+  color: #0F172A;
+  font-weight: 700;
+}
+
+/* Icon Badges */
+.item-icon-badge {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.icon-purple {
+  background-color: #6C5CE7;
+  color: #FFFFFF;
+}
+
+.icon-pink {
+  background-color: #FF4081;
+  color: #FFFFFF;
+}
+
+.icon-orange {
+  background-color: #FF9800;
+  color: #FFFFFF;
+}
+
+/* Card Footer Subtext */
+.persona-card-footer {
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: #64748B;
+  margin: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 1rem;
+}
+
+.persona-card-footer strong {
+  color: #334155;
+  font-weight: 700;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .verse-persona-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .verse-persona-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  
+  .persona-card {
+    min-height: auto;
+    padding: 1.75rem;
+    border-radius: 22px;
+  }
+
+  .persona-profile-card {
+    min-height: 320px;
+  }
+}
+
+/* Dark Mode: Persona cards match other section container backgrounds */
+[data-theme="dark"] .persona-card:not(.persona-profile-card) {
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="dark"] .persona-card-title {
+  color: #F8FAFC;
+}
+
+[data-theme="dark"] .persona-list-item {
+  color: #CBD5E1;
+}
+
+[data-theme="dark"] .persona-list-item strong {
+  color: #F1F5F9;
+}
+
+[data-theme="dark"] .persona-card-footer {
+  color: #94A3B8;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .persona-card-footer strong {
+  color: #CBD5E1;
+}
+

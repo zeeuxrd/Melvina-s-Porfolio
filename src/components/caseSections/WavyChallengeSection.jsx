@@ -5,9 +5,6 @@ export default function WavyChallengeSection() {
     <div className="fitflex-wavy-container">
       {/* Wavy Node Canvas */}
       <div className="wavy-path-stage">
-        {/* Centered Pathway Label */}
-        <span className="wavy-eyebrow wavy-eyebrow-center">MATERNAL FRICTION PATHWAY</span>
-
         {/* SVG S-Curve Line Connector with Dashed Pink Stroke & Arrowhead */}
         <svg className="wavy-svg-stroke" viewBox="0 0 900 380" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
           <defs>

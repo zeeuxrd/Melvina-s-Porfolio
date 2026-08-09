@@ -101,7 +101,7 @@
 /* Responsive Layout */
 @media (max-width: 768px) {
   .about-section {
-    padding: 2.5rem 18px 2.5rem 18px;
+    padding: 2.5rem 0 2.5rem 0;
   }
 
   .about-display-title {
@@ -119,6 +119,6 @@
 
 @media (max-width: 480px) {
   .about-section {
-    padding: 2.5rem 18px 2.5rem 18px;
+    padding: 2.5rem 0 2.5rem 0;
   }
 }

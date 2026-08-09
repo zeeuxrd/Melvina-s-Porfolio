@@ -242,7 +242,7 @@ html.scroll-reveal-ready .footer-blobs-canvas[data-reveal]:not(.is-visible) .sca
 
 @media (max-width: 900px) {
   .footer-section {
-    padding: 2.5rem 34px 2.5rem 34px;
+    padding: 2.5rem 16px 2.5rem 16px;
   }
 
   .footer-heading-wrap {

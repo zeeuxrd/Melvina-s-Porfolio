@@ -189,6 +189,29 @@ h1, h2, h3, h4, h5, h6, .display-font, .title-font {
   min-height: 100vh;
 }
 
+/* Preloader Reveal: page slides up + fades in as the preloader lifts away */
+.app-reveal {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform 0.85s cubic-bezier(0.76, 0, 0.24, 1), opacity 0.85s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+.app-reveal--visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-reveal {
+    transform: none;
+    opacity: 1;
+    transition: none;
+  }
+}
+
 main {
   width: 100%;
   max-width: var(--max-width);

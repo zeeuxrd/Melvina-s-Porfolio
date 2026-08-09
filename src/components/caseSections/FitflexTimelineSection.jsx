@@ -14,7 +14,7 @@ export default function FitflexTimelineSection() {
 
           <div className="card-pills-wrap">
             <span className="timeline-pill">Knowledge Transfer</span>
-            <span className="timeline-pill pill-highlight">Guidance</span>
+            <span className="timeline-pill pill-highlight-pink">Guidance</span>
             <span className="timeline-pill">Best Practices</span>
           </div>
         </div>

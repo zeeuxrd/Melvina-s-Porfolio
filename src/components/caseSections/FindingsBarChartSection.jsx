@@ -9,38 +9,33 @@ export default function FindingsBarChartSection({ caseId }) {
         <div className="stepped-bars-stack">
           {/* Bar 1: Pink */}
           <div className="stepped-bar bar-color-pink pos-step-1">
-            <span className="bar-stat-val">74%</span>
-            <span className="bar-stat-desc">reported multi-portal manual re-entry was their primary operational bottleneck</span>
+            <span className="bar-stat-val">30%</span>
+            <span className="bar-stat-desc">of research signals pointed to multi-portal manual re-entry as the primary operational bottleneck</span>
           </div>
 
           {/* Bar 2: Amber */}
           <div className="stepped-bar bar-color-amber pos-step-2">
-            <span className="bar-stat-val">85%</span>
-            <span className="bar-stat-desc">saw an immediate increase in first-time credit approval velocity with pre-screening</span>
+            <span className="bar-stat-val">24%</span>
+            <span className="bar-stat-desc">of research signals showed F&amp;I managers guessing lender fit blindly without pre-approval guidance</span>
           </div>
 
           {/* Bar 3: Electric Blue */}
           <div className="stepped-bar bar-color-blue pos-step-3">
-            <span className="bar-stat-val">87%</span>
-            <span className="bar-stat-desc">would adopt automated single-entry credit routing over legacy dealership software</span>
+            <span className="bar-stat-val">20%</span>
+            <span className="bar-stat-desc">of research signals flagged buyers walking out when credit application processing exceeded 25 minutes</span>
           </div>
 
           {/* Bar 4: Coral Red */}
           <div className="stepped-bar bar-color-coral pos-step-4">
-            <span className="bar-stat-val">68%</span>
-            <span className="bar-stat-desc">said buyers walked out when credit application processing exceeded 25 minutes</span>
+            <span className="bar-stat-val">16%</span>
+            <span className="bar-stat-desc">of research signals cited opaque pricing and hidden financing terms as a deal-breaker</span>
           </div>
 
           {/* Bar 5: Apple Lime Green */}
           <div className="stepped-bar bar-color-lime pos-step-5">
-            <span className="bar-stat-val">58%</span>
-            <span className="bar-stat-desc">requested automated compliance disclosures integrated directly into credit workflows</span>
+            <span className="bar-stat-val">10%</span>
+            <span className="bar-stat-desc">of research signals reflected demand for a fully contactless purchase with flexible payment options</span>
           </div>
-        </div>
-
-        {/* Bottom Caption */}
-        <div className="stepped-report-footer">
-          <span className="footer-index-txt">(Research) Index No. 051 — Verse Dealership Insights 2024 – Verse</span>
         </div>
       </div>
     ) : (
@@ -63,7 +58,6 @@ export default function FindingsBarChartSection({ caseId }) {
 
             <div className="bento-card-footer border-top-light">
               <span className="bento-pill-badge pill-bright-green">24 INTERVIEW LOGS</span>
-              <span className="bento-footnote-txt dark-text-muted">Research Protocol &amp; Synthesis</span>
             </div>
           </div>
 
@@ -97,64 +91,6 @@ export default function FindingsBarChartSection({ caseId }) {
           </div>
 
           {/* Quadrant 3 (Bottom-Left): Research Validation & Bar Chart - Electric Cobalt Blue Theme */}
-          <div className="fitflex-bento-card bento-card-blue bento-chart-card">
-            <div className="bento-card-header">
-              <div className="bento-metrics-header">
-                <div>
-                  <h4 className="bento-card-title white-text">Market &amp; Habit Traction</h4>
-                  <span className="bento-sub-text white-text-muted">Postpartum User Retention Rate</span>
-                </div>
-                <div className="bento-hero-stat">
-                  <span className="hero-stat-val">+310%</span>
-                </div>
-              </div>
-            </div>
-
-            {/* 5-Bar Pill Chart visual directly matching research-methodoloy-fitflex.png */}
-            <div className="bento-pill-chart-wrap">
-              <div className="bento-pill-bars-container">
-                {/* Bar 1 */}
-                <div className="bento-bar-col">
-                  <div className="bento-bar-slot">
-                    <div className="bento-bar-fill bar-fill-white" style={{ height: '45%' }}></div>
-                  </div>
-                  <span className="bento-bar-lbl">Q1</span>
-                </div>
-                {/* Bar 2 */}
-                <div className="bento-bar-col">
-                  <div className="bento-bar-slot">
-                    <div className="bento-bar-fill bar-fill-white" style={{ height: '30%' }}></div>
-                  </div>
-                  <span className="bento-bar-lbl">Q2</span>
-                </div>
-                {/* Bar 3 */}
-                <div className="bento-bar-col">
-                  <div className="bento-bar-slot">
-                    <div className="bento-bar-fill bar-fill-white" style={{ height: '40%' }}></div>
-                  </div>
-                  <span className="bento-bar-lbl">Q3</span>
-                </div>
-                {/* Bar 4 */}
-                <div className="bento-bar-col">
-                  <div className="bento-bar-slot">
-                    <div className="bento-bar-fill bar-fill-white" style={{ height: '70%' }}></div>
-                  </div>
-                  <span className="bento-bar-lbl">Q4</span>
-                </div>
-                {/* Bar 5 (Hero Lime Bar) */}
-                <div className="bento-bar-col">
-                  <div className="bento-bar-slot">
-                    <div className="bento-bar-fill bar-fill-lime" style={{ height: '95%' }}></div>
-                  </div>
-                  <span className="bento-bar-lbl bar-lbl-lime">Q5</span>
-                </div>
-              </div>
-            </div>
-
-            <div className="bento-card-footer border-top-translucent">
-              <span className="bento-footnote-txt white-text-muted">Source: Fitflex Maternal Research Protocol — Postpartum Retention Study</span>
-            </div>
-          </div>
 
           {/* Quadrant 4 (Bottom-Right): Opportunity Area #2 - Dark Cobalt / Media Theme */}
           <div className="fitflex-bento-card bento-card-dark-blue">
@@ -163,7 +99,6 @@ export default function FindingsBarChartSection({ caseId }) {
                 <span className="bento-pill-badge pill-pink">OPPORTUNITY AREA #2</span>
                 <div className="bento-tag-stack">
                   <span className="bento-pill-badge pill-orange rotated-tag-right">LIVE SESSION</span>
-                  <span className="bento-pill-badge pill-blue">NEW FORMAT</span>
                 </div>
               </div>
               <h4 className="bento-card-title white-text">Expensive Dieting</h4>

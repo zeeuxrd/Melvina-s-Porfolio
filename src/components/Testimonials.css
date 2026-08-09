@@ -229,7 +229,7 @@
 
 @media (max-width: 768px) {
   .testimonials-section {
-    padding: 2.5rem 18px 2.5rem 18px;
+    padding: 2.5rem 0 2.5rem 0;
   }
 
   .testimonials-header {

@@ -1256,7 +1256,7 @@
 
 @media (max-width: 768px) {
   .about-page {
-    padding: 6rem 18px 6rem 18px;
+    padding: 6rem 0 6rem 0;
   }
 
   .about-page-stats-grid {
