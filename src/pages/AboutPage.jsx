@@ -412,7 +412,12 @@ export default function AboutPage({ onBackToHome }) {
             <a href="mailto:okechukwugentlesomto@gmail.com" className="about-page-cta-btn primary">
               Get in Touch <span aria-hidden="true">→</span>
             </a>
-            <a href="/resume.pdf" className="about-page-cta-btn secondary">
+            <a
+              href="https://drive.google.com/file/d/1EDx117Iq4XFWd_x52wbF-NuhxMNx_t8c/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="about-page-cta-btn secondary"
+            >
               Download Resume
             </a>
           </div>

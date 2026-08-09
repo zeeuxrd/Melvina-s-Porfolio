@@ -293,6 +293,13 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [caseStudyId])
 
+  useEffect(() => {
+    const t = setTimeout(() => {
+      document.getElementById('user-stories')?.scrollIntoView({ block: 'start' })
+    }, 2500)
+    return () => clearTimeout(t)
+  }, [])
+
   const handleStickyDown = (id) => (e) => {
     if (e.button !== undefined && e.button !== 0) return
     const clientX = e.touches ? e.touches[0].clientX : e.clientX
@@ -435,7 +442,7 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
             </div>
 
             {/* Massive Full-Width Light Grey / Dark Container for Visual Artifacts */}
-            <div className={`adekoya-section-canvas ${sec.mockType === 'overview-mobile-flow' ? 'adekoya-section-canvas--bleed' : ''}`} data-reveal data-delay="1">
+            <div className={`adekoya-section-canvas ${sec.mockType === 'overview-mobile-flow' ? 'adekoya-section-canvas--bleed' : ''} ${sec.mockType === 'impact-dashboard-grid' || sec.mockType === 'reflections-flow-impact' || sec.mockType === 'verse-user-stories' ? 'adekoya-section-canvas--compact' : ''}`} data-reveal data-delay="1">
               {(() => {
                 const SectionRenderer = SECTION_RENDERERS[sec.mockType] || FallbackSection
                 const safeSec = normalizeSection(sec)

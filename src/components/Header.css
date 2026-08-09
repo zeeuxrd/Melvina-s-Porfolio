@@ -346,25 +346,14 @@
 }
 
 /* Mobile responsive navigation adjustment */
-@media (max-width: 640px) {
-  .nav-links > .nav-item,
-  .nav-links > .theme-toggle-btn {
-    display: none;
-  }
-
-  .mobile-menu-toggle {
-    display: flex;
-  }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .header-nav {
     top: 1rem;
   }
 
   .nav-pill {
-    gap: 1.5rem;
-    padding: 0.4rem 1.2rem 0.4rem 0.5rem;
+    gap: 1rem;
+    padding: 0.4rem 1rem 0.4rem 0.5rem;
   }
 
   .nav-avatar {
@@ -372,11 +361,20 @@
     height: 32px;
   }
 
-  .nav-links {
-    gap: 1.2rem;
+  .nav-brand-name {
+    font-size: 0.85rem;
   }
 
-  .nav-item {
-    font-size: 0.85rem;
+  .nav-links {
+    gap: 0.5rem;
+  }
+
+  .nav-links > .nav-item,
+  .nav-links > .theme-toggle-btn {
+    display: none !important;
+  }
+
+  .mobile-menu-toggle {
+    display: flex !important;
   }
 }

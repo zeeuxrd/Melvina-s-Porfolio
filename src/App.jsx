@@ -60,14 +60,14 @@ function App() {
         />
       )}
 
-      <div className={`app-reveal ${contentRevealed || !isLoading ? 'app-reveal--visible' : ''}`}>
-        <Header
-          theme={theme}
-          onToggleTheme={toggleTheme}
-          onNavigate={handleNavigate}
-          currentPage={currentPage}
-        />
+      <Header
+        theme={theme}
+        onToggleTheme={toggleTheme}
+        onNavigate={handleNavigate}
+        currentPage={currentPage}
+      />
 
+      <div className={`app-reveal ${contentRevealed || !isLoading ? 'app-reveal--visible' : ''}`}>
         {currentPage === 'about' ? (
           <main>
             <AboutPage onBackToHome={() => handleNavigate('home')} />

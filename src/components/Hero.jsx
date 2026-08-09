@@ -43,8 +43,9 @@ export default function Hero({ onSelectCase }) {
         {/* Call to Action Buttons (Side by Side) */}
         <div className="hero-actions">
           <a
-            href="/resume.pdf"
-            download="Somtochukwu_UX_Research_Resume.pdf"
+            href="https://drive.google.com/file/d/1EDx117Iq4XFWd_x52wbF-NuhxMNx_t8c/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             className="hero-cta-btn hero-cta-btn--secondary"
             aria-label="Download Resume"
           >
