@@ -1,5 +1,5 @@
 import React from 'react'
-import pregnantWomanImg from '../../../images/assets/pregnant-woman.png'
+import pregnantWomanImg from '../../../images/assets/pregnant.png'
 
 export default function FindingsBarChartSection({ caseId }) {
   return (

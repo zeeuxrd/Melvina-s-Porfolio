@@ -10,7 +10,11 @@
 
 @media (max-width: 768px) {
   .adekoya-case-page {
-    padding: 5rem 0 5rem 0 !important;
+    padding: 6.5rem 0 5rem 0 !important;
+  }
+
+  .adekoya-header {
+    margin-bottom: 24px !important;
   }
 
   /* Keep the pink band flush to screen edges */
@@ -252,6 +256,45 @@
   font-weight: 600;
   color: var(--text-secondary);
   display: block;
+}
+
+/* Optional Section CTA Link */
+.section-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1.5rem;
+  background: none;
+  color: #ffffff;
+  border: none;
+  font-family: 'General Sans', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.25s ease;
+}
+
+.section-cta-btn:hover {
+  color: var(--text-secondary);
+}
+
+.section-cta-btn-icon {
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+@media (max-width: 768px) {
+  .section-cta-btn {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.section-cta-btn:hover .section-cta-btn-icon {
+  transform: translate(2px, -2px);
 }
 
 /* Section Metrics Grid */
@@ -3691,7 +3734,8 @@
     height: auto !important;
     min-height: auto !important;
     max-height: none !important;
-    object-fit: contain !important;
+    aspect-ratio: 4 / 3;
+    object-fit: cover !important;
     border-radius: 12px;
   }
 

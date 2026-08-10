@@ -1,5 +1,7 @@
 import React from 'react'
 import './Hero.css'
+import heroFirstImg from '../../images/assets/hero-image-first.png'
+import heroSecondImg from '../../images/assets/hero-image-second-option.jpeg'
 
 const designResearchTerms = [
   'USER DISCOVERY',
@@ -36,7 +38,7 @@ export default function Hero({ onSelectCase }) {
         {/* Headline Display Text */}
         <div className="hero-headline-wrap">
           <h1 className="hero-title">
-            Turning complex human realities into clear decisions that drive change through research &amp; human-centered design strategy.
+            Turning complex human realities into clear decisions through human-centered design.
           </h1>
         </div>
 
@@ -68,6 +70,16 @@ export default function Hero({ onSelectCase }) {
               <polyline points="12 5 19 12 12 19" />
             </svg>
           </a>
+        </div>
+
+        {/* Two Hero Images Below CTA Buttons */}
+        <div className="hero-image-row">
+          <div className="hero-image-frame">
+            <img src={heroFirstImg} alt="Somtochukwu leading a research workshop" className="hero-image-frame-img" loading="eager" />
+          </div>
+          <div className="hero-image-frame hero-image-frame--ratio">
+            <img src={heroSecondImg} alt="Collaborative research workshop session" className="hero-image-frame-img" loading="eager" />
+          </div>
         </div>
       </div>
 

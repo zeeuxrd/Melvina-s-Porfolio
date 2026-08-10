@@ -150,10 +150,12 @@
   cursor: grabbing !important;
 }
 
-.sticker-card:hover {
-  transform: rotate(var(--rot, 0deg)) translate(var(--tx, 0px), calc(var(--ty, 0px) - 10px)) scale(1.03) !important;
-  z-index: 40 !important;
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+@media (hover: hover) and (pointer: fine) {
+  .sticker-card:hover {
+    transform: rotate(var(--rot, 0deg)) translate(var(--tx, 0px), calc(var(--ty, 0px) - 10px)) scale(1.03) !important;
+    z-index: 40 !important;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+  }
 }
 
 /* Sticker 1: Terracotta Main Note (Center) */
@@ -709,6 +711,10 @@
     gap: 0;
   }
 
+  .canvas-drag-cue {
+    display: none;
+  }
+
   .sticker-card,
   .sticker-polaroid,
   .sticker-arch-portal,
@@ -728,6 +734,8 @@
     margin: 1.25rem 0 !important;
     width: 100% !important;
     max-width: 480px;
+    touch-action: auto !important;
+    cursor: default !important;
   }
 
   .sticker-lime,
@@ -1013,10 +1021,12 @@
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.16);
 }
 
-.outside-sticker-card:hover {
-  transform: rotate(0deg) translateY(-8px) scale(1.04) !important;
-  z-index: 10 !important;
-  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.4);
+@media (hover: hover) and (pointer: fine) {
+  .outside-sticker-card:hover {
+    transform: rotate(0deg) translateY(-8px) scale(1.04) !important;
+    z-index: 10 !important;
+    box-shadow: 0 22px 45px rgba(0, 0, 0, 0.4);
+  }
 }
 
 /* Top Right Arch Sticker Card */

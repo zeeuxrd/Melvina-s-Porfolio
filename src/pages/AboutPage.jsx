@@ -159,7 +159,7 @@ export default function AboutPage({ onBackToHome }) {
   const getStickerProps = (id) => {
     const cardData = positions[id] || { x: 0, y: 0, rot: '0deg' }
     const customZ = zIndices[id]
-    const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 768px)').matches
+    const isMobile = typeof window !== 'undefined' && window.matchMedia('(max-width: 900px)').matches
     const dragHandlers = isMobile ? {} : { onMouseDown: handleStartDrag(id), onTouchStart: handleStartDrag(id) }
 
     return {

@@ -48,7 +48,7 @@ function App() {
   const handleOpenCase = (caseId) => {
     setSelectedCaseId(caseId);
     setCurrentPage('case-study');
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   };
 
   return (

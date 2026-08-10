@@ -42,6 +42,8 @@ const caseStudyData = {
         text: 'Secondary research revealed that 45% of women globally experience substantial weight gain (≥20 pounds) in the first year after childbirth (Journal of Women\'s Health). Nursing mothers represent extreme users whose unique challenges amplify common barriers such as time, motivation, and lifestyle constraints. Success with this segment not only addresses a critical need but also ensures broader applicability to other user groups, maximizing both impact and business value. The same protocol that validated the product doubled as the mentees\' hands-on runway, so every research stage built their independence as practitioners alongside the evidence for the design.',
         quote: '"I\'d never had a reason to go on a weightloss journey before childbirth"',
         quoteAuthor: 'Adebisi, Nursing Mother and Project Manager (Research participant from indepth interview session)',
+        ctaLink: 'https://www.capcut.com/presentation/7375203676534636560?workspaceId=7351388743103741953&utm_source=share&utm_medium=product',
+        ctaLabel: 'View Miro Workspace',
         mockLabel: 'Field Methodology & Research Framework Matrix',
         mockType: 'sticky-board',
         stickyNotes: [
@@ -290,15 +292,8 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
   const [zIndices, setZIndices] = useState({})
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo(0, 0)
   }, [caseStudyId])
-
-  useEffect(() => {
-    const t = setTimeout(() => {
-      document.getElementById('user-stories')?.scrollIntoView({ block: 'start' })
-    }, 2500)
-    return () => clearTimeout(t)
-  }, [])
 
   const handleStickyDown = (id) => (e) => {
     if (e.button !== undefined && e.button !== 0) return
@@ -425,6 +420,22 @@ export default function CaseStudyPage({ caseStudyId = 'case-01', onBackToWork })
                     <p className="quote-body">{sec.quote}</p>
                     <cite className="quote-cite">  {sec.quoteAuthor}</cite>
                   </blockquote>
+                )}
+
+                {/* Optional CTA Link if present */}
+                {sec.ctaLink && (
+                  <a
+                    href={sec.ctaLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="section-cta-btn"
+                  >
+                    {sec.ctaLabel || 'Learn More'}
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="section-cta-btn-icon">
+                      <line x1="7" y1="17" x2="17" y2="7" />
+                      <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                  </a>
                 )}
 
                 {/* Optional Metrics Grid if present */}
