@@ -182,6 +182,19 @@
 
 
 /* Responsiveness adjustments */
+/* Touch tablets (iPad Air/Pro, both orientations) can be wider than some laptop
+   screens, so target by input type rather than width alone — this must not
+   affect hover-capable laptop/desktop screens regardless of their pixel width. */
+@media (max-width: 1366px) and (hover: none) and (pointer: coarse) {
+  .hero-section {
+    min-height: auto;
+  }
+
+  .hero-content {
+    transform: translateY(-4%);
+  }
+}
+
 @media (max-width: 1024px) {
   .hero-sticker {
     font-size: 1rem;

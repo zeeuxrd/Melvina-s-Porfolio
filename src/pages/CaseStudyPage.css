@@ -279,6 +279,10 @@
   color: var(--text-secondary);
 }
 
+[data-theme="light"] .section-cta-btn {
+  color: #000000;
+}
+
 .section-cta-btn-icon {
   width: 1.1em;
   height: 1.1em;
@@ -6291,7 +6295,8 @@
   .scallop-card,
   .module-card,
   .strat-card,
-  .bento-card {
+  .bento-card,
+  .triple-card-mock {
     width: 100% !important;
     max-width: 100% !important;
     justify-self: stretch !important;
