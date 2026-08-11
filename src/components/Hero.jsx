@@ -1,20 +1,6 @@
 import React from 'react'
 import './Hero.css'
-import heroFirstImg from '../../images/assets/hero-image-first.png'
-import heroSecondImg from '../../images/assets/hero-image-second-option.jpeg'
-
-const designResearchTerms = [
-  'USER DISCOVERY',
-  'BEHAVIORAL SYNTHESIS',
-  'USABILITY LABS',
-  'PRODUCT STRATEGY',
-  'ACCESSIBILITY & WCAG',
-  'MIXED METHODS',
-  'STAKEHOLDER ALIGNMENT',
-  'INFORMATION ARCHITECTURE',
-  'HUMAN-CENTERED DESIGN',
-  'EVIDENCE-LED STRATEGY',
-]
+import { heroPictureCards, designResearchTerms } from '../data/heroData'
 
 export default function Hero({ onSelectCase }) {
   const handleTickerClick = (e) => {
@@ -25,6 +11,7 @@ export default function Hero({ onSelectCase }) {
 
   // Tripled items for seamless infinite ticker loop
   const tickerSequence = [...designResearchTerms, ...designResearchTerms, ...designResearchTerms]
+  const cardSequence = [...heroPictureCards, ...heroPictureCards, ...heroPictureCards]
 
   return (
     <section className="hero-section" aria-label="Hero Section">
@@ -72,31 +59,33 @@ export default function Hero({ onSelectCase }) {
           </a>
         </div>
 
-        {/* Two Hero Images Below CTA Buttons */}
-        <div className="hero-image-row">
-          <div className="hero-image-frame">
-            <img src={heroFirstImg} alt="Somtochukwu leading a research workshop" className="hero-image-frame-img" loading="eager" />
-          </div>
-          <div className="hero-image-frame hero-image-frame--ratio">
-            <img src={heroSecondImg} alt="Collaborative research workshop session" className="hero-image-frame-img" loading="eager" />
+        {/* Polaroid Photo Cards matching About section styling */}
+        <div className="hero-picture-row">
+          <div className="hero-picture-track">
+            {cardSequence.map((card, idx) => (
+              <div key={`${card.id}-${idx}`} className="hero-picture-card" style={{ '--rot': card.rot }}>
+                <div className="tape-accent" />
+                <img src={card.img} alt="UX Research Photo" className="hero-picture-img" loading="lazy" decoding="async" />
+              </div>
+            ))}
           </div>
         </div>
-      </div>
 
-      {/* Edge Scroll Ticker for Design & Research Focus Areas */}
-      <div className="hero-ticker-wrapper" aria-label="Design and research focus area ticker">
-        <div className="hero-ticker-track">
-          {tickerSequence.map((term, idx) => (
-            <a
-              key={`${term}-${idx}`}
-              href="#about"
-              className="hero-ticker-item"
-              onClick={handleTickerClick}
-            >
-              <span className="hero-ticker-title">{term}</span>
-              <span className="hero-ticker-dot" aria-hidden="true">✦</span>
-            </a>
-          ))}
+        {/* Edge Scroll Ticker for Design & Research Focus Areas */}
+        <div className="hero-ticker-wrapper" aria-label="Design and research focus area ticker">
+          <div className="hero-ticker-track">
+            {tickerSequence.map((term, idx) => (
+              <a
+                key={`${term}-${idx}`}
+                href="#about"
+                className="hero-ticker-item"
+                onClick={handleTickerClick}
+              >
+                <span className="hero-ticker-title">{term}</span>
+                <span className="hero-ticker-dot" aria-hidden="true">✦</span>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>

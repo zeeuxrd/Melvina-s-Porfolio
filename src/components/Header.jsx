@@ -5,8 +5,8 @@ import avatarImg from '../../images/assets/avatar.jpg'
 const mobileMenuLinks = [
   { label: 'Home', page: 'home', targetId: undefined },
   { label: 'Work', page: 'home', targetId: 'work' },
-  { label: 'About', page: 'about', targetId: undefined },
   { label: 'Testimonials', page: 'home', targetId: 'testimonials' },
+  { label: 'About', page: 'about', targetId: undefined },
 ]
 
 export default function Header({ theme, onToggleTheme, onNavigate, currentPage }) {
@@ -77,19 +77,19 @@ export default function Header({ theme, onToggleTheme, onNavigate, currentPage }
           >
             work <span className="nav-arrow">↓</span>
           </a>
-          <a 
-            href="#about" 
-            className={`nav-item ${currentPage === 'about' ? 'is-active' : ''}`}
-            onClick={handleNav('about')}
-          >
-            about <span className="nav-arrow">→</span>
-          </a>
-          <a 
-            href="#testimonials" 
+          <a
+            href="#testimonials"
             className="nav-item"
             onClick={handleNav('home', 'testimonials')}
           >
             testimonials <span className="nav-arrow">↓</span>
+          </a>
+          <a
+            href="#about"
+            className={`nav-item ${currentPage === 'about' ? 'is-active' : ''}`}
+            onClick={handleNav('about')}
+          >
+            about <span className="nav-arrow">→</span>
           </a>
           
           <button 

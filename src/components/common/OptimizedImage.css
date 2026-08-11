@@ -1,0 +1,25 @@
+/* OptimizedImage Abstraction Styles */
+
+.optimized-image {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.optimized-image.is-loaded {
+  opacity: 1;
+}
+
+.optimized-image-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #111111;
+}
+
+.optimized-image-fallback-icon {
+  width: 24px;
+  height: 24px;
+  color: rgba(255, 255, 255, 0.5);
+}

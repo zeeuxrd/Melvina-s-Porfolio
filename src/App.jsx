@@ -12,13 +12,27 @@ import useScrollReveal from './hooks/useScrollReveal'
 
 function App() {
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem('theme') || 'dark';
+    const saved = localStorage.getItem('theme')
+    if (saved) return saved
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
   });
 
   const [isLoading, setIsLoading] = useState(true);
   const [contentRevealed, setContentRevealed] = useState(false);
-  const [currentPage, setCurrentPage] = useState('home');
-  const [selectedCaseId, setSelectedCaseId] = useState('case-01');
+
+  // Restore navigation state from URL hash if available (Murphy's Law resilience for refresh F5)
+  const [currentPage, setCurrentPage] = useState(() => {
+    const hash = window.location.hash
+    if (hash === '#about') return 'about'
+    if (hash.startsWith('#case-')) return 'case-study'
+    return 'home'
+  });
+
+  const [selectedCaseId, setSelectedCaseId] = useState(() => {
+    const hash = window.location.hash
+    if (hash.startsWith('#case-')) return hash.replace('#', '')
+    return 'case-01'
+  });
 
   useScrollReveal(`${currentPage}-${selectedCaseId}`);
 
@@ -35,6 +49,12 @@ function App() {
     setCurrentPage(page);
     window.scrollTo(0, 0);
 
+    if (page === 'about') {
+      window.location.hash = 'about'
+    } else if (page === 'home') {
+      window.location.hash = targetId ? `#${targetId}` : ''
+    }
+
     if (page === 'home' && targetId) {
       setTimeout(() => {
         const el = document.getElementById(targetId);
@@ -48,6 +68,7 @@ function App() {
   const handleOpenCase = (caseId) => {
     setSelectedCaseId(caseId);
     setCurrentPage('case-study');
+    window.location.hash = `#${caseId}`;
     window.scrollTo(0, 0);
   };
 
