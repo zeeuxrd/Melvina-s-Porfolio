@@ -19,7 +19,7 @@ export default function VerseUserStoriesSection({ profileImage = null }) {
           {/* Profile Image */}
           <div className="persona-image-wrap">
             {activeImage ? (
-              <img src={activeImage} alt="Will Jack - User Persona" className="persona-img" />
+              <img src={activeImage} alt="Will Jack - User Persona" className="persona-img" loading="lazy" decoding="async" />
             ) : (
               <div className="persona-img-placeholder">
                 <div className="placeholder-icon-ring">

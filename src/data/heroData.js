@@ -1,9 +1,9 @@
-import heroFieldworkImg from '../../images/assets/hero-image-one.jpeg'
-import heroSynthesisImg from '../../images/assets/hero-image-second-option.jpeg'
-import heroStrategyImg from '../../images/assets/hero-image-three.jpeg'
-import heroLabsImg from '../../images/assets/fourth-hero.JPG'
-import heroFifthImg from '../../images/assets/fifth-image.JPG'
-import heroSixthImg from '../../images/assets/sixth-image.JPG'
+import heroFieldworkImg from '../../images/assets/hero-image-one.webp'
+import heroSynthesisImg from '../../images/assets/hero-image-second-option.webp'
+import heroStrategyImg from '../../images/assets/hero-image-three.webp'
+import heroLabsImg from '../../images/assets/fourth-hero.webp'
+import heroFifthImg from '../../images/assets/fifth-image.webp'
+import heroSixthImg from '../../images/assets/sixth-image.webp'
 
 export const heroPictureCards = [
   { id: 1, rot: '-4deg', img: heroFieldworkImg, caption: 'Generative Fieldwork' },

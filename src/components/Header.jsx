@@ -42,6 +42,16 @@ export default function Header({ theme, onToggleTheme, onNavigate, currentPage }
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isMenuOpen]);
 
+  const [isClosing, setIsClosing] = useState(false);
+
+  const handleCloseMenu = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsMenuOpen(false);
+      setIsClosing(false);
+    }, 220);
+  };
+
   return (
     <>
     <header className="header-nav" aria-label="Main Navigation">
@@ -133,7 +143,7 @@ export default function Header({ theme, onToggleTheme, onNavigate, currentPage }
     </header>
 
       {/* Full-Screen Mobile Menu Overlay */}
-      <div className={`mobile-menu-overlay ${isMenuOpen ? 'is-open' : ''}`} aria-hidden={!isMenuOpen}>
+      <div className={`mobile-menu-overlay ${isMenuOpen ? 'is-open' : ''} ${isClosing ? 'is-closing' : ''}`} aria-hidden={!isMenuOpen}>
         <div className="mobile-menu-top">
           <span className="mobile-menu-brand">Somtochukwu</span>
           <div className="mobile-menu-top-actions">
@@ -161,11 +171,14 @@ export default function Header({ theme, onToggleTheme, onNavigate, currentPage }
               )}
             </button>
             <button
-              onClick={() => setIsMenuOpen(false)}
-              className="mobile-menu-close"
+              onClick={handleCloseMenu}
+              className={`mobile-menu-close ${isClosing ? 'is-closing' : ''}`}
               aria-label="Close menu"
             >
-              {'{ CLOSE }'}
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="close-x-icon">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
             </button>
           </div>
         </div>

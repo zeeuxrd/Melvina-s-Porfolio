@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import './AboutPage.css'
-import featureBannerImg from '../../images/assets/hero-image.png'
-import polaroidImgDesk from '../../images/assets/media__1785187669727.jpg'
-import polaroidImgMatcha from '../../images/assets/media__1785189117726.jpg'
-import polaroidImgWorkshop from '../../images/assets/media__1785189276883.jpg'
-import polaroidImgBooks from '../../images/assets/media__1785189547294.png'
-import polaroidImgVacation from '../../images/assets/fifth-about-image.png'
-import polaroidImgSixth from '../../images/assets/sixth-about-image.png'
-import outsideUxImg1 from '../../images/assets/outside-of-ux.png'
-import outsideUxImg2 from '../../images/assets/outisde-of-ux-too.jpg'
-import outsideUxImg3 from '../../images/assets/ouside-of-ux-third image.png'
+import featureBannerImg from '../../images/assets/hero-image.webp'
+import polaroidImgDesk from '../../images/assets/media__1785187669727.webp'
+import polaroidImgMatcha from '../../images/assets/media__1785189117726.webp'
+import polaroidImgWorkshop from '../../images/assets/media__1785189276883.webp'
+import polaroidImgBooks from '../../images/assets/media__1785189547294.webp'
+import polaroidImgVacation from '../../images/assets/fifth-about-image.webp'
+import polaroidImgSixth from '../../images/assets/sixth-about-image.webp'
+import outsideUxImg1 from '../../images/assets/outside-of-ux.webp'
+import outsideUxImg2 from '../../images/assets/outisde-of-ux-too.webp'
+import outsideUxImg3 from '../../images/assets/ouside-of-ux-third image.webp'
 
 const stats = [
   { number: '300+', label: 'Women Researched Across Nigeria' },
@@ -19,8 +19,18 @@ const stats = [
 
 const workExperience = [
   {
+    company: 'CHECK DESIGN',
+    period: 'APRIL 2026 - PRESENT',
+    role: 'UX Researcher',
+    highlights: [
+      'Designed and executed a mixed-methods study (20+ IDIs, screening survey, and social listening) to surface how Nigerians make decisions around retail investing and hesitation points.',
+      'Synthesized qualitative research into strategic opportunity framings that directly shaped an industry Retail Investment Report, establishing a 2–3 year vision for digital investment products.',
+      'Applied JTBD framework and thematic analysis to cluster transcripts into 15+ prioritized themes and 9+ evidence-traced JTBD statements guiding Product, Content, and Design roadmaps.',
+    ],
+  },
+  {
     company: 'DODO DESIGN LIMITED',
-    period: '2023 - PRESENT',
+    period: 'MAR. 2023 - APR. 2026',
     role: 'UX Researcher & Strategy Lead',
     highlights: [
       'Collaborated with design team to conduct comprehensive research in Northern and Southern Nigeria, capturing insights from 300+ women and translating them into strategies that improved adoption, engagement, and health outcomes.',
@@ -30,7 +40,7 @@ const workExperience = [
   },
   {
     company: 'NUGI TECHNOLOGIES',
-    period: '2021 - 2023',
+    period: 'NOV. 2021 - MAR. 2023',
     role: 'Product Researcher & Usability Lead',
     highlights: [
       'Led usability testing for a ride-hailing product BOSSCAB, achieving a 45% reduction in app crashes and boosting user retention and trust.',
@@ -418,7 +428,7 @@ export default function AboutPage({ onBackToHome }) {
               rel="noopener noreferrer"
               className="about-page-cta-btn secondary"
             >
-              Download Resume
+              View Resume
             </a>
           </div>
         </div>

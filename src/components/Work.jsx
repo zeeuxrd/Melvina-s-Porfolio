@@ -1,10 +1,10 @@
 import React from 'react'
 import './Work.css'
-import firstCaseCover from '../../images/assets/media__1785160138028.png'
-import secondCaseCover from '../../images/assets/media__1785160961905.png'
-import thirdCaseCover from '../../images/assets/media__1785165571132.jpg'
-import fourthCaseCover from '../../images/assets/media__1785166951949.jpg'
-import porscheCoverNew from '../../images/assets/fourth-case-study-cover.png'
+import firstCaseCover from '../../images/assets/media__1785160138028.webp'
+import secondCaseCover from '../../images/assets/media__1785160961905.webp'
+import thirdCaseCover from '../../images/assets/media__1785165571132.webp'
+import fourthCaseCover from '../../images/assets/media__1785166951949.webp'
+import porscheCoverNew from '../../images/assets/fourth-case-study-cover.webp'
 
 const caseStudies = [
   {

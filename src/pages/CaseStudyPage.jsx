@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import './CaseStudyPage.css'
-import fitflexHeroImg from '../../images/assets/media__1785430189021.jpg'
-import architectureImg from '../../images/assets/media__1785429137899.png'
-import overviewCard3Img from '../../images/assets/media__1785432917311.jpg'
-import verseHeroImg from '../../images/assets/media__1785441835053.png'
-import verseArchitectureImg from '../../images/assets/media__1785442702780.png'
+import fitflexHeroImg from '../../images/assets/media__1785430189021.webp'
+import architectureImg from '../../images/assets/media__1785429137899.webp'
+import overviewCard3Img from '../../images/assets/media__1785432917311.webp'
+import verseHeroImg from '../../images/assets/media__1785441835053.webp'
+import verseArchitectureImg from '../../images/assets/media__1785442702780.webp'
 import { SECTION_RENDERERS, FallbackSection, normalizeSection } from '../components/caseSections'
 
 const caseStudyData = {

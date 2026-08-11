@@ -53,7 +53,7 @@ export default function FindingsBarChartSection({ caseId }) {
             {/* Clean Framed Image without overlay */}
             <div className="bento-framed-img-wrap">
               <span className="bento-pill-badge pill-purple rotated-tag-float">A SPACE TO THINK</span>
-              <img src={pregnantWomanImg} alt="Maternal UX &amp; Postpartum Synthesis" className="bento-framed-img" />
+              <img src={pregnantWomanImg} alt="Maternal UX &amp; Postpartum Synthesis" className="bento-framed-img" loading="lazy" decoding="async" />
             </div>
 
             <div className="bento-card-footer border-top-light">
