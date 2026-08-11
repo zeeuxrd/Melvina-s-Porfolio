@@ -2,11 +2,11 @@
 
 .hero-section {
   position: relative;
-  min-height: 130vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(9.5rem, 1.25rem + 17.19vw, 15rem) 0 clamp(5rem, 2rem + 6.25vw, 7rem) 0;
+  padding: clamp(5.7rem, 0.75rem + 10.32vw, 9rem) 0 clamp(5rem, 2rem + 6.25vw, 7rem) 0;
   overflow: hidden;
 }
 
@@ -14,13 +14,12 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: var(--max-width);
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  transform: translateY(-14%);
 }
 
 /* Intro line with leading emoji */
@@ -74,6 +73,7 @@
 /* Polaroid-Style Picture Card Row below CTA Buttons (matches About page polaroid style) */
 .hero-picture-row {
   position: relative;
+  align-self: flex-start;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   overflow: hidden;
@@ -366,6 +366,7 @@
 /* Edge Scroll Ticker for Design & Research Focus Areas */
 .hero-ticker-wrapper {
   position: relative;
+  align-self: flex-start;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-top: 40px;

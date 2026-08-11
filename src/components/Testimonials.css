@@ -2,7 +2,7 @@
 
 .testimonials-section {
   width: 100%;
-  padding: 5rem 2rem 5rem 2rem;
+  padding: clamp(3.75rem, 2.25rem + 3.125vw, 4.75rem) 2rem clamp(3.75rem, 2.25rem + 3.125vw, 4.75rem) 2rem;
   background-color: var(--bg-primary);
   box-sizing: border-box;
 }
