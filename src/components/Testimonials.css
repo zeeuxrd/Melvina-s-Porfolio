@@ -195,6 +195,16 @@
   flex-shrink: 0;
 }
 
+.company-name {
+  font-family: var(--font-body);
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  color: #1c1f1d !important;
+  line-height: 1.15;
+  text-align: right;
+  white-space: nowrap;
+}
+
 .company-logo {
   display: flex;
   align-items: center;

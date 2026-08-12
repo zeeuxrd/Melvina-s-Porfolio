@@ -2,42 +2,42 @@ import React from 'react'
 import './Testimonials.css'
 
 // Company Names
-const StacksLogo = () => (
-  <span className="company-name">NaijaTech</span>
+const DodoLogo = () => (
+  <span className="company-name">DODO</span>
 )
 
-const HurleyLogo = () => (
-  <span className="company-name">SwiftPay</span>
+const CheckDCLogo = () => (
+  <span className="company-name">Check DC</span>
 )
 
-const ApexLogo = () => (
-  <span className="company-name">TerraNova</span>
+const NugiLogo = () => (
+  <span className="company-name">Nugi Technologies</span>
 )
 
 const testimonials = [
   {
     id: 't1',
     theme: 'yellow',
-    quote: 'Elevated our product strategy. Their creative discovery research and targeted usability insights significantly boosted user interactions and drove notable traffic to our platform.',
-    name: 'Chinedu Okonkwo',
-    role: 'CEO at NaijaTech',
-    Logo: StacksLogo,
+    quote: "Somtochukwu is driven, hardworking, and approachable. She's known for excellent output, quick turnaround, and diligence. She has also grown into mentoring a group of emerging professionals.",
+    name: 'Susan Onigbinde',
+    role: 'Founder/CEO, DODO',
+    Logo: DodoLogo,
   },
   {
     id: 't2',
     theme: 'pink',
-    quote: 'We saw remarkable ROI improvement after partnering with Melvina. Her expert research team delivered insights and campaigns that increased our conversion rates by 35%.',
-    name: 'Emeka Adewale',
-    role: 'CEO at SwiftPay',
-    Logo: HurleyLogo,
+    quote: 'I think for people who call themselves researchers, curiosity is your biggest advantage. And I think Somto showed that all through.',
+    name: 'Lanre Wright',
+    role: 'Head of Product, Check DC',
+    Logo: CheckDCLogo,
   },
   {
     id: 't3',
     theme: 'rose',
-    quote: 'One of the few researchers who can speak fluently to both engineers and executives. The user insights always landed cleanly because the narrative was airtight and evidence-backed.',
-    name: 'Amara Eze',
-    role: 'VP of Design at TerraNova',
-    Logo: ApexLogo,
+    quote: 'Somtochukwu is hardworking, intelligent, and deeply passionate about her work. She communicates well, collaborates effectively, and consistently delivers results.',
+    name: 'Emmanuel Olube',
+    role: 'Head of Products',
+    Logo: NugiLogo,
   },
 ]
 

@@ -155,7 +155,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <p className="footer-copyright">© {new Date().getFullYear()} Somtochukwu. Designed &amp; Developed with Evidence.</p>
+      <p className="footer-copyright">© {new Date().getFullYear()} somtochukwu. designed and developed by productwithzeey</p>
     </footer>
   )
 }
